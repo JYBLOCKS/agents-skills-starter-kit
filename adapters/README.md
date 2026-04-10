@@ -11,5 +11,6 @@ Adapters map the neutral core into tool-specific conventions.
 - `cursor/`: extension placeholder
 - `windsurf/`: extension placeholder
 - `aider/`: extension placeholder
+- `antigravity/`: extension placeholder
 
 Use the generic adapter first when onboarding a new tool.
