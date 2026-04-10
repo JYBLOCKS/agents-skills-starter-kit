@@ -1,0 +1,28 @@
+artifact_type: agent
+normalized_path_pattern: agents/<role>-agent/
+required_questions:
+  - role_name
+  - mission
+  - in_scope
+  - out_of_scope
+  - trigger_conditions
+  - decision_boundaries
+  - inputs
+  - outputs
+  - required_context
+  - supported_skills
+conditional_questions:
+  - condition: requires_other_artifacts
+    ask:
+      - dependency_artifacts
+  - condition: tool_specific_behavior
+    ask:
+      - adapter_notes
+contract_mapping:
+  - agents/CONTRACT.md
+  - templates/agent/agent.md
+  - templates/agent/prompt.md
+validation_checks:
+  - all canonical agent files are drafted
+  - role and path follow repository naming rules
+  - contract fields are fully covered

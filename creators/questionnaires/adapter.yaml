@@ -1,0 +1,26 @@
+artifact_type: adapter
+normalized_path_pattern: adapters/<tool-name>/
+required_questions:
+  - tool_name
+  - discovery_model
+  - naming_conventions
+  - prompt_mapping
+  - rule_mapping
+  - context_mapping
+  - skill_mapping
+  - reference_vs_copy
+  - minimum_setup
+conditional_questions:
+  - condition: tool_requires_wrappers
+    ask:
+      - wrapper_files
+  - condition: tool_has_known_limitations
+    ask:
+      - limitations
+contract_mapping:
+  - adapters/CONTRACT.md
+  - templates/tool-adapter.md
+validation_checks:
+  - shared core remains the source of truth
+  - minimum setup is complete
+  - copied vs referenced behavior is explicit

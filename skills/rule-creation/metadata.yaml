@@ -1,0 +1,18 @@
+name: rule-creation
+version: 0.1.0
+tags:
+  - creators
+  - rules
+supported_tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+required_inputs:
+  - user_request
+  - questionnaire_answers
+produced_outputs:
+  - creation_package
+  - rule_draft
+constraints:
+  - rules_must_be_behavioral

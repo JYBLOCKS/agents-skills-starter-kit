@@ -1,0 +1,22 @@
+artifact_type: rule
+normalized_path_pattern: rules/<rule-set>.md
+required_questions:
+  - rule_set_name
+  - audience
+  - scope
+  - enforcement_level
+  - required_rules
+conditional_questions:
+  - condition: has_exclusions
+    ask:
+      - exclusions
+  - condition: conflicts_with_existing_rules
+    ask:
+      - precedence_rules
+contract_mapping:
+  - rules/README.md
+  - rules/global-rules.md
+validation_checks:
+  - audience and scope are explicit
+  - precedence is documented when needed
+  - rules are behaviorally testable

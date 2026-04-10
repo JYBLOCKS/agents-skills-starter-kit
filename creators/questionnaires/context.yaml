@@ -1,0 +1,22 @@
+artifact_type: context
+normalized_path_pattern: context/<context-name>.md
+required_questions:
+  - context_name
+  - subtype
+  - owner
+  - intended_consumers
+  - core_facts
+  - update_cadence
+conditional_questions:
+  - condition: derived_from_decisions
+    ask:
+      - source_specs_or_docs
+  - condition: has_time_sensitive_facts
+    ask:
+      - freshness_notes
+contract_mapping:
+  - context/README.md
+validation_checks:
+  - consumers and owner are explicit
+  - reusable facts are separated from temporary notes
+  - source decisions are linked when relevant

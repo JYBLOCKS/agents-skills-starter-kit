@@ -1,0 +1,17 @@
+# Artifact Questionnaire Contract
+
+Each questionnaire file should contain:
+
+- `artifact_type`
+- `normalized_path_pattern`
+- `required_questions`
+- `conditional_questions`
+- `contract_mapping`
+- `validation_checks`
+
+## Question Rules
+
+- required questions must be asked before drafting
+- conditional questions should only appear when a prior answer makes them relevant
+- contract mapping should point to the current repository contracts and template sections
+- validation checks should be phrased as completion gates

@@ -1,0 +1,29 @@
+artifact_type: spec
+normalized_path_pattern: specs/<spec-name>.md
+required_questions:
+  - problem
+  - goals
+  - non_goals
+  - constraints
+  - decisions
+  - interfaces_or_outputs
+  - acceptance_criteria
+  - validation_plan
+conditional_questions:
+  - condition: rollout_needed
+    ask:
+      - rollout_steps
+  - condition: migration_needed
+    ask:
+      - migration_notes
+  - condition: unresolved_risk
+    ask:
+      - risks
+      - open_questions
+contract_mapping:
+  - specs/CONTRACT.md
+  - templates/spec/spec.md
+validation_checks:
+  - all required sections are drafted
+  - acceptance criteria are testable
+  - interfaces or outputs are concrete enough to implement

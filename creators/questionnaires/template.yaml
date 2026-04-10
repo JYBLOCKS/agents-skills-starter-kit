@@ -1,0 +1,20 @@
+artifact_type: template
+normalized_path_pattern: templates/<template-target>/
+required_questions:
+  - target_artifact_type
+  - required_sections
+  - placeholders
+  - safe_defaults
+conditional_questions:
+  - condition: multiple_files_needed
+    ask:
+      - template_file_list
+  - condition: template_depends_on_contract
+    ask:
+      - governing_contracts
+contract_mapping:
+  - templates/README.md
+validation_checks:
+  - placeholders are meaningful
+  - defaults are safe and reusable
+  - sections cover the governing contract

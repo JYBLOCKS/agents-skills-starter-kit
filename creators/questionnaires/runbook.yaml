@@ -1,0 +1,21 @@
+artifact_type: runbook
+normalized_path_pattern: runbooks/<runbook-name>.md
+required_questions:
+  - runbook_name
+  - trigger
+  - prerequisites
+  - ordered_steps
+  - expected_outputs
+conditional_questions:
+  - condition: rollback_needed
+    ask:
+      - rollback_steps
+  - condition: escalation_needed
+    ask:
+      - escalation_path
+contract_mapping:
+  - runbooks/README.md
+validation_checks:
+  - steps are sequential and actionable
+  - prerequisites are explicit
+  - outputs match the intended workflow

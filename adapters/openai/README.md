@@ -36,6 +36,12 @@ Map the neutral core into OpenAI-oriented coding workflows without duplicating t
 3. Provide the required context files for the current task.
 4. Link any relevant skills by name and path.
 
+## Invoking Creators
+
+- Start with `creator-orchestrator-agent` when the user asks to create a new repository artifact.
+- Switch to the specialized creator agent once the artifact family is known.
+- Load the corresponding creator skill and questionnaire so the conversation follows the shared creator contract.
+
 ## Notes
 
 - Keep provider-specific instructions thin.

@@ -15,3 +15,8 @@ Skills are portable capability bundles that agents can invoke across tools.
 - Global rules: `rules/global-rules.md`
 - Skill rules: `rules/skill-rules.md`
 - Skill template: `templates/skill/`
+- Creator extensions: `creators/SKILL-CONTRACT.md`
+
+## Creator Skills
+
+Creator skills encode interview questions, contract mapping rules, naming rules, and validation logic for guided artifact creation.

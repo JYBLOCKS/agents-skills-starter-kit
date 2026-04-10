@@ -10,6 +10,7 @@ This repository is a documented operating system for agent-driven delivery:
 
 - `agents/` define roles, prompts, decision boundaries, and handoffs
 - `skills/` define reusable capabilities with metadata and examples
+- `creators/` define guided creation contracts, questionnaires, and output packages
 - `context/` stores shared business, product, technical, repo, and delivery context
 - `rules/` stores global, agent, and skill rules
 - `specs/` stores approved product and implementation specs
@@ -55,13 +56,41 @@ Extension placeholders are included for:
 |   |-- spec-agent/
 |   |-- implementation-agent/
 |   |-- review-agent/
-|   `-- docs-agent/
+|   |-- docs-agent/
+|   |-- creator-orchestrator-agent/
+|   |-- agent-creator-agent/
+|   |-- skill-creator-agent/
+|   |-- rule-creator-agent/
+|   |-- spec-creator-agent/
+|   |-- context-creator-agent/
+|   |-- runbook-creator-agent/
+|   |-- checklist-creator-agent/
+|   |-- adapter-creator-agent/
+|   `-- template-creator-agent/
 |-- checklists/
 |-- context/
+|-- creators/
+|   |-- CONTRACT.md
+|   |-- AGENT-CONTRACT.md
+|   |-- SKILL-CONTRACT.md
+|   |-- QUESTIONNAIRE-CONTRACT.md
+|   |-- CREATION-PACKAGE-CONTRACT.md
+|   |-- questionnaires/
+|   `-- templates/
 |-- rules/
 |-- runbooks/
 |-- skills/
 |   |-- CONTRACT.md
+|   |-- creator-intake/
+|   |-- creator-validation/
+|   |-- agent-creation/
+|   |-- skill-creation/
+|   |-- rule-creation/
+|   |-- spec-creation/
+|   |-- context-creation/
+|   |-- runbook-creation/
+|   |-- checklist-creation/
+|   |-- adapter-creation/
 |   |-- repo-analysis/
 |   |-- requirements-extraction/
 |   |-- architecture-planning/
@@ -71,7 +100,8 @@ Extension placeholders are included for:
 |   |-- test-planning/
 |   |-- docs-sync/
 |   |-- release-notes/
-|   `-- adapter-generation/
+|   |-- adapter-generation/
+|   `-- template-creation/
 |-- specs/
 |-- templates/
 |-- LICENSE
@@ -97,6 +127,11 @@ This starter defines explicit contracts so contributors do not invent incompatib
 - [skills/CONTRACT.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/skills/CONTRACT.md)
 - [specs/CONTRACT.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/specs/CONTRACT.md)
 - [adapters/CONTRACT.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/adapters/CONTRACT.md)
+- [creators/CONTRACT.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/creators/CONTRACT.md)
+- [creators/AGENT-CONTRACT.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/creators/AGENT-CONTRACT.md)
+- [creators/SKILL-CONTRACT.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/creators/SKILL-CONTRACT.md)
+- [creators/QUESTIONNAIRE-CONTRACT.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/creators/QUESTIONNAIRE-CONTRACT.md)
+- [creators/CREATION-PACKAGE-CONTRACT.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/creators/CREATION-PACKAGE-CONTRACT.md)
 
 ## Included Agents
 
@@ -116,9 +151,46 @@ Every shipped agent includes:
 - `handoff-template.md`
 - `example.md`
 
-## Included Skills
+## Creator Agents
 
-The starter ships with ten portable skills:
+The starter also ships a guided creator system:
+
+- `creator-orchestrator-agent`
+- `agent-creator-agent`
+- `skill-creator-agent`
+- `rule-creator-agent`
+- `spec-creator-agent`
+- `context-creator-agent`
+- `runbook-creator-agent`
+- `checklist-creator-agent`
+- `adapter-creator-agent`
+- `template-creator-agent`
+
+These agents interview the user in three phases:
+
+1. intent and use case
+2. contract completion and missing decisions
+3. artifact assembly and validation summary
+
+## Creator Skills
+
+The starter ships with guided creator skills and shared creator utilities:
+
+- `creator-intake`
+- `creator-validation`
+- `agent-creation`
+- `skill-creation`
+- `rule-creation`
+- `spec-creation`
+- `context-creation`
+- `runbook-creation`
+- `checklist-creation`
+- `adapter-creation`
+- `template-creation`
+
+## Foundational Skills
+
+The starter also ships foundational workflow skills:
 
 - `repo-analysis`
 - `requirements-extraction`
@@ -136,6 +208,19 @@ Every shipped skill includes:
 - `SKILL.md`
 - `metadata.yaml`
 - at least one example
+
+## Using Creators
+
+Use creators when you want the repo to guide artifact generation instead of manually copying templates.
+
+Default flow:
+
+1. Start with [agents/creator-orchestrator-agent/agent.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/agents/creator-orchestrator-agent/agent.md) if the artifact family is unclear.
+2. Route to the specialized creator agent for the target artifact family.
+3. Load the matching creator skill and questionnaire from [creators/questionnaires/README.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/creators/questionnaires/README.md).
+4. Return a final creation package that follows [creators/CREATION-PACKAGE-CONTRACT.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/creators/CREATION-PACKAGE-CONTRACT.md).
+
+Creator ownership map: [creators/matrix.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/creators/matrix.md)
 
 ## Rules, Context, Runbooks, and Checklists
 
@@ -194,6 +279,13 @@ Detailed flow: [runbooks/new-skill.md](E:/projects/IN-PROGRESS/agents-skills-sta
 
 Detailed flow: [runbooks/new-tool-adapter.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/runbooks/new-tool-adapter.md)
 
+## Create Artifacts With Creators
+
+Guided creation runbooks:
+
+- [runbooks/create-with-creators.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/runbooks/create-with-creators.md)
+- [runbooks/extend-creator.md](E:/projects/IN-PROGRESS/agents-skills-starter-kit/runbooks/extend-creator.md)
+
 ## Adapter Matrix
 
 | Tool | Status | Adapter Folder | Notes |
@@ -206,13 +298,30 @@ Detailed flow: [runbooks/new-tool-adapter.md](E:/projects/IN-PROGRESS/agents-ski
 | Windsurf | Placeholder | `adapters/windsurf/` | Extend from the generic adapter |
 | Aider | Placeholder | `adapters/aider/` | Extend from the generic adapter |
 
+## Creator Matrix
+
+| Artifact Family | Creator Agent | Creator Skill | Output |
+| --- | --- | --- | --- |
+| Agents | `agent-creator-agent` | `agent-creation` | Full agent package |
+| Skills | `skill-creator-agent` | `skill-creation` | Full skill package |
+| Rules | `rule-creator-agent` | `rule-creation` | Rule document or rule set |
+| Specs | `spec-creator-agent` | `spec-creation` | Complete spec draft |
+| Context | `context-creator-agent` | `context-creation` | Context document |
+| Runbooks | `runbook-creator-agent` | `runbook-creation` | Runbook draft |
+| Checklists | `checklist-creator-agent` | `checklist-creation` | Checklist draft |
+| Adapters | `adapter-creator-agent` | `adapter-creation` | Adapter package |
+| Templates | `template-creator-agent` | `template-creation` | Template file or package |
+
 ## Acceptance Checklist For This Starter
 
 - README matches the actual repo structure
 - Every shipped agent includes the canonical package files
+- Every shipped creator agent includes the canonical package files
 - Every shipped skill includes a contract, metadata, and an example
+- Every shipped creator skill includes a contract, metadata, questionnaire mapping, and an example
 - Every adapter explains how it consumes the shared core
 - The sample end-to-end flow is documented
+- The guided creator flow is documented
 - No core contract assumes a single vendor or runtime
 
 ## License

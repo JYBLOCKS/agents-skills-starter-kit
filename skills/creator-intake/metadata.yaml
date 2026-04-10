@@ -1,0 +1,23 @@
+name: creator-intake
+version: 0.1.0
+tags:
+  - creators
+  - intake
+  - routing
+supported_tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - aider
+required_inputs:
+  - creation_request
+  - creator_matrix
+produced_outputs:
+  - artifact_family
+  - normalized_name_path
+  - dependency_notes
+constraints:
+  - no_drafting_in_intake

@@ -33,3 +33,9 @@ Map the neutral core into Claude Code workflows while preserving shared prompts,
 2. Select the agent prompt to anchor the session.
 3. Load shared rules and the task-specific context.
 4. Reference the relevant skills during execution or planning.
+
+## Invoking Creators
+
+- Use `agents/creator-orchestrator-agent/` for ambiguous create requests.
+- Use the artifact-specific creator agent plus matching creator skill for guided generation.
+- Return a final creation package that follows the shared creator contract.

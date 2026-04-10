@@ -1,0 +1,18 @@
+name: checklist-creation
+version: 0.1.0
+tags:
+  - creators
+  - checklists
+supported_tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+required_inputs:
+  - user_request
+  - questionnaire_answers
+produced_outputs:
+  - creation_package
+  - checklist_draft
+constraints:
+  - concrete_done_criteria

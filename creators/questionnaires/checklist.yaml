@@ -1,0 +1,20 @@
+artifact_type: checklist
+normalized_path_pattern: checklists/<checklist-name>.md
+required_questions:
+  - checklist_name
+  - owner
+  - done_criteria
+  - evidence_requirements
+conditional_questions:
+  - condition: stop_conditions_exist
+    ask:
+      - stop_conditions
+  - condition: depends_on_prior_stage
+    ask:
+      - upstream_dependencies
+contract_mapping:
+  - checklists/README.md
+validation_checks:
+  - checklist items are concrete
+  - evidence requirements are explicit
+  - done criteria align with the intended owner

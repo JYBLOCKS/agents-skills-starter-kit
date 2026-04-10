@@ -34,3 +34,9 @@ Map the neutral core into OpenCode-style coding sessions so the same agents, ski
 2. Load the shared and local rules.
 3. Attach the relevant context and spec files.
 4. Reference the skills needed for the task.
+
+## Invoking Creators
+
+- Route create requests through `creator-orchestrator-agent` first when the target family is unclear.
+- Load the specialized creator agent, creator skill, and questionnaire for the selected artifact family.
+- Use the creation package contract as the required final output shape.

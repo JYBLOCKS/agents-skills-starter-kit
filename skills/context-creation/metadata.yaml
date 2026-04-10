@@ -1,0 +1,18 @@
+name: context-creation
+version: 0.1.0
+tags:
+  - creators
+  - context
+supported_tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+required_inputs:
+  - user_request
+  - questionnaire_answers
+produced_outputs:
+  - creation_package
+  - context_draft
+constraints:
+  - durable_reusable_content_only
