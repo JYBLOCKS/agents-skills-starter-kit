@@ -1,0 +1,9 @@
+name: <skill-name>
+version: 0.1.0
+tags:
+  - starter
+supported_tools:
+  - generic
+required_inputs: []
+produced_outputs: []
+constraints: []
