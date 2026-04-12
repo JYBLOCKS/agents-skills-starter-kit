@@ -39,10 +39,18 @@ Transform approved business intent into a decision-complete implementation spec 
 ## Dependencies
 
 - Context: all files in `context/`
-- Skills: `skills/spec-writing`, `skills/architecture-planning`
+- Skills: `skills/spec-writing`, `skills/repo-analysis`
 - Specs: `specs/CONTRACT.md`
+- Rules: `rules/global-rules.md`, `rules/agent-rules.md`
 
 ## Runbooks and Checklists
 
 - Runbook: `runbooks/spec-lifecycle.md`
 - Checklist: `checklists/spec-ready.md`
+
+## Default Asset Use
+
+- For drafting the implementation spec: use `skills/spec-writing`.
+- For grounding the spec in the current repo: use `skills/repo-analysis`.
+- For repository constraints and decisions: read the relevant files under `context/`.
+- For completion gates: use `checklists/spec-ready.md`.

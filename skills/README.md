@@ -4,9 +4,7 @@ Skills are portable capability bundles that agents can invoke across tools.
 
 ## Canonical Package Contents
 
-- `SKILL.md`: narrative contract and usage guidance
-- `metadata.yaml`: structured discovery metadata
-- `examples/`: realistic usage samples
+- `SKILL.md`: the canonical skill contract, trigger guidance, workflow, checklist, references, and examples
 - optional `assets/`
 - optional `scripts/`
 
@@ -15,8 +13,36 @@ Skills are portable capability bundles that agents can invoke across tools.
 - Global rules: `rules/global-rules.md`
 - Skill rules: `rules/skill-rules.md`
 - Skill template: `templates/skill/`
-- Creator extensions: `creators/SKILL-CONTRACT.md`
+- Optional creator extensions: `optional/creators/SKILL-CONTRACT.md`
 
-## Creator Skills
+## Core Skills
 
-Creator skills encode interview questions, contract mapping rules, naming rules, and validation logic for guided artifact creation.
+The minimal starter path keeps these skills front and center:
+
+- `repo-analysis`
+- `requirements-extraction`
+- `spec-writing`
+- `task-breakdown`
+- `code-review`
+- `test-planning`
+- `docs-sync`
+
+## Required Structure
+
+Each `SKILL.md` should start with a structured metadata block and then define:
+
+- `Purpose`
+- `Use When`
+- `Do Not Use When`
+- `Inputs`
+- `Outputs`
+- `Workflow`
+- `Rules`
+- `Checklist`
+- `Non-Negotiable Rules`
+- `References`
+- `Examples`
+
+Keep examples inline inside `SKILL.md` when they materially improve usage clarity.
+
+Optional creator skills live under `optional/skills/`.

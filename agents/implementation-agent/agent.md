@@ -41,8 +41,16 @@ Implement the approved spec, keep the change set coherent, and produce enough va
 - Context: `context/technical-context.md`, `context/repo-context.md`
 - Skills: `skills/repo-analysis`, `skills/task-breakdown`, `skills/test-planning`
 - Specs: approved item in `specs/`
+- Rules: `rules/global-rules.md`, `rules/agent-rules.md`
 
 ## Runbooks and Checklists
 
 - Runbook: `runbooks/new-project-bootstrap.md`
 - Checklist: `checklists/implementation-ready.md`
+
+## Default Asset Use
+
+- For grounding the change in the current codebase: use `skills/repo-analysis`.
+- For slicing work safely inside the approved scope: use `skills/task-breakdown`.
+- For deciding the right validation depth: use `skills/test-planning`.
+- For technical and repository constraints: read `context/technical-context.md` and `context/repo-context.md`.

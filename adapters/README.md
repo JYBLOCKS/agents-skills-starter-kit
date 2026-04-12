@@ -8,9 +8,5 @@ Adapters map the neutral core into tool-specific conventions.
 - `openai/`: OpenAI-oriented mapping
 - `claude-code/`: Claude Code-oriented mapping
 - `opencode/`: OpenCode-oriented mapping
-- `cursor/`: extension placeholder
-- `windsurf/`: extension placeholder
-- `aider/`: extension placeholder
-- `antigravity/`: extension placeholder
 
 Use the generic adapter first when onboarding a new tool.

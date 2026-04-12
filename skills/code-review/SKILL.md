@@ -1,42 +1,86 @@
+---
+name: code-review
+description: Review changes for regressions, contract mismatches, quality gaps, and missing validation evidence.
+trigger: Use this when implementation work is ready for review and the priority is finding bugs, risks, regressions, or missing evidence rather than praising the change.
+metadata:
+  author: starter-kit
+  version: 0.2.0
+  scope: Owns review findings and residual risk assessment, but does not replace implementation or business approval.
+  auto-invoke: true
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+---
+
 # code-review
 
 ## Purpose
 
 Review changes for regressions, contract mismatches, quality gaps, and missing evidence.
 
-## Supported Tools
+## Use When
 
-- generic
-- openai
-- claude-code
-- opencode
-- cursor
-- windsurf
-- aider
+- An implementation handoff is ready for review.
+- A risky change needs focused regression analysis.
+- The repo needs findings ordered by severity.
+
+## Do Not Use When
+
+- The task is still in early scoping or spec drafting.
+- The request is to implement or refactor code rather than review it.
 
 ## Inputs
 
-- change set
-- governing spec
-- validation evidence
+- Change set
+- Governing spec
+- Validation evidence
 
 ## Outputs
 
-- findings by severity
-- residual risk summary
-- missing validation notes
+- Findings by severity
+- Residual risk summary
+- Missing validation notes
 
-## Guardrails
+## Workflow
+
+1. Compare the change set against the approved spec and stated scope.
+2. Inspect for broken behavior, missing tests, rule violations, or contract drift.
+3. Prioritize findings by severity and confidence.
+4. Summarize residual risks and validation gaps that remain.
+
+## Rules
 
 - Lead with issues, not praise.
 - Anchor findings to files, behavior, or contracts.
+- Prefer concrete, testable statements over vague quality language.
 
-## Process
+## Checklist
 
-1. Compare changes against the approved spec.
-2. Inspect for broken contracts and missing tests.
-3. Summarize residual risk.
+- The approved scope was checked.
+- Findings are prioritized.
+- Evidence gaps are called out.
+- Residual risk is summarized.
 
-## Adapter Notes
+## Non-Negotiable Rules
 
-- openai: align with the review style required by the active environment.
+- Do not bury critical findings under summary text.
+- Do not approve behavior that conflicts with the governing spec.
+- Do not treat missing validation as a minor detail when risk is material.
+
+## References
+
+- `rules/global-rules.md`
+- `rules/agent-rules.md`
+- `checklists/review-ready.md`
+
+## Examples
+
+### Example Trigger
+
+Review this implementation for regressions, contract mismatches, and missing tests.
+
+### Example Output Shape
+
+Produce findings ordered by severity with references to files or behaviors, then summarize residual risk and missing validation.

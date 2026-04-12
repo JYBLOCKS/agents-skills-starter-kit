@@ -43,8 +43,15 @@ Clarify user value, success metrics, scope, priorities, and acceptance language 
 - Context: `context/business-context.md`, `context/product-context.md`
 - Skills: `skills/requirements-extraction`
 - Specs: `specs/CONTRACT.md`
+- Rules: `rules/global-rules.md`, `rules/agent-rules.md`
 
 ## Runbooks and Checklists
 
 - Runbook: `runbooks/spec-lifecycle.md`
 - Checklist: `checklists/spec-ready.md`
+
+## Default Asset Use
+
+- For goal framing and scope definition: use `skills/requirements-extraction`.
+- For product direction and user value: read `context/business-context.md` and `context/product-context.md`.
+- For completion gates: use `checklists/spec-ready.md`.

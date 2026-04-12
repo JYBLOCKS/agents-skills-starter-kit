@@ -17,8 +17,17 @@ Agents are decision-making packages that coordinate work, apply context, and han
 - Agent rules: `rules/agent-rules.md`
 - Shared context: `context/`
 - Shared runbooks: `runbooks/`
-- Creator extensions: `creators/AGENT-CONTRACT.md`
+- Optional creator extensions: `optional/creators/AGENT-CONTRACT.md`
 
-## Creator Agents
+## Core Agents
 
-This repository also ships creator agents that guide users through artifact generation for agents, skills, rules, specs, context, runbooks, checklists, adapters, and templates.
+The minimal starter flow is built around:
+
+- `business-agent`
+- `spec-agent`
+- `orchestrator-agent`
+- `implementation-agent`
+- `review-agent`
+- `docs-agent`
+
+Optional creator agents live under `optional/agents/`.

@@ -41,8 +41,16 @@ Review changes for behavioral risk, missing tests, broken contracts, and documen
 - Context: `context/technical-context.md`, `context/delivery-context.md`
 - Skills: `skills/code-review`, `skills/test-planning`
 - Specs: approved item in `specs/`
+- Rules: `rules/global-rules.md`, `rules/agent-rules.md`
 
 ## Runbooks and Checklists
 
 - Runbook: `runbooks/spec-lifecycle.md`
 - Checklist: `checklists/review-ready.md`
+
+## Default Asset Use
+
+- For finding regressions and contract mismatches: use `skills/code-review`.
+- For checking whether validation depth matches risk: use `skills/test-planning`.
+- For technical and delivery expectations: read `context/technical-context.md` and `context/delivery-context.md`.
+- For review completion gates: use `checklists/review-ready.md`.

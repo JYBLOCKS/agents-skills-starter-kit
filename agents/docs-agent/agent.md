@@ -40,10 +40,17 @@ Keep README, templates, runbooks, and release-facing docs aligned with the actua
 ## Dependencies
 
 - Context: `context/repo-context.md`, `context/delivery-context.md`
-- Skills: `skills/docs-sync`, `skills/release-notes`
+- Skills: `skills/docs-sync`
 - Specs: approved item in `specs/`
+- Rules: `rules/global-rules.md`, `rules/agent-rules.md`
 
 ## Runbooks and Checklists
 
 - Runbook: `runbooks/new-project-bootstrap.md`
 - Checklist: `checklists/docs-ready.md`
+
+## Default Asset Use
+
+- For README, template, and guide updates: use `skills/docs-sync`.
+- For repository structure and delivery expectations: read `context/repo-context.md` and `context/delivery-context.md`.
+- For documentation completion gates: use `checklists/docs-ready.md`.

@@ -9,7 +9,7 @@ Map the neutral core into OpenAI-oriented coding workflows without duplicating t
 - Use the selected agent's `prompt.md` as the base role prompt.
 - Layer shared rules from `rules/` into system or developer instructions.
 - Pull shared context files into the model workspace or prompt assembly.
-- Reference skills from `skills/*/SKILL.md` and `metadata.yaml`.
+- Reference skills from `skills/*/SKILL.md`.
 
 ## Naming Conventions
 
@@ -38,9 +38,9 @@ Map the neutral core into OpenAI-oriented coding workflows without duplicating t
 
 ## Invoking Creators
 
-- Start with `creator-orchestrator-agent` when the user asks to create a new repository artifact.
+- Start with `optional/agents/creator-orchestrator-agent/` when the user asks to create a new repository artifact.
 - Switch to the specialized creator agent once the artifact family is known.
-- Load the corresponding creator skill and questionnaire so the conversation follows the shared creator contract.
+- Load the corresponding creator skill and questionnaire from `optional/skills/` and `optional/creators/questionnaires/` so the conversation follows the shared creator contract.
 
 ## Notes
 

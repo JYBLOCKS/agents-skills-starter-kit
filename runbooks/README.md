@@ -10,5 +10,5 @@ Start with:
 - `new-tool-adapter.md`
 - `spec-lifecycle.md`
 - `end-to-end-example.md`
-- `create-with-creators.md`
-- `extend-creator.md`
+
+Creator-specific runbooks live under `optional/runbooks/`.

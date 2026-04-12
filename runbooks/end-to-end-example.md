@@ -16,7 +16,7 @@ Add a new tool adapter while keeping shared prompts, rules, and context portable
    - defines the adapter contract and setup expectations
 3. `orchestrator-agent`
    - routes work to implementation, review, and docs
-   - identifies supporting skills such as `adapter-generation` and `docs-sync`
+   - identifies supporting skills such as `docs-sync` and any optional adapter-specific helper skill when needed
 4. `implementation-agent`
    - creates the adapter folder and docs
    - updates any required templates or examples

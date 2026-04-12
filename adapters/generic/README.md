@@ -21,7 +21,7 @@ Use this adapter as the default contract for any coding tool that does not yet h
 - Local agent rules: `agents/*-agent/rules.md`
 - Shared rules: `rules/*.md`
 - Context: `context/*.md`
-- Skills: `skills/*/SKILL.md` plus `metadata.yaml`
+- Skills: `skills/*/SKILL.md`
 
 ## Reference vs Copy
 
@@ -36,7 +36,7 @@ Use this adapter as the default contract for any coding tool that does not yet h
 
 ## Invoking Creators
 
-- Use `agents/creator-orchestrator-agent/` when the artifact family is unclear.
+- Use `optional/agents/creator-orchestrator-agent/` when the artifact family is unclear.
 - Use the matching specialized creator agent when the artifact family is known.
-- Load the matching creator skill and questionnaire from `skills/` and `creators/questionnaires/`.
-- Expect the final output to follow `creators/CREATION-PACKAGE-CONTRACT.md`.
+- Load the matching creator skill and questionnaire from `optional/skills/` and `optional/creators/questionnaires/`.
+- Expect the final output to follow `optional/creators/CREATION-PACKAGE-CONTRACT.md`.

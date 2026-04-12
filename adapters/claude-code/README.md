@@ -36,6 +36,6 @@ Map the neutral core into Claude Code workflows while preserving shared prompts,
 
 ## Invoking Creators
 
-- Use `agents/creator-orchestrator-agent/` for ambiguous create requests.
-- Use the artifact-specific creator agent plus matching creator skill for guided generation.
-- Return a final creation package that follows the shared creator contract.
+- Use `optional/agents/creator-orchestrator-agent/` for ambiguous create requests.
+- Use the artifact-specific creator agent plus matching creator skill from `optional/skills/` for guided generation.
+- Return a final creation package that follows `optional/creators/CREATION-PACKAGE-CONTRACT.md`.
