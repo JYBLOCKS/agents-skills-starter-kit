@@ -78,6 +78,7 @@ npx skills add . -l
 ```
 
 you should now see one combined list that includes both core skills and the formerly optional ones.
+
 ## Pick Your Agent
 
 One repository stays canonical. Install wrappers only adapt discovery and host-specific bootstrap.
