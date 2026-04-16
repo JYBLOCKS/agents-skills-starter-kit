@@ -1,0 +1,414 @@
+{
+  "name": "agents-skills-starter-kit",
+  "displayName": "AI starter kit",
+  "version": "0.3.0",
+  "description": "Portable starter kit for agent-driven delivery workflows with shared agents, reusable skills, and thin multi-host adapters.",
+  "repository": "https://github.com/JYBLOCKS/agents-skills-starter-kit",
+  "installSurface": {
+    "skillsRoot": "./skills"
+  },
+  "sourceOfTruth": {
+    "agents": "./agents",
+    "skills": "./skills",
+    "context": "./context",
+    "rules": "./rules",
+    "checklists": "./checklists",
+    "runbooks": "./runbooks",
+    "specs": "./specs",
+    "optional": "./optional",
+    "templates": "./templates",
+    "adapters": "./adapters"
+  },
+  "skillSourceGroups": {
+    "core": [
+      {
+        "name": "caveman",
+        "path": "./skills/caveman"
+      },
+      {
+        "name": "repo-analysis",
+        "path": "./skills/repo-analysis"
+      },
+      {
+        "name": "requirements-extraction",
+        "path": "./skills/requirements-extraction"
+      },
+      {
+        "name": "spec-writing",
+        "path": "./skills/spec-writing"
+      },
+      {
+        "name": "task-breakdown",
+        "path": "./skills/task-breakdown"
+      },
+      {
+        "name": "code-review",
+        "path": "./skills/code-review"
+      },
+      {
+        "name": "test-planning",
+        "path": "./skills/test-planning"
+      },
+      {
+        "name": "docs-sync",
+        "path": "./skills/docs-sync"
+      }
+    ],
+    "optional": [
+      {
+        "name": "adapter-creation",
+        "path": "./optional/skills/adapter-creation"
+      },
+      {
+        "name": "adapter-generation",
+        "path": "./optional/skills/adapter-generation"
+      },
+      {
+        "name": "agent-creation",
+        "path": "./optional/skills/agent-creation"
+      },
+      {
+        "name": "architecture-planning",
+        "path": "./optional/skills/architecture-planning"
+      },
+      {
+        "name": "checklist-creation",
+        "path": "./optional/skills/checklist-creation"
+      },
+      {
+        "name": "context-creation",
+        "path": "./optional/skills/context-creation"
+      },
+      {
+        "name": "creator-intake",
+        "path": "./optional/skills/creator-intake"
+      },
+      {
+        "name": "creator-validation",
+        "path": "./optional/skills/creator-validation"
+      },
+      {
+        "name": "frontend-design",
+        "path": "./optional/skills/frontend-design"
+      },
+      {
+        "name": "frontend-developer",
+        "path": "./optional/skills/frontend-developer"
+      },
+      {
+        "name": "release-notes",
+        "path": "./optional/skills/release-notes"
+      },
+      {
+        "name": "rule-creation",
+        "path": "./optional/skills/rule-creation"
+      },
+      {
+        "name": "runbook-creation",
+        "path": "./optional/skills/runbook-creation"
+      },
+      {
+        "name": "skill-creation",
+        "path": "./optional/skills/skill-creation"
+      },
+      {
+        "name": "spec-creation",
+        "path": "./optional/skills/spec-creation"
+      },
+      {
+        "name": "template-creation",
+        "path": "./optional/skills/template-creation"
+      }
+    ]
+  },
+  "hosts": [
+    {
+      "id": "claude-code",
+      "adapter": "./adapters/claude-code",
+      "install": {
+        "type": "universal",
+        "command": "npx skills add JYBLOCKS/agents-skills-starter-kit -a claude-code"
+      }
+    },
+    {
+      "id": "codex",
+      "adapter": "./adapters/codex",
+      "install": {
+        "type": "native",
+        "plugin": "./plugins/ai-starter-kit/.codex-plugin/plugin.json",
+        "marketplace": "./.agents/plugins/marketplace.json",
+        "fallbackCommand": "npx skills add JYBLOCKS/agents-skills-starter-kit -a codex"
+      }
+    },
+    {
+      "id": "gemini-cli",
+      "adapter": "./adapters/gemini-cli",
+      "install": {
+        "type": "native-and-universal",
+        "extension": "./gemini-extension.json",
+        "command": "gemini extensions install https://github.com/JYBLOCKS/agents-skills-starter-kit",
+        "fallbackCommand": "npx skills add JYBLOCKS/agents-skills-starter-kit -a gemini-cli"
+      }
+    },
+    {
+      "id": "cursor",
+      "adapter": "./adapters/cursor",
+      "install": {
+        "type": "universal",
+        "command": "npx skills add JYBLOCKS/agents-skills-starter-kit -a cursor"
+      }
+    },
+    {
+      "id": "windsurf",
+      "adapter": "./adapters/windsurf",
+      "install": {
+        "type": "universal",
+        "command": "npx skills add JYBLOCKS/agents-skills-starter-kit -a windsurf"
+      }
+    },
+    {
+      "id": "github-copilot",
+      "adapter": "./adapters/github-copilot",
+      "install": {
+        "type": "universal",
+        "command": "npx skills add JYBLOCKS/agents-skills-starter-kit -a github-copilot"
+      }
+    },
+    {
+      "id": "cline",
+      "adapter": "./adapters/cline",
+      "install": {
+        "type": "universal",
+        "command": "npx skills add JYBLOCKS/agents-skills-starter-kit -a cline"
+      }
+    },
+    {
+      "id": "universal",
+      "adapter": "./adapters/generic",
+      "install": {
+        "type": "universal",
+        "command": "npx skills add JYBLOCKS/agents-skills-starter-kit"
+      }
+    }
+  ],
+  "exports": {
+    "agents": [
+      {
+        "name": "business-agent",
+        "path": "./agents/business-agent"
+      },
+      {
+        "name": "spec-agent",
+        "path": "./agents/spec-agent"
+      },
+      {
+        "name": "orchestrator-agent",
+        "path": "./agents/orchestrator-agent"
+      },
+      {
+        "name": "implementation-agent",
+        "path": "./agents/implementation-agent"
+      },
+      {
+        "name": "review-agent",
+        "path": "./agents/review-agent"
+      },
+      {
+        "name": "docs-agent",
+        "path": "./agents/docs-agent"
+      }
+    ],
+    "skills": [
+      {
+        "name": "adapter-creation",
+        "path": "./skills/adapter-creation"
+      },
+      {
+        "name": "adapter-generation",
+        "path": "./skills/adapter-generation"
+      },
+      {
+        "name": "agent-creation",
+        "path": "./skills/agent-creation"
+      },
+      {
+        "name": "architecture-planning",
+        "path": "./skills/architecture-planning"
+      },
+      {
+        "name": "caveman",
+        "path": "./skills/caveman"
+      },
+      {
+        "name": "checklist-creation",
+        "path": "./skills/checklist-creation"
+      },
+      {
+        "name": "code-review",
+        "path": "./skills/code-review"
+      },
+      {
+        "name": "context-creation",
+        "path": "./skills/context-creation"
+      },
+      {
+        "name": "creator-intake",
+        "path": "./skills/creator-intake"
+      },
+      {
+        "name": "creator-validation",
+        "path": "./skills/creator-validation"
+      },
+      {
+        "name": "docs-sync",
+        "path": "./skills/docs-sync"
+      },
+      {
+        "name": "frontend-design",
+        "path": "./skills/frontend-design"
+      },
+      {
+        "name": "frontend-developer",
+        "path": "./skills/frontend-developer"
+      },
+      {
+        "name": "release-notes",
+        "path": "./skills/release-notes"
+      },
+      {
+        "name": "repo-analysis",
+        "path": "./skills/repo-analysis"
+      },
+      {
+        "name": "requirements-extraction",
+        "path": "./skills/requirements-extraction"
+      },
+      {
+        "name": "rule-creation",
+        "path": "./skills/rule-creation"
+      },
+      {
+        "name": "runbook-creation",
+        "path": "./skills/runbook-creation"
+      },
+      {
+        "name": "skill-creation",
+        "path": "./skills/skill-creation"
+      },
+      {
+        "name": "spec-creation",
+        "path": "./skills/spec-creation"
+      },
+      {
+        "name": "spec-writing",
+        "path": "./skills/spec-writing"
+      },
+      {
+        "name": "task-breakdown",
+        "path": "./skills/task-breakdown"
+      },
+      {
+        "name": "template-creation",
+        "path": "./skills/template-creation"
+      },
+      {
+        "name": "test-planning",
+        "path": "./skills/test-planning"
+      }
+    ],
+    "optionalAgents": [
+      {
+        "name": "adapter-creator-agent",
+        "path": "./optional/agents/adapter-creator-agent"
+      },
+      {
+        "name": "agent-creator-agent",
+        "path": "./optional/agents/agent-creator-agent"
+      },
+      {
+        "name": "checklist-creator-agent",
+        "path": "./optional/agents/checklist-creator-agent"
+      },
+      {
+        "name": "context-creator-agent",
+        "path": "./optional/agents/context-creator-agent"
+      },
+      {
+        "name": "creator-orchestrator-agent",
+        "path": "./optional/agents/creator-orchestrator-agent"
+      },
+      {
+        "name": "rule-creator-agent",
+        "path": "./optional/agents/rule-creator-agent"
+      },
+      {
+        "name": "runbook-creator-agent",
+        "path": "./optional/agents/runbook-creator-agent"
+      },
+      {
+        "name": "skill-creator-agent",
+        "path": "./optional/agents/skill-creator-agent"
+      },
+      {
+        "name": "spec-creator-agent",
+        "path": "./optional/agents/spec-creator-agent"
+      },
+      {
+        "name": "template-creator-agent",
+        "path": "./optional/agents/template-creator-agent"
+      }
+    ],
+    "optionalModules": [
+      {
+        "name": "creator-assets",
+        "path": "./optional/creators"
+      },
+      {
+        "name": "creator-runbooks",
+        "path": "./optional/runbooks"
+      }
+    ],
+    "adapters": [
+      {
+        "name": "generic",
+        "path": "./adapters/generic"
+      },
+      {
+        "name": "openai",
+        "path": "./adapters/openai"
+      },
+      {
+        "name": "claude-code",
+        "path": "./adapters/claude-code"
+      },
+      {
+        "name": "opencode",
+        "path": "./adapters/opencode"
+      },
+      {
+        "name": "cursor",
+        "path": "./adapters/cursor"
+      },
+      {
+        "name": "windsurf",
+        "path": "./adapters/windsurf"
+      },
+      {
+        "name": "github-copilot",
+        "path": "./adapters/github-copilot"
+      },
+      {
+        "name": "cline",
+        "path": "./adapters/cline"
+      },
+      {
+        "name": "gemini-cli",
+        "path": "./adapters/gemini-cli"
+      },
+      {
+        "name": "codex",
+        "path": "./adapters/codex"
+      }
+    ]
+  }
+}
