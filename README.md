@@ -32,6 +32,8 @@ That behavior matters because the starter kit keeps two different concepts in th
 - `skills/`: the install-facing discovery surface that the CLI and Codex plugin actually read
 - `optional/skills/`: the optional authoring source for advanced skills that are not part of the minimal happy path
 
+you should now see combined list that includes both core skills and the formerly optional ones.
+
 To make optional skills selectable during installation, this repository mirrors the installable optional skills into `skills/`.
 
 That means:
@@ -40,7 +42,7 @@ That means:
 - the minimal/core vs optional distinction still exists in documentation and authoring layout
 - the universal installer and the Codex plugin see the same skill set
 
-## Why Optional Skills Now Appear
+## Why Optional Skills Appear
 
 The original issue was that the installer only enumerated `skills/`.
 
@@ -49,14 +51,6 @@ Even if `optional/skills/` was exported in package metadata, the real installer 
 1. keep optional skills authored under `optional/skills/`
 2. mirror those installable skills into `skills/`
 3. point package validation and the Codex plugin at the same install-facing `skills/` surface
-
-If you run:
-
-```bash
-npx skills add . -l
-```
-
-you should now see one combined list that includes both core skills and the formerly optional ones.
 
 ## Pick Your Agent
 
