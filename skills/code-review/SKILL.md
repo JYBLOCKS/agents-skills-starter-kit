@@ -4,16 +4,21 @@ description: Review changes for regressions, contract mismatches, quality gaps, 
 trigger: Use this when implementation work is ready for review and the priority is finding bugs, risks, regressions, or missing evidence rather than praising the change.
 metadata:
   author: starter-kit
-  version: 0.2.0
-  scope: Owns review findings and residual risk assessment, but does not replace implementation or business approval.
+  version: 0.3.0
+  scope: Owns the code-review workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
   auto-invoke: true
 allowed-tools:
   - generic
   - openai
   - claude-code
   - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
 ---
-
 # code-review
 
 ## Purpose

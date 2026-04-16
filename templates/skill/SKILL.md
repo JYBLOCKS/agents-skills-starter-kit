@@ -3,14 +3,22 @@ name: <skill-name>
 description: <what this skill does and why it exists>
 trigger: <when this skill should be activated and what outcome it is meant to drive>
 metadata:
-  author: <author>
-  version: 0.1.0
-  scope: <what this skill owns and where it stops>
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the starter structure for Skill SKILL, but does not replace approved repository-specific decisions.
   auto-invoke: false
 allowed-tools:
   - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
 ---
-
 # <skill-name>
 
 ## Purpose

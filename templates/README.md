@@ -1,3 +1,24 @@
+---
+name: templates
+description: Catalog and usage guidance for starter kit templates.
+trigger: Use this when browsing the available Templates resources in the repository.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns discoverability for Templates, but does not replace the canonical documents it references.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # Templates
 
 Use these templates when adding new repository assets:

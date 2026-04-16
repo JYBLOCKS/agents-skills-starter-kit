@@ -1,3 +1,24 @@
+---
+name: rule-creator-agent-example
+description: Example invocation and output shape for optional rule-creator-agent.
+trigger: Use this when you need a concrete example of how rule-creator-agent should be invoked or how it should respond.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns a reference example for rule-creator-agent, but does not redefine the canonical contract.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # rule-creator-agent Example
 
 ## Phase 1: Intent

@@ -1,3 +1,24 @@
+---
+name: matrix
+description: Creator contract document for Matrix.
+trigger: Use this when you need the canonical structure, requirements, or constraints defined in Matrix.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the canonical requirements for Matrix, but does not replace the concrete artifacts that implement them.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # Creator Matrix
 
 | Artifact Family | Creator Agent | Creator Skill | Primary Output |

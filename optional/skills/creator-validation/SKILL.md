@@ -1,3 +1,24 @@
+---
+name: creator-validation
+description: Optional skill package for creator-validation.
+trigger: Use this when creator-validation is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the creator-validation workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
+  auto-invoke: true
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # creator-validation
 
 ## Purpose

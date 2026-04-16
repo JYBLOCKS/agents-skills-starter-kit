@@ -1,3 +1,24 @@
+---
+name: skill-creator-agent-example
+description: Example invocation and output shape for optional skill-creator-agent.
+trigger: Use this when you need a concrete example of how skill-creator-agent should be invoked or how it should respond.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns a reference example for skill-creator-agent, but does not redefine the canonical contract.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # skill-creator-agent Example
 
 ## Phase 1: Intent

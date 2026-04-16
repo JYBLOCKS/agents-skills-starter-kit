@@ -1,3 +1,24 @@
+---
+name: product-context
+description: Reusable shared context for Product Context.
+trigger: Use this when work depends on stable shared context from Product Context.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns stable shared context for Product Context, but does not replace approved specs or current repository facts.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # Product Context
 
 ## Product Shape

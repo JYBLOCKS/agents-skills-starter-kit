@@ -1,3 +1,24 @@
+---
+name: end-to-end-example
+description: Repeatable workflow document for End To End Example.
+trigger: Use this when you need the repeatable workflow documented in End To End Example.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the repeatable workflow for End To End Example, but does not replace underlying contracts or repository rules.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # End-to-End Example
 
 This example shows the default flow for a repository change request.

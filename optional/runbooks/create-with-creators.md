@@ -1,3 +1,24 @@
+---
+name: create-with-creators
+description: Optional creator workflow for Create With Creators.
+trigger: Use this when you need the repeatable workflow documented in Create With Creators.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the repeatable workflow for Create With Creators, but does not replace underlying contracts or repository rules.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # Create With Creators
 
 1. Start with `optional/agents/creator-orchestrator-agent/` when the artifact family is unclear.

@@ -1,3 +1,24 @@
+---
+name: new-agent
+description: Repeatable workflow document for New Agent.
+trigger: Use this when you need the repeatable workflow documented in New Agent.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the repeatable workflow for New Agent, but does not replace underlying contracts or repository rules.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # New Agent Runbook
 
 1. Copy `templates/agent/`.

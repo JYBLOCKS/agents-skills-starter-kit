@@ -4,16 +4,21 @@ description: Define the right level of validation for a change based on scope, b
 trigger: Use this when a spec or implementation needs a clear validation strategy that matches the risk of the change.
 metadata:
   author: starter-kit
-  version: 0.2.0
-  scope: Owns validation planning and evidence expectations, but does not replace execution or review.
+  version: 0.3.0
+  scope: Owns the test-planning workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
   auto-invoke: true
 allowed-tools:
   - generic
   - openai
   - claude-code
   - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
 ---
-
 # test-planning
 
 ## Purpose

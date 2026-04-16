@@ -1,3 +1,24 @@
+---
+name: creator-intake
+description: Optional skill package for creator-intake.
+trigger: Use this when creator-intake is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the creator-intake workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
+  auto-invoke: true
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # creator-intake
 
 ## Purpose

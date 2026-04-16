@@ -1,3 +1,24 @@
+---
+name: rule-creation
+description: Optional skill package for rule-creation.
+trigger: Use this when rule-creation is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the rule-creation workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
+  auto-invoke: true
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # rule-creation
 
 ## Purpose

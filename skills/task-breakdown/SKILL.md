@@ -4,16 +4,21 @@ description: Break an approved spec into ordered implementation tasks with depen
 trigger: Use this when a spec is approved and the team needs coherent implementation slices, routing guidance, or safer sequencing before execution starts.
 metadata:
   author: starter-kit
-  version: 0.2.0
-  scope: Owns work decomposition and sequencing, but does not redefine the spec or business scope.
+  version: 0.3.0
+  scope: Owns the task-breakdown workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
   auto-invoke: true
 allowed-tools:
   - generic
   - openai
   - claude-code
   - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
 ---
-
 # task-breakdown
 
 ## Purpose

@@ -1,3 +1,24 @@
+---
+name: business-agent-rules
+description: Local behavioral rules for business-agent.
+trigger: Use this when business-agent is active and its local behavioral constraints need to be applied.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns local behavioral constraints for business-agent, but does not replace repository-wide rules.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # business-agent Rules
 
 1. Optimize for clarity of outcome before solution detail.

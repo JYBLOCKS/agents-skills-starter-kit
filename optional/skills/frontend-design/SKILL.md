@@ -4,16 +4,21 @@ description: Define intentional frontend visual direction, layout decisions, and
 trigger: Use this when the task is primarily about UI direction, layout, visual language, interaction style, or translating product intent into a coherent frontend design approach.
 metadata:
   author: starter-kit
-  version: 0.1.0
-  scope: Owns design direction and UI decision-making for frontend work, but does not own production implementation.
-  auto-invoke: false
+  version: 0.3.0
+  scope: Owns the frontend-design workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
+  auto-invoke: true
 allowed-tools:
   - generic
   - openai
   - claude-code
   - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
 ---
-
 # frontend-design
 
 ## Purpose

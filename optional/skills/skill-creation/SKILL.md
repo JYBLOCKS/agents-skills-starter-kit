@@ -4,16 +4,21 @@ description: Create or update a repository skill using the single-file SKILL.md 
 trigger: Use this when the user wants to create or update a skill package, especially when they need help defining triggers, scope, workflow, rules, checklist, or supporting references.
 metadata:
   author: starter-kit
-  version: 0.2.0
-  scope: Produces complete skill drafts and validates them against the repository skill contract.
-  auto-invoke: false
+  version: 0.3.0
+  scope: Owns the skill-creation workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
+  auto-invoke: true
 allowed-tools:
   - generic
   - openai
   - claude-code
   - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
 ---
-
 # skill-creation
 
 ## Purpose

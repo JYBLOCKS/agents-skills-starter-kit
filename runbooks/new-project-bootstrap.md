@@ -1,3 +1,24 @@
+---
+name: new-project-bootstrap
+description: Repeatable workflow document for New Project Bootstrap.
+trigger: Use this when you need the repeatable workflow documented in New Project Bootstrap.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the repeatable workflow for New Project Bootstrap, but does not replace underlying contracts or repository rules.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # New Project Bootstrap
 
 1. Copy the repository or chosen templates into a new workspace.

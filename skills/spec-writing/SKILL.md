@@ -4,16 +4,21 @@ description: Produce implementation-ready specs from approved intent, repository
 trigger: Use this when business intent has been clarified and the next step is to create a decision-complete spec that implementers can follow safely.
 metadata:
   author: starter-kit
-  version: 0.2.0
-  scope: Owns spec drafting and validation planning, but does not own implementation or business prioritization.
+  version: 0.3.0
+  scope: Owns the spec-writing workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
   auto-invoke: true
 allowed-tools:
   - generic
   - openai
   - claude-code
   - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
 ---
-
 # spec-writing
 
 ## Purpose

@@ -4,16 +4,21 @@ description: Implement or refine production frontend code with maintainable stru
 trigger: Use this when the task requires writing, changing, or validating real frontend code for components, pages, interactions, styling, or UI behavior.
 metadata:
   author: starter-kit
-  version: 0.1.0
-  scope: Owns frontend implementation and refinement, but does not replace dedicated design direction work when the visual language is still undefined.
-  auto-invoke: false
+  version: 0.3.0
+  scope: Owns the frontend-developer workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
+  auto-invoke: true
 allowed-tools:
   - generic
   - openai
   - claude-code
   - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
 ---
-
 # frontend-developer
 
 ## Purpose
