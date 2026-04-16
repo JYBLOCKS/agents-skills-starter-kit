@@ -1,3 +1,24 @@
+---
+name: generic
+description: Tool adapter guidance for generic.
+trigger: Use this when mapping the neutral core into generic without forking the shared repository content.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the mapping from the neutral core into generic, but does not replace the repository source of truth.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # Generic Adapter
 
 Use this adapter as the default contract for any coding tool that does not yet have a dedicated folder.
@@ -7,7 +28,7 @@ Use this adapter as the default contract for any coding tool that does not yet h
 - Read shared context from `context/`
 - Read global and category rules from `rules/`
 - Discover agents from `agents/*-agent/`
-- Discover skills from `skills/*/`
+- Discover installable skills from `skills/*/`
 - Read approved specs from `specs/`
 
 ## Naming Conventions
@@ -27,6 +48,7 @@ Use this adapter as the default contract for any coding tool that does not yet h
 
 - Reference shared Markdown files directly when the tool can access the repo.
 - Copy prompts or rules only if the tool requires a specific local config path.
+- Treat `skills/` as the install and discovery surface; optional skill authoring still belongs in `optional/skills/` and must be mirrored into `skills/`.
 
 ## Minimum Setup
 

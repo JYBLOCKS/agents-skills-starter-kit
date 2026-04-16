@@ -1,3 +1,24 @@
+---
+name: agents
+description: Catalog and structure overview for the core agent packages.
+trigger: Use this when browsing the available Agents resources in the repository.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns discoverability for Agents, but does not replace the canonical documents it references.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # Agents
 
 Agents are decision-making packages that coordinate work, apply context, and hand off outputs.

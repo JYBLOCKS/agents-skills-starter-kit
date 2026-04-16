@@ -1,3 +1,24 @@
+---
+name: opencode
+description: Tool adapter guidance for opencode.
+trigger: Use this when mapping the neutral core into opencode without forking the shared repository content.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the mapping from the neutral core into opencode, but does not replace the repository source of truth.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # OpenCode Adapter
 
 ## Purpose

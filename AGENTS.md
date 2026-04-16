@@ -1,3 +1,24 @@
+---
+name: agents-guide
+description: Primary routing map and resource index for the starter kit.
+trigger: Use this when you need to choose the right agent, skill, rule, or repository resource before starting work.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns repository navigation and routing guidance, but does not replace the underlying source documents it points to.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # AGENTS Guide
 
 Use this file as the main navigation map for the starter kit.
@@ -25,6 +46,7 @@ Use this file as the main navigation map for the starter kit.
 | `review-agent` | `agent` | Reviews regressions, rule compliance, and residual risk | [agents/review-agent/agent.md](agents/review-agent/agent.md) |
 | `docs-agent` | `agent` | Keeps docs, templates, and onboarding paths aligned | [agents/docs-agent/agent.md](agents/docs-agent/agent.md) |
 | `repo-analysis` | `skill` | Grounds work in the current repository structure and risks | [skills/repo-analysis/SKILL.md](skills/repo-analysis/SKILL.md) |
+| `caveman` | `skill` | Forces ultra-compact, token-efficient output without dropping correctness | [skills/caveman/SKILL.md](skills/caveman/SKILL.md) |
 | `requirements-extraction` | `skill` | Converts requests into explicit goals, constraints, and acceptance language | [skills/requirements-extraction/SKILL.md](skills/requirements-extraction/SKILL.md) |
 | `spec-writing` | `skill` | Drafts implementation-ready specs from approved intent | [skills/spec-writing/SKILL.md](skills/spec-writing/SKILL.md) |
 | `task-breakdown` | `skill` | Breaks approved work into ordered slices with done criteria | [skills/task-breakdown/SKILL.md](skills/task-breakdown/SKILL.md) |
@@ -38,7 +60,10 @@ Use this file as the main navigation map for the starter kit.
 | `checklists/` | `checklist` | Completion gates for specs, implementation, review, and docs | [checklists/README.md](checklists/README.md) |
 | `runbooks/` | `runbook` | Core repeatable workflows for using and extending the starter | [runbooks/README.md](runbooks/README.md) |
 | `templates/` | `template` | Minimal templates for new agents, skills, specs, and adapters | [templates/README.md](templates/README.md) |
+| `distribution/` | `distribution` | Canonical package metadata, host export map, and install contract | [distribution/README.md](distribution/README.md) |
+| `plugins/` | `plugin` | Native local plugin wrappers that point back to the neutral core | [plugins/ai-starter-kit/README.md](plugins/ai-starter-kit/README.md) |
 | `optional/` | `creator` | Advanced creator module and guided artifact-generation assets | [optional/README.md](optional/README.md) |
+| `optional/skills/` | `skill` | Installable advanced skills that extend the starter beyond the minimal path | [optional/README.md](optional/README.md) |
 
 ## Minimal Happy Path
 

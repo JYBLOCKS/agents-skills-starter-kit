@@ -1,3 +1,24 @@
+---
+name: sample-product-spec
+description: Example specification document for Sample Product Spec.
+trigger: Use this when you need a concrete example spec based on Sample Product Spec.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns an illustrative spec example for Sample Product Spec, but does not replace an approved project spec.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # Sample Product Spec
 
 ## Problem

@@ -1,3 +1,24 @@
+---
+name: rule-creator-agent
+description: Role definition and operating contract for optional rule-creator-agent.
+trigger: Use this when the task matches the role, mission, and decision boundaries owned by rule-creator-agent.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the role definition, mission, and decision boundaries for rule-creator-agent, but does not replace shared rules, context, or approved specs.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # rule-creator-agent
 
 ## Identity

@@ -4,16 +4,21 @@ description: Convert raw requests into explicit goals, non-goals, constraints, p
 trigger: Use this when a request is under-specified, mixes goals with solutions, or needs clearer business framing before a spec or implementation plan can be trusted.
 metadata:
   author: starter-kit
-  version: 0.2.0
-  scope: Owns requirement clarification and acceptance framing, but does not own low-level implementation design.
+  version: 0.3.0
+  scope: Owns the requirements-extraction workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
   auto-invoke: true
 allowed-tools:
   - generic
   - openai
   - claude-code
   - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
 ---
-
 # requirements-extraction
 
 ## Purpose

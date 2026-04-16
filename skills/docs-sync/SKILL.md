@@ -4,16 +4,21 @@ description: Keep README, guides, templates, and other repository docs aligned w
 trigger: Use this when the repository structure, workflow, templates, or public-facing docs need to match current reality after a change.
 metadata:
   author: starter-kit
-  version: 0.2.0
-  scope: Owns documentation drift detection and sync work, but does not redefine product or implementation scope.
+  version: 0.3.0
+  scope: Owns the docs-sync workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
   auto-invoke: true
 allowed-tools:
   - generic
   - openai
   - claude-code
   - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
 ---
-
 # docs-sync
 
 ## Purpose

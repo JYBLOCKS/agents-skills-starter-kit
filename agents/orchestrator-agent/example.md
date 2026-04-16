@@ -1,3 +1,24 @@
+---
+name: orchestrator-agent-example
+description: Example invocation and output shape for orchestrator-agent.
+trigger: Use this when you need a concrete example of how orchestrator-agent should be invoked or how it should respond.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns a reference example for orchestrator-agent, but does not redefine the canonical contract.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # orchestrator-agent Example
 
 ## Input

@@ -1,0 +1,38 @@
+{
+  "name": "ai-starter-kit",
+  "version": "0.3.0",
+  "description": "Portable starter kit for shared agents, reusable skills, and thin multi-host adapters.",
+  "author": {
+    "name": "JYBLOCKS",
+    "url": "https://github.com/JYBLOCKS"
+  },
+  "homepage": "https://github.com/JYBLOCKS/agents-skills-starter-kit",
+  "repository": "https://github.com/JYBLOCKS/agents-skills-starter-kit",
+  "license": "MIT",
+  "keywords": [
+    "agents",
+    "skills",
+    "starter-kit",
+    "codex",
+    "multi-tool"
+  ],
+  "skills": "../../../skills/",
+  "interface": {
+    "displayName": "AI starter kit",
+    "shortDescription": "Starter kit for reusable agents, skills, rules, context, and delivery workflows",
+    "longDescription": "Use AI starter kit to bootstrap agent-driven delivery flows with shared role packages, reusable skills, thin adapters, and portable context across Codex and other coding assistants.",
+    "developerName": "JYBLOCKS",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/JYBLOCKS/agents-skills-starter-kit",
+    "privacyPolicyURL": "https://github.com/JYBLOCKS/agents-skills-starter-kit/blob/main/README.md",
+    "termsOfServiceURL": "https://github.com/JYBLOCKS/agents-skills-starter-kit/blob/main/LICENSE",
+    "defaultPrompt": "Use the starter kit routing map, choose the right agent, and apply the matching skills, rules, and context for this task",
+    "brandColor": "#111111",
+    "screenshots": []
+  }
+}

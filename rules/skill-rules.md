@@ -1,3 +1,24 @@
+---
+name: skill-rules
+description: Shared rule document for Skill Rules.
+trigger: Use this when shared operating constraints from Skill Rules must govern the work.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns shared operating constraints in Skill Rules, but does not replace task-specific agent or skill guidance.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # Skill Rules
 
 1. Skills should do one thing well.

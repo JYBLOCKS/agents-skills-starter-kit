@@ -1,3 +1,24 @@
+---
+name: implementation-agent
+description: Role definition and operating contract for implementation-agent.
+trigger: Use this when the task matches the role, mission, and decision boundaries owned by implementation-agent.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the role definition, mission, and decision boundaries for implementation-agent, but does not replace shared rules, context, or approved specs.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # implementation-agent
 
 ## Identity

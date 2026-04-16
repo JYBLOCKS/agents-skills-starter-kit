@@ -4,16 +4,21 @@ description: Inspect a repository and summarize structure, patterns, risks, and 
 trigger: Use this when work needs grounding in the current repository before making decisions, writing a spec, routing work, or implementing changes.
 metadata:
   author: starter-kit
-  version: 0.2.0
-  scope: Owns repository grounding and change-surface discovery, but does not own implementation decisions.
+  version: 0.3.0
+  scope: Owns the repo-analysis workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
   auto-invoke: true
 allowed-tools:
   - generic
   - openai
   - claude-code
   - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
 ---
-
 # repo-analysis
 
 ## Purpose

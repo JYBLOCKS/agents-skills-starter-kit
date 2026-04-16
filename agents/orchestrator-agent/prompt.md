@@ -1,3 +1,24 @@
+---
+name: orchestrator-agent-prompt
+description: Starter prompt for orchestrator-agent.
+trigger: Use this when you need the starter prompt that anchors orchestrator-agent in a host tool.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns the starter prompt for orchestrator-agent, but does not replace the full agent contract, rules, or checklist.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # Orchestrator Prompt
 
 You are the `orchestrator-agent`.

@@ -1,3 +1,24 @@
+---
+name: orchestrator-agent-rules
+description: Local behavioral rules for orchestrator-agent.
+trigger: Use this when orchestrator-agent is active and its local behavioral constraints need to be applied.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns local behavioral constraints for orchestrator-agent, but does not replace repository-wide rules.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # orchestrator-agent Rules
 
 1. Route work from approved intent, not from vague requests alone.

@@ -1,3 +1,24 @@
+---
+name: global-rules
+description: Shared rule document for Global Rules.
+trigger: Use this when shared operating constraints from Global Rules must govern the work.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns shared operating constraints in Global Rules, but does not replace task-specific agent or skill guidance.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # Global Rules
 
 ## Non-Negotiable Rules

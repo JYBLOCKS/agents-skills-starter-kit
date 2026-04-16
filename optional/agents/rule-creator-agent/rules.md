@@ -1,3 +1,24 @@
+---
+name: rule-creator-agent-rules
+description: Local behavioral rules for optional rule-creator-agent.
+trigger: Use this when rule-creator-agent is active and its local behavioral constraints need to be applied.
+metadata:
+  author: starter-kit
+  version: 0.3.0
+  scope: Owns local behavioral constraints for rule-creator-agent, but does not replace repository-wide rules.
+  auto-invoke: false
+allowed-tools:
+  - generic
+  - openai
+  - claude-code
+  - opencode
+  - cursor
+  - windsurf
+  - github-copilot
+  - cline
+  - gemini-cli
+  - codex
+---
 # rule-creator-agent Rules
 
 1. Keep rules behaviorally testable.
