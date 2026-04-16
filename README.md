@@ -1,24 +1,3 @@
----
-name: agents-skills-starter-kit
-description: Top-level installation, onboarding, and distribution guide for the starter kit.
-trigger: Use this when you need the top-level install commands, onboarding path, or public distribution surface for the starter kit.
-metadata:
-  author: starter-kit
-  version: 0.3.0
-  scope: Owns top-level onboarding, installation guidance, and public package framing, but does not replace deeper contracts in the repository.
-  auto-invoke: false
-allowed-tools:
-  - generic
-  - openai
-  - claude-code
-  - opencode
-  - cursor
-  - windsurf
-  - github-copilot
-  - cline
-  - gemini-cli
-  - codex
----
 # Multi-Tool Agent Skills Starter Kit
 
 A minimal, tool-agnostic starter for teams building agent-driven delivery workflows with shared agents, reusable skills, portable context, and thin tool adapters.
