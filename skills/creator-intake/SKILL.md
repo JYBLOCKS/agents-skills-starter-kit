@@ -1,6 +1,6 @@
 ---
 name: creator-intake
-description: Optional skill package for creator-intake.
+description: guide and workflow for creator-intake.
 trigger: Use this when creator-intake is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
 metadata:
   author: starter-kit
@@ -56,7 +56,7 @@ Run the first creator phase: detect the artifact family, clarify the requested o
 
 ## Process
 
-1. Map the request to an artifact family using `optional/creators/matrix.md`.
+1. Map the request to an artifact family using `creators/matrix.md`.
 2. Normalize the expected path pattern.
 3. Identify missing dependencies or ambiguous targets.
 

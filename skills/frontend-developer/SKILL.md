@@ -1,6 +1,6 @@
 ---
 name: frontend-developer
-description: Implement or refine production frontend code with maintainable structure, responsive behavior, accessibility coverage, and clear alignment to the intended user experience.
+description: implement or refine production frontend code with maintainable structure, responsive behavior, accessibility coverage, and clear alignment to the intended user experience.
 trigger: Use this when the task requires writing, changing, or validating real frontend code for components, pages, interactions, styling, or UI behavior.
 metadata:
   author: starter-kit

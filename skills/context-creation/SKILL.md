@@ -1,6 +1,6 @@
 ---
 name: context-creation
-description: Optional skill package for context-creation.
+description: guide and workflow for context-creation.
 trigger: Use this when context-creation is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
 metadata:
   author: starter-kit
@@ -35,7 +35,7 @@ Guide the creation of reusable context documents with clear ownership, consumers
 ## Inputs
 
 - context request
-- `optional/creators/questionnaires/context.yaml`
+- `creators/questionnaires/context.yaml`
 - `context/README.md`
 
 ## Outputs

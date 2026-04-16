@@ -1,6 +1,6 @@
 ---
 name: runbook-creation
-description: Optional skill package for runbook-creation.
+description: guide and workflow for runbook-creation.
 trigger: Use this when runbook-creation is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
 metadata:
   author: starter-kit
@@ -35,7 +35,7 @@ Guide the creation of operational runbooks with explicit triggers, prerequisites
 ## Inputs
 
 - runbook request
-- `optional/creators/questionnaires/runbook.yaml`
+- `creators/questionnaires/runbook.yaml`
 - `runbooks/README.md`
 
 ## Outputs

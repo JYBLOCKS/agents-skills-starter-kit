@@ -21,7 +21,7 @@ allowed-tools:
 ---
 # Distribution Contract
 
-The starter ships one canonical repository package and optional host wrappers.
+The starter ships one canonical repository package and host-specific wrappers where needed.
 
 ## Required Metadata
 
@@ -45,7 +45,7 @@ The starter ships one canonical repository package and optional host wrappers.
 
 - Every exported path exists.
 - The install-facing skills export matches the unified skills root under `skills/`.
-- Skills authored under `optional/skills/` are mirrored into `skills/` for installer discovery.
+- The install-facing skills export matches the actual `skills/` folders without extra staging or mirror steps.
 - The package version matches the distribution manifest, Gemini extension, and Codex plugin manifest.
 - Native wrapper files exist for the documented hosts.
 - `README.md` includes only supported install commands.

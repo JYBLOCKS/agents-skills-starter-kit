@@ -1,6 +1,6 @@
 ---
 name: agent-creation
-description: Optional skill package for agent-creation.
+description: guide and workflow for agent-creation.
 trigger: Use this when agent-creation is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
 metadata:
   author: starter-kit
@@ -35,7 +35,7 @@ Guide the full creation of a new agent package from interview answers, repositor
 ## Inputs
 
 - agent request
-- `optional/creators/questionnaires/agent.yaml`
+- `creators/questionnaires/agent.yaml`
 - `agents/CONTRACT.md`
 - `templates/agent/`
 

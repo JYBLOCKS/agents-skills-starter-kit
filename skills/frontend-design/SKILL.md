@@ -1,6 +1,6 @@
 ---
 name: frontend-design
-description: Define intentional frontend visual direction, layout decisions, and UI system guidance for product work that needs stronger design quality than a generic default.
+description: define intentional frontend visual direction, layout decisions, and UI system guidance for product work that needs stronger design quality than a generic default.
 trigger: Use this when the task is primarily about UI direction, layout, visual language, interaction style, or translating product intent into a coherent frontend design approach.
 metadata:
   author: starter-kit

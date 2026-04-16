@@ -1,6 +1,6 @@
 ---
 name: agents
-description: Catalog and structure overview for the core agent packages.
+description: Catalog and structure overview for the starter kit agent packages.
 trigger: Use this when browsing the available Agents resources in the repository.
 metadata:
   author: starter-kit
@@ -38,9 +38,9 @@ Agents are decision-making packages that coordinate work, apply context, and han
 - Agent rules: `rules/agent-rules.md`
 - Shared context: `context/`
 - Shared runbooks: `runbooks/`
-- Optional creator extensions: `optional/creators/AGENT-CONTRACT.md`
+- Creator extensions: `creators/AGENT-CONTRACT.md`
 
-## Core Agents
+## Delivery Agents
 
 The minimal starter flow is built around:
 
@@ -51,4 +51,4 @@ The minimal starter flow is built around:
 - `review-agent`
 - `docs-agent`
 
-Optional creator agents live under `optional/agents/`.
+Creator agents also live under `agents/` and follow the same package conventions.

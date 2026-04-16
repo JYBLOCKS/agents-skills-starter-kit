@@ -58,6 +58,6 @@ Map the neutral core into OpenCode-style coding sessions so the same agents, ski
 
 ## Invoking Creators
 
-- Route create requests through `optional/agents/creator-orchestrator-agent/` first when the target family is unclear.
-- Load the specialized creator agent, creator skill, and questionnaire for the selected artifact family from `optional/agents/`, `optional/skills/`, and `optional/creators/questionnaires/`.
-- Use `optional/creators/CREATION-PACKAGE-CONTRACT.md` as the required final output shape.
+- Route create requests through `agents/creator-orchestrator-agent/` first when the target family is unclear.
+- Load the specialized creator agent, creator skill, and questionnaire for the selected artifact family from `agents/`, `skills/`, and `creators/questionnaires/`.
+- Use `creators/CREATION-PACKAGE-CONTRACT.md` as the required final output shape.

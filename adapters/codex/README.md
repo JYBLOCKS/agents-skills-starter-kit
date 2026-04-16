@@ -42,7 +42,7 @@ Provide a native local plugin wrapper for Codex while keeping the starter reposi
 ## Reference vs Copy
 
 - The local plugin intentionally references the repository's `skills/` directory.
-- That discovery root includes core skills plus mirrored installable copies of the skills authored in `optional/skills/`.
+- That discovery root includes the full shared skill catalog from `skills/`.
 - Do not move the plugin folder out of this repository unless you also vendor the referenced core files.
 
 ## Minimum Setup

@@ -1,6 +1,6 @@
 ---
 name: release-notes
-description: Optional skill package for release-notes.
+description: guide and workflow for release-notes.
 trigger: Use this when release-notes is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
 metadata:
   author: starter-kit

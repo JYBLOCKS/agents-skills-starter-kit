@@ -34,9 +34,9 @@ Skills are portable capability bundles that agents can invoke across tools.
 - Global rules: `rules/global-rules.md`
 - Skill rules: `rules/skill-rules.md`
 - Skill template: `templates/skill/`
-- Optional creator extensions: `optional/creators/SKILL-CONTRACT.md`
+- Creator extensions: `creators/SKILL-CONTRACT.md`
 
-## Core Skills
+## Starter Skills
 
 The minimal starter path keeps these skills front and center:
 
@@ -69,4 +69,5 @@ Each `SKILL.md` should start with a structured metadata block and then define:
 
 Keep examples inline inside `SKILL.md` when they materially improve usage clarity.
 
-Optional creator skills live under `optional/skills/` as authoring sources and are mirrored into `skills/` so the default installer sees one combined skill catalog.
+All skills are authored directly under `skills/`.
+Creator-oriented skills and delivery-oriented skills follow the same repository contract.

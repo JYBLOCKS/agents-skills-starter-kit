@@ -1,6 +1,6 @@
 ---
 name: rule-creation
-description: Optional skill package for rule-creation.
+description: guide and workflow for rule-creation.
 trigger: Use this when rule-creation is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
 metadata:
   author: starter-kit
@@ -35,7 +35,7 @@ Guide the creation of a new rule document or rule set with explicit audience, sc
 ## Inputs
 
 - rule request
-- `optional/creators/questionnaires/rule.yaml`
+- `creators/questionnaires/rule.yaml`
 - `rules/README.md`
 
 ## Outputs

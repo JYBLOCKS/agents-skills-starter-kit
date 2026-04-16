@@ -1,6 +1,6 @@
 ---
 name: adapter-creation
-description: Optional skill package for adapter-creation.
+description: guide and workflow for adapter-creation.
 trigger: Use this when adapter-creation is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
 metadata:
   author: starter-kit
@@ -38,7 +38,7 @@ Guide the creation of tool adapters that map the neutral repository core into a 
 ## Inputs
 
 - adapter request
-- `optional/creators/questionnaires/adapter.yaml`
+- `creators/questionnaires/adapter.yaml`
 - `adapters/CONTRACT.md`
 - `templates/tool-adapter.md`
 

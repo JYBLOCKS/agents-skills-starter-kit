@@ -1,6 +1,6 @@
 ---
 name: adapter-generation
-description: Optional skill package for adapter-generation.
+description: guide and workflow for adapter-generation.
 trigger: Use this when adapter-generation is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
 metadata:
   author: starter-kit

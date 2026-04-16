@@ -48,7 +48,7 @@ Use this adapter as the default contract for any coding tool that does not yet h
 
 - Reference shared Markdown files directly when the tool can access the repo.
 - Copy prompts or rules only if the tool requires a specific local config path.
-- Treat `skills/` as the install and discovery surface; optional skill authoring still belongs in `optional/skills/` and must be mirrored into `skills/`.
+- Treat `skills/` as the install and discovery surface and the direct authoring home for all skills.
 
 ## Minimum Setup
 
@@ -58,7 +58,7 @@ Use this adapter as the default contract for any coding tool that does not yet h
 
 ## Invoking Creators
 
-- Use `optional/agents/creator-orchestrator-agent/` when the artifact family is unclear.
+- Use `agents/creator-orchestrator-agent/` when the artifact family is unclear.
 - Use the matching specialized creator agent when the artifact family is known.
-- Load the matching creator skill and questionnaire from `optional/skills/` and `optional/creators/questionnaires/`.
-- Expect the final output to follow `optional/creators/CREATION-PACKAGE-CONTRACT.md`.
+- Load the matching creator skill and questionnaire from `skills/` and `creators/questionnaires/`.
+- Expect the final output to follow `creators/CREATION-PACKAGE-CONTRACT.md`.

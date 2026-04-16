@@ -1,6 +1,6 @@
 ---
 name: creator-validation
-description: Optional skill package for creator-validation.
+description: guide and workflow for creator-validation.
 trigger: Use this when creator-validation is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
 metadata:
   author: starter-kit
@@ -55,7 +55,7 @@ Run the final creator phase: validate draft outputs against the target contract 
 
 ## Process
 
-1. Compare the draft package to `optional/creators/CREATION-PACKAGE-CONTRACT.md`.
+1. Compare the draft package to `creators/CREATION-PACKAGE-CONTRACT.md`.
 2. Compare the drafted artifact to its governing contract.
 3. Produce a concise validation checklist.
 

@@ -1,6 +1,6 @@
 ---
 name: architecture-planning
-description: Optional skill package for architecture-planning.
+description: guide and workflow for architecture-planning.
 trigger: Use this when architecture-planning is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
 metadata:
   author: starter-kit

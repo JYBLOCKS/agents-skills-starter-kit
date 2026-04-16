@@ -26,17 +26,16 @@ Use this runbook when updating install flows, wrapper artifacts, or public packa
 ## Update Version
 
 1. Bump `package.json`.
-2. Mirror the version in `distribution/manifest.json`.
-3. Mirror the version in `gemini-extension.json`.
-4. Mirror the version in `plugins/ai-starter-kit/.codex-plugin/plugin.json`.
+2. Update the version in `distribution/manifest.json`.
+3. Update the version in `gemini-extension.json`.
+4. Update the version in `plugins/ai-starter-kit/.codex-plugin/plugin.json`.
 
 ## Update Public Install Surface
 
 1. Add or update the host adapter folder in `adapters/`.
 2. Update `distribution/manifest.json`.
-3. Sync mirrored optional skills from `optional/skills/` into `skills/`.
-4. Update `README.md` install tables and verification steps.
-5. Keep the neutral core referenced instead of duplicated when possible.
+3. Update `README.md` install tables and verification steps.
+4. Keep the neutral core referenced instead of duplicated when possible.
 
 ## Validate
 

@@ -34,4 +34,4 @@ Use these directly for the starter's happy path.
 
 Templates are intentionally small. Extend them only when a recurring pattern proves necessary.
 
-For guided artifact generation, see the optional creator module in [optional/README.md](../optional/README.md).
+For guided artifact generation, see [creators/README.md](../creators/README.md).

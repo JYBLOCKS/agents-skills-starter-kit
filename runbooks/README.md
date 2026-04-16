@@ -33,4 +33,4 @@ Start with:
 - `spec-lifecycle.md`
 - `end-to-end-example.md`
 
-Creator-specific runbooks live under `optional/runbooks/`.
+Creator runbooks live alongside the main runbooks under `runbooks/`.

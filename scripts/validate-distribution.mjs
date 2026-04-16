@@ -22,12 +22,12 @@ function assertReadmeIncludes(readme, value) {
   assert(readme.includes(value), `README.md is missing documented install path: ${value}`);
 }
 
-function normalizeExportPath(relativePath) {
-  return relativePath.replace(/^\.\//, "").replace(/\\/g, "/").replace(/\/$/, "");
+function assertTextExcludes(text, value, label) {
+  assert(!text.includes(value), `${label} still contains deprecated text: ${value}`);
 }
 
-function normalizeByName(entries) {
-  return [...entries].sort((left, right) => left.name.localeCompare(right.name));
+function normalizeExportPath(relativePath) {
+  return relativePath.replace(/^\.\//, "").replace(/\\/g, "/").replace(/\/$/, "");
 }
 
 function listDirectDirectoryNames(relativePath) {
@@ -53,22 +53,6 @@ function assertExportGroupMatchesDirectories(groupName, relativePath) {
   assert(
     JSON.stringify(actualPaths) === JSON.stringify(expectedPaths),
     `Export group ${groupName} does not match ${relativePath}`
-  );
-}
-
-function assertEntryGroupMatchesDirectories(groupName, entries, relativePath) {
-  assert(Array.isArray(entries), `Missing entry group: ${groupName}`);
-
-  const expectedPaths = listDirectDirectoryNames(relativePath).map((name) =>
-    normalizeExportPath(path.posix.join(relativePath.replace(/\\/g, "/"), name))
-  );
-  const actualPaths = entries
-    .map((item) => normalizeExportPath(item.path))
-    .sort();
-
-  assert(
-    JSON.stringify(actualPaths) === JSON.stringify(expectedPaths),
-    `Entry group ${groupName} does not match ${relativePath}`
   );
 }
 
@@ -100,7 +84,7 @@ const requiredSourceOfTruth = [
   "checklists",
   "runbooks",
   "specs",
-  "optional",
+  "creators",
   "templates",
   "adapters"
 ];
@@ -115,46 +99,15 @@ for (const group of Object.values(manifest.exports)) {
   }
 }
 
-for (const group of Object.values(manifest.skillSourceGroups ?? {})) {
-  for (const item of group) {
-    assertExists(item.path);
-  }
-}
-
 assertExportGroupMatchesDirectories("agents", "agents");
 assertExportGroupMatchesDirectories("skills", normalizeExportPath(manifest.installSurface.skillsRoot));
-assertExportGroupMatchesDirectories("optionalAgents", "optional/agents");
 assertExportGroupMatchesDirectories("adapters", "adapters");
 
 assert(
-  manifest.skillSourceGroups?.core && manifest.skillSourceGroups?.optional,
-  "distribution/manifest.json must define skillSourceGroups.core and skillSourceGroups.optional"
+  manifest.exports.creators?.length === 1 &&
+    normalizeExportPath(manifest.exports.creators[0].path) === "creators",
+  "distribution/manifest.json must export the creators workspace"
 );
-assertEntryGroupMatchesDirectories("skillSourceGroups.optional", manifest.skillSourceGroups.optional, "optional/skills");
-
-const sourceSkillEntries = normalizeByName([
-  ...manifest.skillSourceGroups.core,
-  ...manifest.skillSourceGroups.optional
-]);
-const exportedSkillEntries = normalizeByName(manifest.exports.skills);
-
-assert(
-  JSON.stringify(exportedSkillEntries.map((item) => item.name)) ===
-    JSON.stringify(sourceSkillEntries.map((item) => item.name)),
-  "distribution/manifest.json exports.skills must match the combined skill source groups"
-);
-
-for (const sourceEntry of sourceSkillEntries) {
-  const exportedEntry = exportedSkillEntries.find((item) => item.name === sourceEntry.name);
-  assert(exportedEntry, `Missing exported installable skill: ${sourceEntry.name}`);
-
-  const sourceSkillFile = path.join(root, normalizeExportPath(sourceEntry.path), "SKILL.md");
-  const exportedSkillFile = path.join(root, normalizeExportPath(exportedEntry.path), "SKILL.md");
-  assert(
-    fs.readFileSync(sourceSkillFile, "utf8") === fs.readFileSync(exportedSkillFile, "utf8"),
-    `Installable skill ${sourceEntry.name} must mirror the source SKILL.md`
-  );
-}
 
 for (const host of manifest.hosts) {
   assertExists(host.adapter);
@@ -212,6 +165,31 @@ const requiredReadmeCommands = [
 
 for (const command of requiredReadmeCommands) {
   assertReadmeIncludes(readme, command);
+}
+
+const filesThatMustNotMentionOptional = [
+  "AGENTS.md",
+  "README.md",
+  "agents/README.md",
+  "skills/README.md",
+  "templates/README.md",
+  "distribution/README.md",
+  "distribution/CONTRACT.md",
+  "runbooks/README.md",
+  "runbooks/distribution-maintenance.md",
+  "runbooks/create-with-creators.md",
+  "runbooks/extend-creator.md",
+  "adapters/generic/README.md",
+  "adapters/openai/README.md",
+  "adapters/claude-code/README.md",
+  "adapters/opencode/README.md",
+  "adapters/codex/README.md",
+  "creators/README.md"
+];
+
+for (const relativePath of filesThatMustNotMentionOptional) {
+  const text = fs.readFileSync(path.join(root, relativePath), "utf8");
+  assertTextExcludes(text, "optional/", relativePath);
 }
 
 console.log("Distribution validation passed.");

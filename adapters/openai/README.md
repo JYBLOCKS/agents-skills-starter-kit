@@ -59,9 +59,9 @@ Map the neutral core into OpenAI-oriented coding workflows without duplicating t
 
 ## Invoking Creators
 
-- Start with `optional/agents/creator-orchestrator-agent/` when the user asks to create a new repository artifact.
+- Start with `agents/creator-orchestrator-agent/` when the user asks to create a new repository artifact.
 - Switch to the specialized creator agent once the artifact family is known.
-- Load the corresponding creator skill and questionnaire from `optional/skills/` and `optional/creators/questionnaires/` so the conversation follows the shared creator contract.
+- Load the corresponding creator skill and questionnaire from `skills/` and `creators/questionnaires/` so the conversation follows the shared creator contract.
 
 ## Notes
 

@@ -15,111 +15,9 @@
     "checklists": "./checklists",
     "runbooks": "./runbooks",
     "specs": "./specs",
-    "optional": "./optional",
+    "creators": "./creators",
     "templates": "./templates",
     "adapters": "./adapters"
-  },
-  "skillSourceGroups": {
-    "core": [
-      {
-        "name": "caveman",
-        "path": "./skills/caveman"
-      },
-      {
-        "name": "repo-analysis",
-        "path": "./skills/repo-analysis"
-      },
-      {
-        "name": "requirements-extraction",
-        "path": "./skills/requirements-extraction"
-      },
-      {
-        "name": "spec-writing",
-        "path": "./skills/spec-writing"
-      },
-      {
-        "name": "task-breakdown",
-        "path": "./skills/task-breakdown"
-      },
-      {
-        "name": "code-review",
-        "path": "./skills/code-review"
-      },
-      {
-        "name": "test-planning",
-        "path": "./skills/test-planning"
-      },
-      {
-        "name": "docs-sync",
-        "path": "./skills/docs-sync"
-      }
-    ],
-    "optional": [
-      {
-        "name": "adapter-creation",
-        "path": "./optional/skills/adapter-creation"
-      },
-      {
-        "name": "adapter-generation",
-        "path": "./optional/skills/adapter-generation"
-      },
-      {
-        "name": "agent-creation",
-        "path": "./optional/skills/agent-creation"
-      },
-      {
-        "name": "architecture-planning",
-        "path": "./optional/skills/architecture-planning"
-      },
-      {
-        "name": "checklist-creation",
-        "path": "./optional/skills/checklist-creation"
-      },
-      {
-        "name": "context-creation",
-        "path": "./optional/skills/context-creation"
-      },
-      {
-        "name": "creator-intake",
-        "path": "./optional/skills/creator-intake"
-      },
-      {
-        "name": "creator-validation",
-        "path": "./optional/skills/creator-validation"
-      },
-      {
-        "name": "frontend-design",
-        "path": "./optional/skills/frontend-design"
-      },
-      {
-        "name": "frontend-developer",
-        "path": "./optional/skills/frontend-developer"
-      },
-      {
-        "name": "release-notes",
-        "path": "./optional/skills/release-notes"
-      },
-      {
-        "name": "rule-creation",
-        "path": "./optional/skills/rule-creation"
-      },
-      {
-        "name": "runbook-creation",
-        "path": "./optional/skills/runbook-creation"
-      },
-      {
-        "name": "skill-creation",
-        "path": "./optional/skills/skill-creation"
-      },
-      {
-        "name": "spec-creation",
-        "path": "./optional/skills/spec-creation"
-      },
-      {
-        "name": "template-creation",
-        "path": "./optional/skills/template-creation"
-      }
-    ]
   },
   "hosts": [
     {
@@ -194,28 +92,68 @@
   "exports": {
     "agents": [
       {
+        "name": "adapter-creator-agent",
+        "path": "./agents/adapter-creator-agent"
+      },
+      {
+        "name": "agent-creator-agent",
+        "path": "./agents/agent-creator-agent"
+      },
+      {
         "name": "business-agent",
         "path": "./agents/business-agent"
       },
       {
-        "name": "spec-agent",
-        "path": "./agents/spec-agent"
+        "name": "checklist-creator-agent",
+        "path": "./agents/checklist-creator-agent"
       },
       {
-        "name": "orchestrator-agent",
-        "path": "./agents/orchestrator-agent"
+        "name": "context-creator-agent",
+        "path": "./agents/context-creator-agent"
+      },
+      {
+        "name": "creator-orchestrator-agent",
+        "path": "./agents/creator-orchestrator-agent"
+      },
+      {
+        "name": "docs-agent",
+        "path": "./agents/docs-agent"
       },
       {
         "name": "implementation-agent",
         "path": "./agents/implementation-agent"
       },
       {
+        "name": "orchestrator-agent",
+        "path": "./agents/orchestrator-agent"
+      },
+      {
         "name": "review-agent",
         "path": "./agents/review-agent"
       },
       {
-        "name": "docs-agent",
-        "path": "./agents/docs-agent"
+        "name": "rule-creator-agent",
+        "path": "./agents/rule-creator-agent"
+      },
+      {
+        "name": "runbook-creator-agent",
+        "path": "./agents/runbook-creator-agent"
+      },
+      {
+        "name": "skill-creator-agent",
+        "path": "./agents/skill-creator-agent"
+      },
+      {
+        "name": "spec-agent",
+        "path": "./agents/spec-agent"
+      },
+      {
+        "name": "spec-creator-agent",
+        "path": "./agents/spec-creator-agent"
+      },
+      {
+        "name": "template-creator-agent",
+        "path": "./agents/template-creator-agent"
       }
     ],
     "skills": [
@@ -316,56 +254,10 @@
         "path": "./skills/test-planning"
       }
     ],
-    "optionalAgents": [
+    "creators": [
       {
-        "name": "adapter-creator-agent",
-        "path": "./optional/agents/adapter-creator-agent"
-      },
-      {
-        "name": "agent-creator-agent",
-        "path": "./optional/agents/agent-creator-agent"
-      },
-      {
-        "name": "checklist-creator-agent",
-        "path": "./optional/agents/checklist-creator-agent"
-      },
-      {
-        "name": "context-creator-agent",
-        "path": "./optional/agents/context-creator-agent"
-      },
-      {
-        "name": "creator-orchestrator-agent",
-        "path": "./optional/agents/creator-orchestrator-agent"
-      },
-      {
-        "name": "rule-creator-agent",
-        "path": "./optional/agents/rule-creator-agent"
-      },
-      {
-        "name": "runbook-creator-agent",
-        "path": "./optional/agents/runbook-creator-agent"
-      },
-      {
-        "name": "skill-creator-agent",
-        "path": "./optional/agents/skill-creator-agent"
-      },
-      {
-        "name": "spec-creator-agent",
-        "path": "./optional/agents/spec-creator-agent"
-      },
-      {
-        "name": "template-creator-agent",
-        "path": "./optional/agents/template-creator-agent"
-      }
-    ],
-    "optionalModules": [
-      {
-        "name": "creator-assets",
-        "path": "./optional/creators"
-      },
-      {
-        "name": "creator-runbooks",
-        "path": "./optional/runbooks"
+        "name": "creators",
+        "path": "./creators"
       }
     ],
     "adapters": [

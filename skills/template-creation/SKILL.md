@@ -1,6 +1,6 @@
 ---
 name: template-creation
-description: Optional skill package for template-creation.
+description: guide and workflow for template-creation.
 trigger: Use this when template-creation is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
 metadata:
   author: starter-kit
@@ -35,7 +35,7 @@ Guide the creation of reusable templates with meaningful placeholders, safe defa
 ## Inputs
 
 - template request
-- `optional/creators/questionnaires/template.yaml`
+- `creators/questionnaires/template.yaml`
 - `templates/README.md`
 
 ## Outputs

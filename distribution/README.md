@@ -39,13 +39,14 @@ The repository root content remains canonical:
 - `checklists/`
 - `runbooks/`
 - `specs/`
-- `optional/`
+- `creators/`
 - `templates/`
 - `adapters/`
 
 ## Unified Install Surface
 
 - `skills/`: install-facing discovery root for all selectable skills
-- `optional/skills/`: canonical authoring source for optional skills that are mirrored into `skills/`
+- `agents/`: canonical home for all agent packages, including creator agents
+- `creators/`: shared creator contracts, questionnaires, and templates
 
-Distribution metadata points at the canonical authoring folders and validates that host wrappers resolve the unified install surface back to them.
+Distribution metadata points at the canonical repository folders and validates that host wrappers resolve the shared install surface back to them.

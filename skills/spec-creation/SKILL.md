@@ -1,6 +1,6 @@
 ---
 name: spec-creation
-description: Optional skill package for spec-creation.
+description: guide and workflow for spec-creation.
 trigger: Use this when spec-creation is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
 metadata:
   author: starter-kit
@@ -35,7 +35,7 @@ Guide the creation of a full spec document using the repository's required and o
 ## Inputs
 
 - spec request
-- `optional/creators/questionnaires/spec.yaml`
+- `creators/questionnaires/spec.yaml`
 - `specs/CONTRACT.md`
 - `templates/spec/spec.md`
 

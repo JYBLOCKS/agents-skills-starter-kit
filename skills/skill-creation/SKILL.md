@@ -1,6 +1,6 @@
 ---
 name: skill-creation
-description: Create or update a repository skill using the single-file SKILL.md contract and only the supporting assets the skill truly needs.
+description: create or update a repository skill using the single-file SKILL.md contract and only the supporting assets the skill truly needs.
 trigger: Use this when the user wants to create or update a skill package, especially when they need help defining triggers, scope, workflow, rules, checklist, or supporting references.
 metadata:
   author: starter-kit
@@ -40,7 +40,7 @@ Guide the full creation of a new skill package using a single `SKILL.md` file as
 ## Inputs
 
 - Skill request
-- `optional/creators/questionnaires/skill.yaml`
+- `creators/questionnaires/skill.yaml`
 - `skills/CONTRACT.md`
 - `templates/skill/`
 
@@ -78,7 +78,7 @@ Guide the full creation of a new skill package using a single `SKILL.md` file as
 
 ## References
 
-- `optional/creators/questionnaires/skill.yaml`
+- `creators/questionnaires/skill.yaml`
 - `skills/CONTRACT.md`
 - `templates/skill/SKILL.md`
 

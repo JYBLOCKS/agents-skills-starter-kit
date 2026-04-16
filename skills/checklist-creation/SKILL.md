@@ -1,6 +1,6 @@
 ---
 name: checklist-creation
-description: Optional skill package for checklist-creation.
+description: guide and workflow for checklist-creation.
 trigger: Use this when checklist-creation is the right reusable capability for the task and you want its workflow, rules, and output shape applied consistently.
 metadata:
   author: starter-kit
@@ -35,7 +35,7 @@ Guide the creation of checklists with explicit ownership, done criteria, evidenc
 ## Inputs
 
 - checklist request
-- `optional/creators/questionnaires/checklist.yaml`
+- `creators/questionnaires/checklist.yaml`
 - `checklists/README.md`
 
 ## Outputs
