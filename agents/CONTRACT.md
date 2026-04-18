@@ -1,23 +1,13 @@
 ---
 name: agents-contract
-description: Canonical contract for agent packages in the starter kit.
-trigger: Use this when you need the canonical structure, requirements, or constraints defined in Agents Contract.
+description: Canonical contract for agent packages in the starter kit
+trigger: Use this when you need the canonical structure, requirements, or constraints defined in Agents Contract
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the canonical requirements for Agents Contract, but does not replace the concrete artifacts that implement them.
+  scope: Owns the canonical requirements for Agents Contract, but does not replace the concrete artifacts that implement them
   auto-invoke: false
-allowed-tools:
-  - generic
-  - openai
-  - claude-code
-  - opencode
-  - cursor
-  - windsurf
-  - github-copilot
-  - cline
-  - gemini-cli
-  - codex
+tools: shared/tool-permissions.md#standard-tool-set
 ---
 # Agent Contract
 

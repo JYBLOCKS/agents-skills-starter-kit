@@ -1,23 +1,13 @@
 ---
 name: skills-contract
-description: Canonical contract for skill packages in the starter kit.
-trigger: Use this when CONTRACT is the relevant repository document for the task.
+description: Canonical contract for skill packages in the starter kit
+trigger: Use this when CONTRACT is the relevant repository document for the task
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the repository guidance for CONTRACT, but does not replace the source artifacts it describes.
+  scope: Owns the repository guidance for CONTRACT, but does not replace the source artifacts it describes
   auto-invoke: false
-allowed-tools:
-  - generic
-  - openai
-  - claude-code
-  - opencode
-  - cursor
-  - windsurf
-  - github-copilot
-  - cline
-  - gemini-cli
-  - codex
+tools: shared/tool-permissions.md#standard-tool-set
 ---
 # Skill Contract
 

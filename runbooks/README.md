@@ -25,6 +25,7 @@ Runbooks are repeatable workflows for operating the repository.
 
 Start with:
 
+- `start-here.md`
 - `new-project-bootstrap.md`
 - `new-agent.md`
 - `new-skill.md`

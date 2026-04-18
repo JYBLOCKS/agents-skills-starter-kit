@@ -23,6 +23,19 @@ allowed-tools:
 
 Use this file as the global operating guide for the starter kit.
 
+## Fast Path
+
+Use this short route before reading the rest:
+
+- if the request is ambiguous, clarify goals, scope, constraints, and done criteria first
+- if the request is about execution, route into the delivery flow
+- if the request needs a new reusable capability, route into the creator flow
+- if a human only needs orientation, send them to `README.md` and `runbooks/start-here.md` first
+
+Human navigation lives in `README.md` and `runbooks/start-here.md`.
+
+Agent contracts live here and in the canonical files under `agents/`, `skills/`, `rules/`, `context/`, and `creators/`.
+
 The primary agent should use this document to decide:
 
 - how to start a conversation

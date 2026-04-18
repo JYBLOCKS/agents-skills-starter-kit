@@ -7,18 +7,9 @@ metadata:
   version: 0.3.0
   scope: Owns completion gates for adapter-creator-agent, but does not replace formal approval or review.
   auto-invoke: false
-allowed-tools:
-  - generic
-  - openai
-  - claude-code
-  - opencode
-  - cursor
-  - windsurf
-  - github-copilot
-  - cline
-  - gemini-cli
-  - codex
+tools: shared/tool-permissions.md#standard-tool-set
 ---
+
 # adapter-creator-agent Checklist
 
 - Adapter name and path are normalized.

@@ -7,17 +7,7 @@ metadata:
   version: 0.3.0
   scope: Owns the role definition, mission, and decision boundaries for business-agent, but does not replace shared rules, context, or approved specs.
   auto-invoke: false
-allowed-tools:
-  - generic
-  - openai
-  - claude-code
-  - opencode
-  - cursor
-  - windsurf
-  - github-copilot
-  - cline
-  - gemini-cli
-  - codex
+tools: shared/tool-permissions.md#standard-tool-set
 ---
 # business-agent
 

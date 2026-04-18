@@ -1,24 +1,13 @@
 ---
 name: agent-creator-agent-example
-description: Example invocation and output shape for agent-creator-agent.
-trigger: Use this when you need a concrete example of how agent-creator-agent should be invoked or how it should respond.
-metadata:
-  author: starter-kit
-  version: 0.3.0
-  scope: Owns a reference example for agent-creator-agent, but does not redefine the canonical contract.
-  auto-invoke: false
-allowed-tools:
-  - generic
-  - openai
-  - claude-code
-  - opencode
-  - cursor
-  - windsurf
-  - github-copilot
-  - cline
-  - gemini-cli
-  - codex
+description: Example invocation and output shape for agent-creator-agent.trigger: Use this when you need a concrete example of how agent-creator-agent should be invoked or how it should respond.
+metadata:  author: starter-kit
+version: 0.3.0
+scope: Owns a reference example for agent-creator-agent, but does not redefine the canonical contract.
+auto-invoke: false
+tools: shared/tool-permissions.md#standard-tool-set
 ---
+
 # agent-creator-agent Example
 
 ## Phase 1: Intent
