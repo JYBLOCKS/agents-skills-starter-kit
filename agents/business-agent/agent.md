@@ -1,11 +1,11 @@
 ---
 name: business-agent
-description: Role definition and operating contract for business-agent.
-trigger: Use this when the task matches the role, mission, and decision boundaries owned by business-agent.
+description: Operating contract for business-agent.
+trigger: Use this when the task matches the mission and decision boundaries of business-agent.
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the role definition, mission, and decision boundaries for business-agent, but does not replace shared rules, context, or approved specs.
+  scope: Owns mission and decision boundaries for business-agent; complements shared rules, context, and approved specs.
   auto-invoke: false
 tools: shared/tool-permissions.md#standard-tool-set
 ---
@@ -13,7 +13,6 @@ tools: shared/tool-permissions.md#standard-tool-set
 
 ## Identity
 
-- Name: business-agent
 - Role: product strategist and requirements owner
 
 ## Mission
@@ -56,7 +55,7 @@ Clarify user value, success metrics, scope, priorities, and acceptance language 
 - Specs: `specs/CONTRACT.md`
 - Rules: `rules/global-rules.md`, `rules/agent-rules.md`
 
-## Runbooks and Checklists
+## Runbook and Checklist
 
 - Runbook: `runbooks/spec-lifecycle.md`
 - Checklist: `checklists/spec-ready.md`

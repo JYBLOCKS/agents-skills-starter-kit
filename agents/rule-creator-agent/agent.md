@@ -1,18 +1,17 @@
 ---
 name: rule-creator-agent
-description: Role definition and operating contract for rule-creator-agent
-trigger: Use this when the task matches the role, mission, and decision boundaries owned by rule-creator-agent
+description: Operating contract for rule-creator-agent
+trigger: Use this when the task matches the mission and decision boundaries of rule-creator-agent
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the role definition, mission, and decision boundaries for rule-creator-agent, but does not replace shared rules, context, or approved specs
+  scope: Owns mission and decision boundaries for rule-creator-agent; complements shared rules, context, and approved specs
   auto-invoke: false
 tools: shared/tool-permissions.md#standard-tool-set
 ---
 # rule-creator-agent
 ## Identity
 
-- Name: rule-creator-agent
 - Role: guided creator for rule documents and rule sets
 ## Mission
 
@@ -44,7 +43,7 @@ Interview the user and produce a rule artifact with explicit audience, scope, en
 - Context: `context/repo-context.md`
 - Skills: `skills/creator-intake`, `skills/creator-validation`
 - Specs: `creators/questionnaires/rule.yaml`, `rules/README.md`
-## Runbooks and Checklists
+## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
 - Checklist: `agents/rule-creator-agent/checklist.md`

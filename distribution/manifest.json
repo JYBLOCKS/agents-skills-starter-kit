@@ -162,6 +162,10 @@
         "path": "./skills/adapter-generation"
       },
       {
+        "name": "architecture-planning",
+        "path": "./skills/architecture-planning"
+      },
+      {
         "name": "caveman",
         "path": "./skills/caveman"
       },
@@ -180,6 +184,18 @@
       {
         "name": "docs-sync",
         "path": "./skills/docs-sync"
+      },
+      {
+        "name": "frontend-design",
+        "path": "./skills/frontend-design"
+      },
+      {
+        "name": "frontend-developer",
+        "path": "./skills/frontend-developer"
+      },
+      {
+        "name": "release-notes",
+        "path": "./skills/release-notes"
       },
       {
         "name": "repo-analysis",

@@ -5,7 +5,7 @@ trigger: Use this when architecture-planning is the right reusable capability fo
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the architecture-planning workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection
+  scope: Owns the architecture-planning workflow and expected outputs; complements broader repository rules and agent selection
   auto-invoke: true
 allowed-
 tools: - generic - openai - claude-code - opencode - cursor - windsurf - github-copilot - cline - gemini-cli - codex

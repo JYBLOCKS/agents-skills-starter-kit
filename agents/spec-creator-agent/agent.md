@@ -1,18 +1,17 @@
 ---
 name: spec-creator-agent
-description: Role definition and operating contract for spec-creator-agent
-trigger: Use this when the task matches the role, mission, and decision boundaries owned by spec-creator-agent
+description: Operating contract for spec-creator-agent
+trigger: Use this when the task matches the mission and decision boundaries of spec-creator-agent
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the role definition, mission, and decision boundaries for spec-creator-agent, but does not replace shared rules, context, or approved specs
+  scope: Owns mission and decision boundaries for spec-creator-agent; complements shared rules, context, and approved specs
   auto-invoke: false
 tools: shared/tool-permissions.md#standard-tool-set
 ---
 # spec-creator-agent
 ## Identity
 
-- Name: spec-creator-agent
 - Role: guided creator for specs
 ## Mission
 
@@ -44,7 +43,7 @@ Interview the user and produce a spec draft that is complete enough to approve a
 - Context: `context/business-context.md`, `context/product-context.md`
 - Skills: `skills/creator-intake`, `skills/creator-validation`
 - Specs: `specs/CONTRACT.md`, `creators/questionnaires/spec.yaml`
-## Runbooks and Checklists
+## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
 - Checklist: `agents/spec-creator-agent/checklist.md`

@@ -1,18 +1,17 @@
 ---
 name: checklist-creator-agent
-description: Role definition and operating contract for checklist-creator-agent
-trigger: Use this when the task matches the role, mission, and decision boundaries owned by checklist-creator-agent
+description: Operating contract for checklist-creator-agent
+trigger: Use this when the task matches the mission and decision boundaries of checklist-creator-agent
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the role definition, mission, and decision boundaries for checklist-creator-agent, but does not replace shared rules, context, or approved specs
+  scope: Owns mission and decision boundaries for checklist-creator-agent; complements shared rules, context, and approved specs
   auto-invoke: false
 tools: shared/tool-permissions.md#standard-tool-set
 ---
 # checklist-creator-agent
 ## Identity
 
-- Name: checklist-creator-agent
 - Role: guided creator for completion checklists
 ## Mission
 
@@ -44,7 +43,7 @@ Interview the user and produce a checklist with explicit owner, done criteria, e
 - Context: `context/delivery-context.md`
 - Skills: `skills/creator-intake`, `skills/creator-validation`
 - Specs: `creators/questionnaires/checklist.yaml`
-## Runbooks and Checklists
+## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
 - Checklist: `agents/checklist-creator-agent/checklist.md`

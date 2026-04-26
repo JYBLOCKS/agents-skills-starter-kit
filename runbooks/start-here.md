@@ -21,81 +21,81 @@ allowed-tools:
 ---
 # Start Here
 
-Este documento existe para humanos.
+This document is for humans.
 
-No reemplaza los contratos del repo. Solo te ayuda a llegar al archivo correcto mas rapido.
+It does not replace repository contracts. It helps you reach the right file quickly.
 
-## Primero Entiende La Regla Del Repo
+## Core Repository Rule
 
-El starter intenta mantener dos cosas al mismo tiempo:
+The starter protects two things at once:
 
-- legibilidad para humanos
-- estabilidad para agentes y hosts
+- human readability
+- stable contracts for agents and hosts
 
-Eso significa:
+That means:
 
-- no inventar formatos paralelos
-- no esconder la estructura real
-- no duplicar contratos si ya existe una fuente canonica
+- do not invent parallel formats
+- do not hide the real structure
+- do not duplicate contracts when a canonical source already exists
 
-## Si Quieres Usar El Starter
+## If You Want To Use The Starter
 
-Lee en este orden:
+Read in this order:
 
 1. [README.md](../README.md)
 2. [context/README.md](../context/README.md)
 3. [runbooks/new-project-bootstrap.md](new-project-bootstrap.md)
-4. el adapter o plugin del host que vayas a usar
+4. the host adapter or plugin you plan to use
 
-## Si Quieres Ejecutar Trabajo En El Repo
+## If You Want To Run Work In The Repository
 
-Usa este mapa:
+Use this map:
 
-| Necesidad | Punto de entrada |
+| Need | Entry point |
 | --- | --- |
-| aclarar objetivo y alcance | [agents/business-agent/agent.md](../agents/business-agent/agent.md) |
-| escribir una spec | [agents/spec-agent/agent.md](../agents/spec-agent/agent.md) |
-| dividir o enrutar trabajo | [agents/orchestrator-agent/agent.md](../agents/orchestrator-agent/agent.md) |
-| implementar cambios | [agents/implementation-agent/agent.md](../agents/implementation-agent/agent.md) |
-| revisar riesgos o regresiones | [agents/review-agent/agent.md](../agents/review-agent/agent.md) |
-| sincronizar docs | [agents/docs-agent/agent.md](../agents/docs-agent/agent.md) |
+| clarify goal and scope | [agents/business-agent/agent.md](../agents/business-agent/agent.md) |
+| write a spec | [agents/spec-agent/agent.md](../agents/spec-agent/agent.md) |
+| decompose or route work | [agents/orchestrator-agent/agent.md](../agents/orchestrator-agent/agent.md) |
+| implement approved changes | [agents/implementation-agent/agent.md](../agents/implementation-agent/agent.md) |
+| review risk or regressions | [agents/review-agent/agent.md](../agents/review-agent/agent.md) |
+| sync docs | [agents/docs-agent/agent.md](../agents/docs-agent/agent.md) |
 
-## Si Quieres Extender El Starter
+## If You Want To Extend The Starter
 
-Haz esta pregunta primero:
+Ask first:
 
-> Lo que quiero agregar, ¿es una capacidad reusable o solo una necesidad puntual?
+> Is this a reusable capability, or only a one-off need?
 
-Si es reusable:
+If it is reusable:
 
-- nuevo rol reusable: crea un agente
-- nueva capacidad reusable: crea una skill
-- restriccion compartida: crea o ajusta una regla
-- conocimiento compartido: crea o ajusta contexto
-- puerta de calidad: crea o ajusta checklist
-- proceso repetible: crea o ajusta runbook
-- base estable para nuevos artefactos: crea o ajusta template
-- generacion guiada de artefactos: entra por `creators/`
+- new reusable role: create an agent
+- new reusable capability: create a skill
+- shared behavioral constraint: create or update a rule
+- shared knowledge: create or update context
+- quality gate: create or update checklist
+- repeatable process: create or update runbook
+- stable artifact starter shape: create or update template
+- guided artifact generation: start in `creators/`
 
-## Si No Sabes Que Artefacto Tocar
+## If You Are Not Sure Which Artifact To Change
 
-Lee esto:
+Read in this order:
 
-1. [AGENTS.md](../AGENTS.md) para el routing completo.
-2. [creators/README.md](../creators/README.md) si sospechas que falta un artefacto reusable.
-3. [creators/matrix.md](../creators/matrix.md) si quieres ver ownership por familia.
+1. [AGENTS.md](../AGENTS.md) for full routing.
+2. [creators/README.md](../creators/README.md) if you suspect a reusable artifact is missing.
+3. [creators/matrix.md](../creators/matrix.md) for ownership by artifact family.
 
-## Lo Que No Conviene Hacer
+## What To Avoid
 
-- no pongas reglas globales dentro de un agente si aplican a todo el repo
-- no metas contexto reusable dentro de prompts locales
-- no crees un artefacto nuevo si uno existente ya cubre el caso
-- no copies explicaciones largas en varios `README` si basta con enlazar la fuente canonica
+- do not place global rules inside one agent when they apply repository-wide
+- do not bury reusable context inside local prompts
+- do not create a new artifact when an existing one already fits
+- do not copy long explanations across multiple `README` files when one canonical source is enough
 
-## Regla Practica
+## Practical Shortcut
 
-Si un humano necesita entender el repo:
+If a human needs to understand the repository:
 
-- empieza en `README.md`
-- usa este runbook para elegir camino
-- entra a `AGENTS.md` solo cuando ya sepas que parte del sistema te importa
+- start in `README.md`
+- use this runbook to choose a path
+- open `AGENTS.md` when you know which system area matters

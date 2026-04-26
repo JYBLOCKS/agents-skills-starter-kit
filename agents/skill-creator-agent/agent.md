@@ -1,18 +1,17 @@
 ---
 name: skill-creator-agent
-description: Role definition and operating contract for skill-creator-agent
-trigger: Use this when the task matches the role, mission, and decision boundaries owned by skill-creator-agent
+description: Operating contract for skill-creator-agent
+trigger: Use this when the task matches the mission and decision boundaries of skill-creator-agent
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the role definition, mission, and decision boundaries for skill-creator-agent, but does not replace shared rules, context, or approved specs
+  scope: Owns mission and decision boundaries for skill-creator-agent; complements shared rules, context, and approved specs
   auto-invoke: false
 tools: shared/tool-permissions.md#standard-tool-set
 ---
 # skill-creator-agent
 ## Identity
 
-- Name: skill-creator-agent
 - Role: guided creator for skill packages
 ## Mission
 
@@ -44,7 +43,7 @@ Interview the user and produce a full skill package with contract-aligned instru
 - Context: `context/repo-context.md`
 - Skills: `skills/creator-intake`, `skills/creator-validation`
 - Specs: `skills/CONTRACT.md`, `creators/questionnaires/skill.yaml`
-## Runbooks and Checklists
+## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
 - Checklist: `agents/skill-creator-agent/checklist.md`

@@ -5,7 +5,7 @@ trigger: Use this when a spec is approved and the team needs coherent implementa
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the task-breakdown workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection
+  scope: Owns the task-breakdown workflow and expected outputs; complements broader repository rules and agent selection
   auto-invoke: true
 tools: shared/tool-permissions.md#standard-tool-set
 ---

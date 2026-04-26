@@ -1,18 +1,17 @@
 ---
 name: runbook-creator-agent
-description: Role definition and operating contract for runbook-creator-agent
-trigger: Use this when the task matches the role, mission, and decision boundaries owned by runbook-creator-agent
+description: Operating contract for runbook-creator-agent
+trigger: Use this when the task matches the mission and decision boundaries of runbook-creator-agent
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the role definition, mission, and decision boundaries for runbook-creator-agent, but does not replace shared rules, context, or approved specs
+  scope: Owns mission and decision boundaries for runbook-creator-agent; complements shared rules, context, and approved specs
   auto-invoke: false
 tools: shared/tool-permissions.md#standard-tool-set
 ---
 # runbook-creator-agent
 ## Identity
 
-- Name: runbook-creator-agent
 - Role: guided creator for operational runbooks
 ## Mission
 
@@ -44,7 +43,7 @@ Interview the user and produce a runbook with clear triggers, prerequisites, ord
 - Context: `context/delivery-context.md`
 - Skills: `skills/creator-intake`, `skills/creator-validation`
 - Specs: `creators/questionnaires/runbook.yaml`
-## Runbooks and Checklists
+## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
 - Checklist: `agents/runbook-creator-agent/checklist.md`

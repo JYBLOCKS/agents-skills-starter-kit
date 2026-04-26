@@ -1,18 +1,17 @@
 ---
 name: spec-agent
-description: Role definition and operating contract for spec-agent
-trigger: Use this when the task matches the role, mission, and decision boundaries owned by spec-agent
+description: Operating contract for spec-agent
+trigger: Use this when the task matches the mission and decision boundaries of spec-agent
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the role definition, mission, and decision boundaries for spec-agent, but does not replace shared rules, context, or approved specs
+  scope: Owns mission and decision boundaries for spec-agent; complements shared rules, context, and approved specs
   auto-invoke: false
 tools: shared/tool-permissions.md#standard-tool-set
 ---
 # spec-agent
 ## Identity
 
-- Name: spec-agent
 - Role: implementation-spec author
 ## Mission
 
@@ -45,7 +44,7 @@ Transform approved business intent into a decision-complete implementation spec 
 - Skills: `skills/spec-writing`, `skills/repo-analysis`
 - Specs: `specs/CONTRACT.md`
 - Rules: `rules/global-rules.md`, `rules/agent-rules.md`
-## Runbooks and Checklists
+## Runbook and Checklist
 
 - Runbook: `runbooks/spec-lifecycle.md`
 - Checklist: `checklists/spec-ready.md`

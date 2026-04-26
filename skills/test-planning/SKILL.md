@@ -5,7 +5,7 @@ trigger: Use this when a spec or implementation needs a clear validation strateg
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the test-planning workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection
+  scope: Owns the test-planning workflow and expected outputs; complements broader repository rules and agent selection
   auto-invoke: true
 tools: shared/tool-permissions.md#standard-tool-set
 ---

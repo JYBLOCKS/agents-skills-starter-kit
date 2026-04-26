@@ -1,79 +1,76 @@
 # Multi-Tool Agent Skills Starter Kit
 
-Starter kit agnostico de herramienta para construir flujos de trabajo con agentes, skills, reglas, contexto compartido y adapters ligeros.
+Tool-agnostic starter kit for building reliable agent workflows with reusable agents, skills, rules, shared context, and lightweight host adapters.
 
-La idea del repo es simple:
+This repository keeps two surfaces in sync:
 
-- los humanos necesitan una entrada clara
-- los agentes necesitan contratos estables
-- ambos deben trabajar sobre la misma estructura real
+- Human navigation: quick onboarding and clear folder purpose.
+- Agent contracts: stable, canonical instructions and reusable artifacts.
 
-Por eso este repo separa dos capas:
+The canonical contract surface lives in `AGENTS.md`, `agents/`, `skills/`, `rules/`, `context/`, and `creators/`.
 
-- navegacion humana corta en `README.md` y `runbooks/`
-- contratos canonicos para agentes en `AGENTS.md`, `agents/`, `skills/`, `rules/`, `context/` y `creators/`
+## Quick Start
 
-## Empieza Aqui
+### If you are a human contributor
 
-### Si eres humano
+Read in this order:
 
-Lee esto en orden:
+1. [README.md](README.md)
+2. [runbooks/start-here.md](runbooks/start-here.md)
+3. [AGENTS.md](AGENTS.md) when you need full routing and artifact-creation contracts
 
-1. [README.md](README.md) para entender el mapa corto del repo.
-2. [runbooks/start-here.md](runbooks/start-here.md) para elegir la ruta correcta segun lo que quieres hacer.
-3. [AGENTS.md](AGENTS.md) solo cuando necesites el contrato operativo completo.
+### If you are an agent
 
-### Si eres un agente
+Start here:
 
-Empieza en:
+1. [AGENTS.md](AGENTS.md) for primary routing rules.
+2. `rules/` and `context/` for shared constraints and grounding.
+3. `agents/`, `skills/`, `checklists/`, and `creators/` only as needed by the selected flow.
 
-1. [AGENTS.md](AGENTS.md) como contrato primario de routing.
-2. `rules/` y `context/` segun el flujo elegido.
-3. `agents/`, `skills/`, `checklists/` y `creators/` solo cuando el trabajo lo requiera.
+## Repository Map
 
-## Que Hay En El Repo
-
-| Carpeta | Para humanos | Para agentes |
+| Folder | Human value | Agent value |
 | --- | --- | --- |
-| `agents/` | roles reutilizables del flujo | paquetes canonicos de decision y handoff |
-| `skills/` | capacidades reutilizables | contratos operativos portables |
-| `rules/` | restricciones compartidas | fuente de verdad de comportamiento |
-| `context/` | contexto estable del proyecto | contexto reusable para routing y ejecucion |
-| `checklists/` | definicion de terminado | puertas concretas de calidad |
-| `runbooks/` | caminos guiados y onboarding | apoyo operativo humano |
-| `creators/` | generacion guiada de artefactos | contratos y cuestionarios de creacion |
-| `templates/` | puntos de partida minimos | esqueletos canonicos |
-| `adapters/` | como aterrizar el starter en cada host | mapeo host-specific |
-| `distribution/` | superficie instalable | manifiesto y export map |
-| `plugins/` | wrappers nativos locales | integraciones de host |
+| `agents/` | reusable roles and flow ownership | canonical decision and handoff packages |
+| `skills/` | reusable capabilities | portable execution contracts |
+| `rules/` | shared constraints | behavior source of truth |
+| `context/` | stable project knowledge | reusable routing and execution grounding |
+| `checklists/` | done criteria | concrete quality gates |
+| `runbooks/` | guided workflows | operational support for delivery |
+| `creators/` | guided artifact generation | creation contracts, questionnaires, templates |
+| `templates/` | starter skeletons | canonical starting structures |
+| `adapters/` | host-specific setup guidance | host mapping to canonical contracts |
+| `distribution/` | install/export surface | manifest, compatibility, validation mapping |
+| `plugins/` | native host wrappers | local host integration bridge |
+| `scripts/` | maintenance and validation automation | contract and distribution enforcement |
+| `shared/` | shared references across docs/contracts | reusable references like tool permissions |
+| `specs/` | implementation intent contracts | approved specs and examples |
 
-## Rutas Rapidas
+## Core Flows
 
-### Quiero usar el starter
+### Use the starter in a new project
 
-1. Completa el contexto base en [context/README.md](context/README.md).
-2. Revisa [runbooks/new-project-bootstrap.md](runbooks/new-project-bootstrap.md).
-3. Elige el host correcto en `adapters/` o `plugins/`.
-4. Valida la distribucion antes de publicar cambios.
+1. Complete baseline context in [context/README.md](context/README.md).
+2. Follow [runbooks/new-project-bootstrap.md](runbooks/new-project-bootstrap.md).
+3. Select the right host route in `adapters/` or `plugins/`.
+4. Run validation before publishing changes.
 
-### Quiero ejecutar trabajo con agentes
+### Run delivery work with agents
 
-Usa este flujo:
+1. `business-agent`: clarify goal, scope, and acceptance.
+2. `spec-agent`: convert approved intent into an implementation contract.
+3. `orchestrator-agent`: decompose and route execution.
+4. `implementation-agent`: implement approved changes.
+5. `review-agent`: check regressions, risk, and evidence.
+6. `docs-agent`: align docs and onboarding with shipped reality.
 
-1. `business-agent` para aclarar objetivo, alcance y aceptacion.
-2. `spec-agent` para convertir la intencion en un contrato ejecutable.
-3. `orchestrator-agent` para partir y enrutar el trabajo.
-4. `implementation-agent` para aplicar cambios.
-5. `review-agent` para revisar riesgo y evidencia.
-6. `docs-agent` para alinear documentacion y onboarding.
+### Extend repository capability
 
-### Quiero extender el starter
+1. Use [runbooks/start-here.md](runbooks/start-here.md) to decide the right artifact family.
+2. If reusable capability is missing, use [creators/README.md](creators/README.md).
+3. Generate the artifact through creator contracts instead of ad-hoc formats.
 
-1. Usa [runbooks/start-here.md](runbooks/start-here.md) para decidir si necesitas un agente, skill, regla, contexto, checklist, runbook o template.
-2. Si falta un artefacto reusable, entra al flujo de `creators/`.
-3. Usa las plantillas minimas en `templates/` solo cuando no exista ya un artefacto guiado mejor.
-
-## Instalacion
+## Installation
 
 ```bash
 npm install
@@ -84,17 +81,21 @@ npm run validate:distribution
 ```
 
 ```bash
+npm run validate:docs
+```
+
+```bash
 npx skills add JYBLOCKS/agents-skills-starter-kit
 ```
 
-## Hosts Soportados
+## Supported Hosts
 
-| Host | Instalacion | Tipo |
+| Host | Install | Type |
 | --- | --- | --- |
 | Claude Code | `npx skills add JYBLOCKS/agents-skills-starter-kit -a claude-code` | Universal |
-| Codex | Local plugin: `plugins/ai-starter-kit` | Nativo |
+| Codex | Local plugin: `plugins/ai-starter-kit` | Native |
 | Codex fallback | `npx skills add JYBLOCKS/agents-skills-starter-kit -a codex` | Universal |
-| Gemini CLI | `gemini extensions install https://github.com/JYBLOCKS/agents-skills-starter-kit` | Nativo |
+| Gemini CLI | `gemini extensions install https://github.com/JYBLOCKS/agents-skills-starter-kit` | Native |
 | Gemini CLI fallback | `npx skills add JYBLOCKS/agents-skills-starter-kit -a gemini-cli` | Universal |
 | Cursor | `npx skills add JYBLOCKS/agents-skills-starter-kit -a cursor` | Universal |
 | Windsurf | `npx skills add JYBLOCKS/agents-skills-starter-kit -a windsurf` | Universal |
@@ -102,48 +103,52 @@ npx skills add JYBLOCKS/agents-skills-starter-kit
 | Cline | `npx skills add JYBLOCKS/agents-skills-starter-kit -a cline` | Universal |
 | Fallback | `npx skills add JYBLOCKS/agents-skills-starter-kit` | Universal |
 
-## Que Leer Segun La Tarea
+## Read by Goal
 
-| Si quieres... | Lee primero | Luego |
+| Goal | Read first | Then |
 | --- | --- | --- |
-| entender el repo rapido | [runbooks/start-here.md](runbooks/start-here.md) | [AGENTS.md](AGENTS.md) |
-| cambiar el flujo de agentes | [AGENTS.md](AGENTS.md) | `agents/`, `skills/`, `rules/`, `context/` |
-| crear un artefacto nuevo | [creators/README.md](creators/README.md) | `creators/CONTRACT.md`, `creators/matrix.md` |
-| agregar un agente | [agents/README.md](agents/README.md) | `templates/agent/`, `distribution/manifest.json` |
-| agregar una skill | [skills/README.md](skills/README.md) | `templates/skill/`, `rules/skill-rules.md` |
-| documentar un proceso | [runbooks/README.md](runbooks/README.md) | `checklists/`, `context/` si aplica |
-| tocar la distribucion | [distribution/README.md](distribution/README.md) | `distribution/manifest.json`, `package.json` |
+| learn the repo quickly | [runbooks/start-here.md](runbooks/start-here.md) | [AGENTS.md](AGENTS.md) |
+| modify the agent flow | [AGENTS.md](AGENTS.md) | `agents/`, `skills/`, `rules/`, `context/` |
+| create a new artifact | [creators/README.md](creators/README.md) | `creators/CONTRACT.md`, `creators/matrix.md` |
+| add an agent | [agents/README.md](agents/README.md) | `templates/agent/`, `distribution/manifest.json` |
+| add a skill | [skills/README.md](skills/README.md) | `templates/skill/`, `rules/skill-rules.md` |
+| document a process | [runbooks/README.md](runbooks/README.md) | `checklists/`, `context/` when needed |
+| change distribution | [distribution/README.md](distribution/README.md) | `distribution/manifest.json`, `package.json` |
 
-## Validacion
+## Validation
 
-Antes de cerrar cambios estructurales:
+Run before merging structural or contract changes:
 
 ```bash
 npm run validate:distribution
 ```
 
-Comprobacion local del catalogo:
+```bash
+npm run validate:docs
+```
+
+Catalog sanity check:
 
 ```bash
 npx skills add . -l
 ```
 
-Comprobaciones recomendadas:
+Recommended checks:
 
-- confirma que los paths exportados en `distribution/manifest.json` existen
-- confirma que el host wrapper afectado sigue resolviendo el repo real
-- confirma que `AGENTS.md`, este `README.md` y `runbooks/start-here.md` siguen contando la misma historia
+- confirm all export paths in `distribution/manifest.json` exist
+- confirm host wrappers still resolve to canonical repository contracts
+- confirm `AGENTS.md`, this `README.md`, and `runbooks/start-here.md` describe the same flow
 
-## Archivos Mas Importantes
+## Highest-Signal Files
 
-- [runbooks/start-here.md](runbooks/start-here.md): entrada humana corta
-- [AGENTS.md](AGENTS.md): contrato primario de routing y artifact creation
-- [distribution/manifest.json](distribution/manifest.json): catalogo exportado
-- [context/README.md](context/README.md): sistema de contexto reusable
-- [creators/README.md](creators/README.md): flujo guiado de creacion
-- [runbooks/README.md](runbooks/README.md): runbooks disponibles
+- [runbooks/start-here.md](runbooks/start-here.md): shortest human navigation path
+- [AGENTS.md](AGENTS.md): primary routing and artifact-creation contract
+- [distribution/manifest.json](distribution/manifest.json): exported install surface
+- [context/README.md](context/README.md): shared context system
+- [creators/README.md](creators/README.md): guided artifact generation flow
+- [runbooks/README.md](runbooks/README.md): runbook index
 
-## Estructura Del Repo
+## Top-Level Structure
 
 ```text
 .
@@ -158,6 +163,8 @@ Comprobaciones recomendadas:
 |-- plugins/
 |-- rules/
 |-- runbooks/
+|-- scripts/
+|-- shared/
 |-- skills/
 |-- specs/
 `-- templates/

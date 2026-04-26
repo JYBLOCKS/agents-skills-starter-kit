@@ -1,11 +1,11 @@
 ---
 name: adapter-creator-agent
-description: Role definition and operating contract for adapter-creator-agent.
-trigger: Use this when the task matches the role, mission, and decision boundaries owned by adapter-creator-agent.
+description: Operating contract for adapter-creator-agent.
+trigger: Use this when the task matches the mission and decision boundaries of adapter-creator-agent.
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the role definition, mission, and decision boundaries for adapter-creator-agent, but does not replace shared rules, context, or approved specs.
+  scope: Owns mission and decision boundaries for adapter-creator-agent; complements shared rules, context, and approved specs.
   auto-invoke: false
 tools: shared/tool-permissions.md#standard-tool-set
 ---
@@ -54,7 +54,7 @@ Interview the user and produce an adapter package that maps the neutral core int
 - **Skills**: `skills/creator-intake`, `skills/creator-validation`
 - **Specs**: `adapters/CONTRACT.md`, `creators/questionnaires/adapter.yaml`
 
-## Runbooks and Checklists
+## Runbook and Checklist
 
 - **Runbook**: `runbooks/create-with-creators.md`
 - **Checklist**: `agents/adapter-creator-agent/checklist.md`

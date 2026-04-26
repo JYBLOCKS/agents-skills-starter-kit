@@ -5,7 +5,7 @@ trigger: Use this when work needs grounding in the current repository before mak
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the repo-analysis workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection
+  scope: Owns the repo-analysis workflow and expected outputs; complements broader repository rules and agent selection
   auto-invoke: true
 tools: shared/tool-permissions.md#standard-tool-set
 ---

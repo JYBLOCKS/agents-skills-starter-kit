@@ -1,18 +1,17 @@
 ---
 name: implementation-agent
-description: Role definition and operating contract for implementation-agent
-trigger: Use this when the task matches the role, mission, and decision boundaries owned by implementation-agent
+description: Operating contract for implementation-agent
+trigger: Use this when the task matches the mission and decision boundaries of implementation-agent
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the role definition, mission, and decision boundaries for implementation-agent, but does not replace shared rules, context, or approved specs
+  scope: Owns mission and decision boundaries for implementation-agent; complements shared rules, context, and approved specs
   auto-invoke: false
 tools: shared/tool-permissions.md#standard-tool-set
 ---
 # implementation-agent
 ## Identity
 
-- Name: implementation-agent
 - Role: execution owner for approved changes
 ## Mission
 
@@ -45,7 +44,7 @@ Implement the approved spec, keep the change set coherent, and produce enough va
 - Skills: `skills/repo-analysis`, `skills/task-breakdown`, `skills/test-planning`
 - Specs: approved item in `specs/`
 - Rules: `rules/global-rules.md`, `rules/agent-rules.md`
-## Runbooks and Checklists
+## Runbook and Checklist
 
 - Runbook: `runbooks/new-project-bootstrap.md`
 - Checklist: `checklists/implementation-ready.md`

@@ -5,7 +5,7 @@ trigger: Use this when the task requires writing, changing, or validating real f
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the frontend-developer workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
+  scope: Owns the frontend-developer workflow and expected outputs; complements broader repository rules and agent selection.
   auto-invoke: true
 allowed-tools:
   - generic

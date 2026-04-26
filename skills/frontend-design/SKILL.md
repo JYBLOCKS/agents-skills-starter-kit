@@ -5,7 +5,7 @@ trigger: Use this when the task is primarily about UI direction, layout, visual 
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the frontend-design workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection
+  scope: Owns the frontend-design workflow and expected outputs; complements broader repository rules and agent selection
   auto-invoke: true
 allowed-
 tools: - generic - openai - claude-code - opencode - cursor - windsurf - github-copilot - cline - gemini-cli - codex ---

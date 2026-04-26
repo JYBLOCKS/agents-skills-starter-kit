@@ -5,7 +5,7 @@ trigger: Use this when release-notes is the right reusable capability for the ta
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the release-notes workflow, guardrails, and expected outputs, but does not replace broader repository rules or agent selection.
+  scope: Owns the release-notes workflow and expected outputs; complements broader repository rules and agent selection.
   auto-invoke: true
 allowed-tools:
   - generic
