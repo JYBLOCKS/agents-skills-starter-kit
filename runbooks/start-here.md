@@ -56,6 +56,7 @@ Use this map:
 | clarify goal and scope | [agents/business-agent.md](../agents/business-agent.md) |
 | write a spec | [agents/spec-agent.md](../agents/spec-agent.md) |
 | decompose or route work | [agents/orchestrator-agent.md](../agents/orchestrator-agent.md) |
+| run full SDD flow with traceability | [runbooks/sdd-flow.md](sdd-flow.md) |
 | implement approved changes | [agents/implementation-agent.md](../agents/implementation-agent.md) |
 | review risk or regressions | [agents/review-agent.md](../agents/review-agent.md) |
 | sync docs | [agents/docs-agent.md](../agents/docs-agent.md) |

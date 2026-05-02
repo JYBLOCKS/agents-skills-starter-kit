@@ -187,6 +187,7 @@ Use this decision guide:
 | Clarify goals, scope, priorities, or acceptance criteria | `business-agent` | `requirements-extraction` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/business-context.md`, `context/product-context.md`, `checklists/spec-ready.md` | [business-agent](agents/business-agent.md) |
 | Turn approved intent into an implementation-ready spec | `spec-agent` | `spec-writing`, `repo-analysis` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/`, `specs/CONTRACT.md`, `checklists/spec-ready.md` | [spec-agent](agents/spec-agent.md) |
 | Route work across the core delivery flow | `orchestrator-agent` | `task-breakdown`, `repo-analysis` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/repo-context.md`, `context/delivery-context.md`, `checklists/implementation-ready.md` | [orchestrator-agent](agents/orchestrator-agent.md) |
+| Run end-to-end SDD delivery with traceability | `sdd-orchestrator-agent` | `sdd-operating-flow`, `requirements-extraction`, `spec-writing`, `task-breakdown`, `code-review` | `rules/global-rules.md`, `rules/agent-rules.md`, `runbooks/sdd-flow.md`, `checklists/sdd-delivery-ready.md` | [sdd-orchestrator-agent](agents/sdd-orchestrator-agent.md) |
 | Implement approved changes in the repo | `implementation-agent` | `repo-analysis`, `task-breakdown`, `test-planning` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/technical-context.md`, `context/repo-context.md`, `checklists/implementation-ready.md` | [implementation-agent](agents/implementation-agent.md) |
 | Review changes for regressions, risk, and missing evidence | `review-agent` | `code-review`, `test-planning` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/technical-context.md`, `context/delivery-context.md`, `checklists/review-ready.md` | [review-agent](agents/review-agent.md) |
 | Sync README, templates, and repo documentation to shipped reality | `docs-agent` | `docs-sync` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/repo-context.md`, `context/delivery-context.md`, `checklists/docs-ready.md` | [docs-agent](agents/docs-agent.md) |
@@ -199,6 +200,7 @@ Use this decision guide:
 | `business-agent` | `agent` | Owns business intent, scope, and acceptance framing | [agents/business-agent.md](agents/business-agent.md) |
 | `spec-agent` | `agent` | Writes decision-complete implementation specs | [agents/spec-agent.md](agents/spec-agent.md) |
 | `orchestrator-agent` | `agent` | Routes work across the core delivery flow | [agents/orchestrator-agent.md](agents/orchestrator-agent.md) |
+| `sdd-orchestrator-agent` | `agent` | Runs the full SDD flow from refined US to PR-ready handoff | [agents/sdd-orchestrator-agent.md](agents/sdd-orchestrator-agent.md) |
 | `implementation-agent` | `agent` | Applies approved changes and gathers validation evidence | [agents/implementation-agent.md](agents/implementation-agent.md) |
 | `review-agent` | `agent` | Reviews regressions, rule compliance, and residual risk | [agents/review-agent.md](agents/review-agent.md) |
 | `docs-agent` | `agent` | Keeps docs, templates, and onboarding paths aligned | [agents/docs-agent.md](agents/docs-agent.md) |
@@ -213,6 +215,7 @@ Use this decision guide:
 | `docs-sync` | `skill` | Keeps README, templates, and docs aligned with shipped behavior | [skills/docs-sync/SKILL.md](skills/docs-sync/SKILL.md) |
 | `creator-intake` | `skill` | Runs the first creator phase to identify artifact family, name/path, and missing decisions | [skills/creator-intake/SKILL.md](skills/creator-intake/SKILL.md) |
 | `creator-validation` | `skill` | Validates generated artifacts against the current repository contract | [skills/creator-validation/SKILL.md](skills/creator-validation/SKILL.md) |
+| `sdd-operating-flow` | `skill` | Executes the full SDD lifecycle with fast-forward package, checklist apply, verify, and PR handoff | [skills/sdd-operating-flow/SKILL.md](skills/sdd-operating-flow/SKILL.md) |
 | `global-rules` | `rule` | Non-negotiable repository-wide operating rules | [rules/global-rules.md](rules/global-rules.md) |
 | `agent-rules` | `rule` | Shared expectations that apply to every agent | [rules/agent-rules.md](rules/agent-rules.md) |
 | `skill-rules` | `rule` | Shared expectations that apply to every skill | [rules/skill-rules.md](rules/skill-rules.md) |

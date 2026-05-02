@@ -12,7 +12,8 @@
     "metadata:check": "node scripts/add-metadata-frontmatter.mjs --check",
     "validate:distribution": "node scripts/validate-distribution.mjs",
     "validate:docs": "node scripts/validate-docs.mjs",
-    "validate": "npm run validate:agents-structure && npm run validate:distribution && npm run validate:docs",
-    "validate:agents-structure": "node scripts/validate-agents-structure.js"
+    "validate": "npm run validate:sdd && npm run validate:agents-structure && npm run validate:distribution && npm run validate:docs",
+    "validate:agents-structure": "node scripts/validate-agents-structure.js",
+    "validate:sdd": "node scripts/validate-sdd-flow.js"
   }
 }

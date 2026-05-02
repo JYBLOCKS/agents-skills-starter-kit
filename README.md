@@ -63,6 +63,7 @@ Start here:
 4. `implementation-agent`: implement approved changes.
 5. `review-agent`: check regressions, risk, and evidence.
 6. `docs-agent`: align docs and onboarding with shipped reality.
+7. `sdd-orchestrator-agent`: run full SDD workflow from US refinement to PR-ready handoff.
 
 ### Extend repository capability
 
@@ -109,6 +110,7 @@ npx skills add JYBLOCKS/agents-skills-starter-kit
 | --- | --- | --- |
 | learn the repo quickly | [runbooks/start-here.md](runbooks/start-here.md) | [AGENTS.md](AGENTS.md) |
 | modify the agent flow | [AGENTS.md](AGENTS.md) | `agents/`, `skills/`, `rules/`, `context/` |
+| run a full SDD delivery flow | [runbooks/sdd-flow.md](runbooks/sdd-flow.md) | [agents/sdd-orchestrator-agent.md](agents/sdd-orchestrator-agent.md), [skills/sdd-operating-flow/SKILL.md](skills/sdd-operating-flow/SKILL.md) |
 | create a new artifact | [creators/README.md](creators/README.md) | `creators/CONTRACT.md`, `creators/matrix.md` |
 | add an agent | [agents/README.md](agents/README.md) | `templates/agent/`, `distribution/manifest.json` |
 | add a skill | [skills/README.md](skills/README.md) | `templates/skill/`, `rules/skill-rules.md` |
