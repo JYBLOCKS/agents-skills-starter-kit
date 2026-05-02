@@ -53,12 +53,12 @@ Use this map:
 
 | Need | Entry point |
 | --- | --- |
-| clarify goal and scope | [agents/business-agent/agent.md](../agents/business-agent/agent.md) |
-| write a spec | [agents/spec-agent/agent.md](../agents/spec-agent/agent.md) |
-| decompose or route work | [agents/orchestrator-agent/agent.md](../agents/orchestrator-agent/agent.md) |
-| implement approved changes | [agents/implementation-agent/agent.md](../agents/implementation-agent/agent.md) |
-| review risk or regressions | [agents/review-agent/agent.md](../agents/review-agent/agent.md) |
-| sync docs | [agents/docs-agent/agent.md](../agents/docs-agent/agent.md) |
+| clarify goal and scope | [agents/business-agent.md](../agents/business-agent.md) |
+| write a spec | [agents/spec-agent.md](../agents/spec-agent.md) |
+| decompose or route work | [agents/orchestrator-agent.md](../agents/orchestrator-agent.md) |
+| implement approved changes | [agents/implementation-agent.md](../agents/implementation-agent.md) |
+| review risk or regressions | [agents/review-agent.md](../agents/review-agent.md) |
+| sync docs | [agents/docs-agent.md](../agents/docs-agent.md) |
 
 ## If You Want To Extend The Starter
 
