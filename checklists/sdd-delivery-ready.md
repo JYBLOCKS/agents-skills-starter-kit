@@ -22,6 +22,7 @@ allowed-tools:
 # SDD Delivery Ready Checklist
 
 ## Discovery
+- [ ] Confirm SDD entrypoint was used as default (`runbooks/sdd-flow.md`).
 - [ ] Confirm actor and value statement are explicit.
 - [ ] Capture objective in one sentence.
 - [ ] Capture business constraint list.
@@ -94,6 +95,11 @@ allowed-tools:
 - [ ] Verify release tasks are present.
 
 ## Apply
+- [ ] Apply `caveman` for executive summaries and handoffs.
+- [ ] Evaluate whether frontend work requires `frontend-design`.
+- [ ] If frontend visual direction is unsettled, execute `frontend-design` before implementation.
+- [ ] If frontend implementation is required and design is settled, execute `frontend-developer`.
+- [ ] If non-SDD path was used, record explicit justification.
 - [ ] Start from approved refined package.
 - [ ] Execute slice 1.
 - [ ] Execute slice 2.

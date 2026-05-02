@@ -80,7 +80,8 @@ After clarification, route the request into one of these paths:
 
 - `business-agent` when intent, priorities, scope, or acceptance are still fuzzy
 - `spec-agent` when the intent is approved but the implementation contract is missing
-- `orchestrator-agent` when work needs sequencing or decomposition
+- `sdd-orchestrator-agent` as the default path for end-to-end delivery
+- `orchestrator-agent` only when SDD delegates decomposition as a sub-step
 - `implementation-agent` when the repo already has the needed agent/skill structure and the task is ready to execute
 - `review-agent` when the user wants review, regressions, or validation evidence
 - `docs-agent` when the request is about README, docs, guides, templates, or onboarding alignment
@@ -94,7 +95,8 @@ Use the existing skills first. Typical pairings:
 
 - `business-agent` + `requirements-extraction`
 - `spec-agent` + `spec-writing`, `repo-analysis`
-- `orchestrator-agent` + `task-breakdown`, `repo-analysis`
+- `sdd-orchestrator-agent` + `sdd-operating-flow`, `requirements-extraction`, `spec-writing`, `task-breakdown`, `code-review`
+- `orchestrator-agent` + `task-breakdown`, `repo-analysis` when invoked by SDD
 - `implementation-agent` + `repo-analysis`, `task-breakdown`, `test-planning`
 - `review-agent` + `code-review`, `test-planning`
 - `docs-agent` + `docs-sync`
@@ -184,10 +186,10 @@ Use this decision guide:
 
 | Situation or Goal | Primary Agent | Supporting Skills | Required Rules, Context, and Checklist | Link |
 | --- | --- | --- | --- | --- |
+| Run end-to-end SDD delivery with traceability | `sdd-orchestrator-agent` | `sdd-operating-flow`, `requirements-extraction`, `spec-writing`, `task-breakdown`, `code-review`, `caveman`, `frontend-design`, `frontend-developer` | `rules/global-rules.md`, `rules/agent-rules.md`, `runbooks/sdd-flow.md`, `checklists/sdd-delivery-ready.md` | [sdd-orchestrator-agent](agents/sdd-orchestrator-agent/AGENT.md) |
 | Clarify goals, scope, priorities, or acceptance criteria | `business-agent` | `requirements-extraction` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/business-context.md`, `context/product-context.md`, `checklists/spec-ready.md` | [business-agent](agents/business-agent/AGENT.md) |
 | Turn approved intent into an implementation-ready spec | `spec-agent` | `spec-writing`, `repo-analysis` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/`, `specs/CONTRACT.md`, `checklists/spec-ready.md` | [spec-agent](agents/spec-agent/AGENT.md) |
-| Route work across the core delivery flow | `orchestrator-agent` | `task-breakdown`, `repo-analysis` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/repo-context.md`, `context/delivery-context.md`, `checklists/implementation-ready.md` | [orchestrator-agent](agents/orchestrator-agent/AGENT.md) |
-| Run end-to-end SDD delivery with traceability | `sdd-orchestrator-agent` | `sdd-operating-flow`, `requirements-extraction`, `spec-writing`, `task-breakdown`, `code-review` | `rules/global-rules.md`, `rules/agent-rules.md`, `runbooks/sdd-flow.md`, `checklists/sdd-delivery-ready.md` | [sdd-orchestrator-agent](agents/sdd-orchestrator-agent/AGENT.md) |
+| Route work across the core delivery flow (secondary/legacy) | `orchestrator-agent` | `task-breakdown`, `repo-analysis` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/repo-context.md`, `context/delivery-context.md`, `checklists/implementation-ready.md` | [orchestrator-agent](agents/orchestrator-agent/AGENT.md) |
 | Implement approved changes in the repo | `implementation-agent` | `repo-analysis`, `task-breakdown`, `test-planning` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/technical-context.md`, `context/repo-context.md`, `checklists/implementation-ready.md` | [implementation-agent](agents/implementation-agent/AGENT.md) |
 | Review changes for regressions, risk, and missing evidence | `review-agent` | `code-review`, `test-planning` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/technical-context.md`, `context/delivery-context.md`, `checklists/review-ready.md` | [review-agent](agents/review-agent/AGENT.md) |
 | Sync README, templates, and repo documentation to shipped reality | `docs-agent` | `docs-sync` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/repo-context.md`, `context/delivery-context.md`, `checklists/docs-ready.md` | [docs-agent](agents/docs-agent/AGENT.md) |
@@ -231,10 +233,10 @@ Use this decision guide:
 
 Use this default flow unless the task is obviously smaller:
 
-1. Clarify the request with questions.
-2. Extract goals, scope, constraints, and acceptance.
-3. Choose the correct existing agent.
-4. Load the minimal supporting skill set.
-5. If a reusable repo artifact is missing, route into the creator flow and generate it.
-6. Return to the delivery flow once the missing artifact exists.
-7. Implement, review, and sync docs as needed.
+1. Enter through `sdd-orchestrator-agent` and `runbooks/sdd-flow.md`.
+2. Refine the request into SDD package inputs and scenarios.
+3. Execute SDD lifecycle with `sdd-operating-flow`.
+4. Apply required skill gates, including `caveman` always for executive outputs.
+5. Trigger `frontend-design` before frontend implementation when visual direction is not settled.
+6. Trigger `frontend-developer` for frontend implementation after design is settled.
+7. Implement, verify, review, and sync docs through SDD done criteria.

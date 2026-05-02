@@ -48,6 +48,16 @@ Start here:
 
 ## Core Flows
 
+### Default Workflow: SDD
+
+SDD is the default execution path for all new delivery work in this starter kit.
+
+Use this sequence first:
+
+1. [runbooks/sdd-flow.md](runbooks/sdd-flow.md)
+2. [agents/sdd-orchestrator-agent/AGENT.md](agents/sdd-orchestrator-agent/AGENT.md)
+3. [skills/sdd-operating-flow/SKILL.md](skills/sdd-operating-flow/SKILL.md)
+
 ### Use the starter in a new project
 
 1. Complete baseline context in [context/README.md](context/README.md).
@@ -57,13 +67,12 @@ Start here:
 
 ### Run delivery work with agents
 
-1. `business-agent`: clarify goal, scope, and acceptance.
-2. `spec-agent`: convert approved intent into an implementation contract.
-3. `orchestrator-agent`: decompose and route execution.
-4. `implementation-agent`: implement approved changes.
-5. `review-agent`: check regressions, risk, and evidence.
+1. `sdd-orchestrator-agent`: run full SDD workflow from US refinement to PR-ready handoff.
+2. `business-agent`: refine intent when required by SDD intake.
+3. `spec-agent`: produce implementation-ready contract inside SDD flow.
+4. `implementation-agent`: execute approved slices from SDD package.
+5. `review-agent`: validate regressions, risk, and evidence.
 6. `docs-agent`: align docs and onboarding with shipped reality.
-7. `sdd-orchestrator-agent`: run full SDD workflow from US refinement to PR-ready handoff.
 
 ### Extend repository capability
 
@@ -108,9 +117,9 @@ npx skills add JYBLOCKS/agents-skills-starter-kit
 
 | Goal | Read first | Then |
 | --- | --- | --- |
-| learn the repo quickly | [runbooks/start-here.md](runbooks/start-here.md) | [AGENTS.md](AGENTS.md) |
-| modify the agent flow | [AGENTS.md](AGENTS.md) | `agents/`, `skills/`, `rules/`, `context/` |
 | run a full SDD delivery flow | [runbooks/sdd-flow.md](runbooks/sdd-flow.md) | [agents/sdd-orchestrator-agent/AGENT.md](agents/sdd-orchestrator-agent/AGENT.md), [skills/sdd-operating-flow/SKILL.md](skills/sdd-operating-flow/SKILL.md) |
+| learn the repo quickly | [runbooks/start-here.md](runbooks/start-here.md) | [AGENTS.md](AGENTS.md) |
+| modify SDD routing/contracts | [AGENTS.md](AGENTS.md) | `agents/`, `skills/`, `rules/`, `context/` |
 | create a new artifact | [creators/README.md](creators/README.md) | `creators/CONTRACT.md`, `creators/matrix.md` |
 | add an agent | [agents/README.md](agents/README.md) | `templates/agent/`, `distribution/manifest.json` |
 | add a skill | [skills/README.md](skills/README.md) | `templates/skill/`, `rules/skill-rules.md` |

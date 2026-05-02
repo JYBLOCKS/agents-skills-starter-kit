@@ -94,11 +94,55 @@ function checkChecklistDensity() {
   }
 }
 
+function checkSddDefaultRouting() {
+  const requiredRoutingChecks = [
+    ['README.md', /Default Workflow:\s*SDD/i, 'README must declare SDD as default workflow'],
+    ['runbooks/start-here.md', /default delivery flow \(recommended\)/i, 'start-here must expose SDD as recommended default delivery flow'],
+  ];
+
+  for (const [file, pattern, message] of requiredRoutingChecks) {
+    const full = path.join(root, file);
+    if (!fs.existsSync(full)) {
+      addError(`Missing routing file: ${file}`);
+      continue;
+    }
+    const content = read(file);
+    if (!pattern.test(content)) {
+      addError(message);
+    }
+  }
+}
+
+function checkThreeSkillGates() {
+  const requiredMentions = [
+    ['agents/sdd-orchestrator-agent/AGENT.md', 'skills/caveman/SKILL.md'],
+    ['agents/sdd-orchestrator-agent/AGENT.md', 'skills/frontend-design/SKILL.md'],
+    ['agents/sdd-orchestrator-agent/AGENT.md', 'skills/frontend-developer/SKILL.md'],
+    ['skills/sdd-operating-flow/SKILL.md', 'skills/caveman/SKILL.md'],
+    ['skills/sdd-operating-flow/SKILL.md', 'skills/frontend-design/SKILL.md'],
+    ['skills/sdd-operating-flow/SKILL.md', 'skills/frontend-developer/SKILL.md'],
+    ['checklists/sdd-delivery-ready.md', 'caveman'],
+    ['checklists/sdd-delivery-ready.md', 'frontend-design'],
+    ['checklists/sdd-delivery-ready.md', 'frontend-developer'],
+  ];
+
+  for (const [file, token] of requiredMentions) {
+    const full = path.join(root, file);
+    if (!fs.existsSync(full)) continue;
+    const content = read(file);
+    if (!content.includes(token)) {
+      addError(`Missing required 3-skill gate reference in ${file}: ${token}`);
+    }
+  }
+}
+
 function main() {
   assertExists();
   checkFrontmatter();
   checkCrossLinks();
   checkChecklistDensity();
+  checkSddDefaultRouting();
+  checkThreeSkillGates();
 
   if (errors.length > 0) {
     console.error('SDD flow validation failed:\n');

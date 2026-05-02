@@ -5,6 +5,9 @@ description: Orchestrates full SDD flow from user story refinement to validation
 version: 1.0.0
 status: active
 skills:
+  - caveman
+  - frontend-design
+  - frontend-developer
   - requirements-extraction
   - spec-writing
   - task-breakdown
@@ -28,6 +31,7 @@ Drive a deterministic SDD delivery system that transforms a raw user story into 
 ## Responsibilities
 - Classify request maturity and select the right refinement depth.
 - Enforce creation of the fast-forward package before execution.
+- Enforce explicit skill gates for `caveman`, `frontend-design`, and `frontend-developer` based on work type.
 - Coordinate apply execution against the SDD checklist.
 - Require verification evidence, code-review evidence, and human happy-path signoff.
 - Enforce concise final documentation and release readiness.
@@ -36,6 +40,9 @@ Drive a deterministic SDD delivery system that transforms a raw user story into 
 - Start from the user story and extract explicit goals, non-goals, constraints, and acceptance criteria.
 - Invoke [skills/sdd-operating-flow/SKILL.md](../../skills/sdd-operating-flow/SKILL.md) as the operational sequence.
 - Require output artifacts listed in [runbooks/sdd-flow.md](../../runbooks/sdd-flow.md).
+- Always apply [skills/caveman/SKILL.md](../../skills/caveman/SKILL.md) for executive summaries and handoffs.
+- Require [skills/frontend-design/SKILL.md](../../skills/frontend-design/SKILL.md) before frontend implementation when visual direction is undefined.
+- Require [skills/frontend-developer/SKILL.md](../../skills/frontend-developer/SKILL.md) after design is defined for frontend implementation.
 - Block implementation if the fast-forward package is incomplete.
 
 ## Available Skills
@@ -46,12 +53,16 @@ Drive a deterministic SDD delivery system that transforms a raw user story into 
 - [skills/docs-sync/SKILL.md](../../skills/docs-sync/SKILL.md)
 - [skills/release-notes/SKILL.md](../../skills/release-notes/SKILL.md)
 - [skills/sdd-operating-flow/SKILL.md](../../skills/sdd-operating-flow/SKILL.md)
+- [skills/caveman/SKILL.md](../../skills/caveman/SKILL.md)
+- [skills/frontend-design/SKILL.md](../../skills/frontend-design/SKILL.md)
+- [skills/frontend-developer/SKILL.md](../../skills/frontend-developer/SKILL.md)
 
 ## Delegation Rules
 - Delegate clarification to `business-agent` when intent is ambiguous.
 - Delegate spec production to `spec-agent` after intent approval.
 - Delegate execution sequencing to `orchestrator-agent` when the task is multi-slice.
 - Delegate implementation to `implementation-agent` only after checklist preconditions pass.
+- Delegate frontend implementation only after `frontend-design` gate completion.
 - Delegate regression and risk checks to `review-agent`.
 - Delegate doc alignment to `docs-agent` before release closeout.
 

@@ -21,9 +21,10 @@ allowed-tools:
 ---
 # Spec Lifecycle
 
-1. Business agent frames the problem and success metrics.
-2. Spec agent converts intent into an implementation-ready spec.
-3. Orchestrator chooses the execution path and dependencies.
-4. Implementation agent executes against the approved spec.
+1. SDD orchestrator starts from user story and opens SDD package.
+2. Business and spec agents refine intent into an implementation-ready contract.
+3. SDD flow applies sequencing and execution gates, delegating orchestration only when needed.
+4. Implementation agent executes against the approved SDD package.
 5. Review agent validates scope, risk, and evidence.
 6. Docs agent syncs artifacts and release notes.
+7. Human happy-path signoff closes the SDD lifecycle.

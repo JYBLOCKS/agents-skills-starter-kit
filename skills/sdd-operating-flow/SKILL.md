@@ -20,17 +20,21 @@ Provide a repeatable execution flow that enforces quality, traceability, and con
 - Refine before implementation.
 - Create fast-forward package before apply.
 - Execute all checklist tasks in [checklists/sdd-delivery-ready.md](../../checklists/sdd-delivery-ready.md).
+- Use [skills/caveman/SKILL.md](../../skills/caveman/SKILL.md) for concise executive outputs and handoffs.
+- Use [skills/frontend-design/SKILL.md](../../skills/frontend-design/SKILL.md) before frontend implementation when visual direction is not settled.
+- Use [skills/frontend-developer/SKILL.md](../../skills/frontend-developer/SKILL.md) for frontend implementation after design is settled.
 - Keep final delivery summary concise and actionable.
 
 ## Workflow
 1. Capture user story and acceptance criteria.
 2. Refine user story into execution-ready contract.
 3. Create fast-forward package from [templates/sdd-fast-forward.md](../../templates/sdd-fast-forward.md).
-4. Apply all tasks from [checklists/sdd-delivery-ready.md](../../checklists/sdd-delivery-ready.md).
-5. Verify implementation and archive evidence in the package.
-6. Produce skill commit output with commit message and PR checklist.
-7. Run code-review validation and regression checks.
-8. Record human happy-path validation result.
+4. Apply skill gates: `caveman` always for executive output; `frontend-design` before frontend implementation when needed; `frontend-developer` after design definition.
+5. Apply all tasks from [checklists/sdd-delivery-ready.md](../../checklists/sdd-delivery-ready.md).
+6. Verify implementation and archive evidence in the package.
+7. Produce skill commit output with commit message and PR checklist.
+8. Run code-review validation and regression checks.
+9. Record human happy-path validation result.
 
 ## Output Format
 - Refined user story

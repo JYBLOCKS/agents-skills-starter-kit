@@ -23,6 +23,7 @@ allowed-tools:
 
 ## Goal
 Run a complete SDD lifecycle from user story to PR-ready package with proof of implementation quality.
+This is the default workflow for delivery work in this starter kit.
 
 ## Inputs
 - User story
@@ -39,11 +40,12 @@ Run a complete SDD lifecycle from user story to PR-ready package with proof of i
 1. **Capture US**: collect goal, actor, value, constraints, and acceptance.
 2. **Refine US**: convert to execution-ready requirements and scenarios.
 3. **Fast-forward Package**: instantiate the prefilled package template.
-4. **Apply**: execute every checklist task and record evidence.
-5. **Verify + Archive**: run validations and persist evidence notes.
-6. **Skill Commit**: generate standard commit + PR-ready payload.
-7. **Code Review + Validation**: validate regressions and quality gates.
-8. **Human Happy Path**: human confirms expected behavior quickly.
+4. **Skill Gates**: apply `caveman` for executive output efficiency; apply `frontend-design` before frontend implementation when visual direction is unsettled; apply `frontend-developer` after design is settled.
+5. **Apply**: execute every checklist task and record evidence.
+6. **Verify + Archive**: run validations and persist evidence notes.
+7. **Skill Commit**: generate standard commit + PR-ready payload.
+8. **Code Review + Validation**: validate regressions and quality gates.
+9. **Human Happy Path**: human confirms expected behavior quickly.
 
 ## Package Layout
 Create one delivery folder per story containing:
