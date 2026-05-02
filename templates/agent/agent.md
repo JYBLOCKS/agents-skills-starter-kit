@@ -1,11 +1,11 @@
 ---
-name: agent-agent
-description: Starter template for agent agent.
-trigger: Use this when creating or updating artifacts that should follow the Agent Agent template.
+name: agent-example
+description: Starter template for agent example.
+trigger: Use this when creating or updating artifacts that should follow the Agent Example template.
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the starter structure for Agent Agent, but does not replace approved repository-specific decisions.
+  scope: Owns the starter structure for Agent Example, but does not replace approved repository-specific decisions.
   auto-invoke: false
 allowed-tools:
   - generic
@@ -19,46 +19,14 @@ allowed-tools:
   - gemini-cli
   - codex
 ---
-# <role>-agent
+# Example Invocation
 
-## Identity
-
-- Name:
-- Role:
-
-## Mission
+## Input
 
 -
 
-## Scope
+## Expected Output Shape
 
-- In scope:
-- Out of scope:
-
-## Trigger Conditions
-
-- 
-
-## Decision Boundaries
-
-- Must decide:
-- Must escalate:
-
-## Inputs
-
-- 
-
-## Outputs
-
-- 
-
-## Dependencies
-
-- Context:
-- Skills:
-- Specs:
-
-## Runbooks and Checklists
-
-- Runbook:
-- Checklist:
+- Summary
+- Decisions
+- Next step
