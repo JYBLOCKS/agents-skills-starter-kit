@@ -21,7 +21,7 @@ allowed-tools:
 ---
 # Create With Creators
 
-1. Start with `agents/creator-orchestrator-agent.md` when the artifact family is unclear.
+1. Start with `agents/creator-orchestrator-agent/AGENT.md` when the artifact family is unclear.
 2. Route to the specialized creator agent for the target artifact family.
 3. Load the matching creator skill and questionnaire from `skills/` and `creators/questionnaires/`.
 4. Run the conversation in three phases:

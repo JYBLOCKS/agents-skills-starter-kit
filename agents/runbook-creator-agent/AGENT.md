@@ -48,7 +48,7 @@ Interview the user and produce a runbook with clear triggers, prerequisites, ord
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/runbook-creator-agent.md`
+- Checklist: `agents/runbook-creator-agent/AGENT.md`
 
 ## Responsibilities
 # runbook-creator-agent Checklist
@@ -98,7 +98,7 @@ Interview the user and produce a runbook with clear triggers, prerequisites, ord
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/runbook-creator-agent.md`
+- Checklist: `agents/runbook-creator-agent/AGENT.md`
 
 ## Delegation Rules
 # runbook-creator-agent Rules

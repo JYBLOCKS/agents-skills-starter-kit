@@ -48,7 +48,7 @@ Interview the user and produce a full skill package with contract-aligned instru
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/skill-creator-agent.md`
+- Checklist: `agents/skill-creator-agent/AGENT.md`
 
 ## Responsibilities
 # skill-creator-agent Checklist
@@ -98,7 +98,7 @@ Interview the user and produce a full skill package with contract-aligned instru
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/skill-creator-agent.md`
+- Checklist: `agents/skill-creator-agent/AGENT.md`
 
 ## Delegation Rules
 # skill-creator-agent Rules

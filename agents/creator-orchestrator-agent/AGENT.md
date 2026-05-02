@@ -50,7 +50,7 @@ Detect which artifact the user wants to create, route to the right specialized c
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/creator-orchestrator-agent.md`
+- Checklist: `agents/creator-orchestrator-agent/AGENT.md`
 
 ## Responsibilities
 # creator-orchestrator-agent Checklist
@@ -105,7 +105,7 @@ Detect which artifact the user wants to create, route to the right specialized c
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/creator-orchestrator-agent.md`
+- Checklist: `agents/creator-orchestrator-agent/AGENT.md`
 
 ## Delegation Rules
 # creator-orchestrator-agent Rules

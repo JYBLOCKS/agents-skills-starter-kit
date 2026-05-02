@@ -77,7 +77,7 @@ Turn a mission into an ordered multi-agent flow, choose the right skills, and ke
 # Operating Rules
 - Follow `rules/global-rules.md`
 - Follow `rules/agent-rules.md`
-- Follow `agents/orchestrator-agent.md`
+- Follow `agents/orchestrator-agent/AGENT.md`
 # Output Shape
 - Mission summary
 - Selected flow

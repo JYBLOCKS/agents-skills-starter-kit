@@ -53,13 +53,13 @@ Use this map:
 
 | Need | Entry point |
 | --- | --- |
-| clarify goal and scope | [agents/business-agent.md](../agents/business-agent.md) |
-| write a spec | [agents/spec-agent.md](../agents/spec-agent.md) |
-| decompose or route work | [agents/orchestrator-agent.md](../agents/orchestrator-agent.md) |
+| clarify goal and scope | [agents/business-agent/AGENT.md](../agents/business-agent/AGENT.md) |
+| write a spec | [agents/spec-agent/AGENT.md](../agents/spec-agent/AGENT.md) |
+| decompose or route work | [agents/orchestrator-agent/AGENT.md](../agents/orchestrator-agent/AGENT.md) |
 | run full SDD flow with traceability | [runbooks/sdd-flow.md](sdd-flow.md) |
-| implement approved changes | [agents/implementation-agent.md](../agents/implementation-agent.md) |
-| review risk or regressions | [agents/review-agent.md](../agents/review-agent.md) |
-| sync docs | [agents/docs-agent.md](../agents/docs-agent.md) |
+| implement approved changes | [agents/implementation-agent/AGENT.md](../agents/implementation-agent/AGENT.md) |
+| review risk or regressions | [agents/review-agent/AGENT.md](../agents/review-agent/AGENT.md) |
+| sync docs | [agents/docs-agent/AGENT.md](../agents/docs-agent/AGENT.md) |
 
 ## If You Want To Extend The Starter
 

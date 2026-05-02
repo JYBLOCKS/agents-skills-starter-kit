@@ -48,7 +48,7 @@ Interview the user and produce a checklist with explicit owner, done criteria, e
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/checklist-creator-agent.md`
+- Checklist: `agents/checklist-creator-agent/AGENT.md`
 
 ## Responsibilities
 # checklist-creator-agent Checklist
@@ -98,7 +98,7 @@ Interview the user and produce a checklist with explicit owner, done criteria, e
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/checklist-creator-agent.md`
+- Checklist: `agents/checklist-creator-agent/AGENT.md`
 
 ## Delegation Rules
 # checklist-creator-agent Rules

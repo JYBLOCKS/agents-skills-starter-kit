@@ -48,7 +48,7 @@ Interview the user and produce a spec draft that is complete enough to approve a
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/spec-creator-agent.md`
+- Checklist: `agents/spec-creator-agent/AGENT.md`
 
 ## Responsibilities
 # spec-creator-agent Checklist
@@ -98,7 +98,7 @@ Interview the user and produce a spec draft that is complete enough to approve a
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/spec-creator-agent.md`
+- Checklist: `agents/spec-creator-agent/AGENT.md`
 
 ## Delegation Rules
 # spec-creator-agent Rules

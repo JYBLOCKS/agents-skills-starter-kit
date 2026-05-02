@@ -5,7 +5,7 @@ const root = process.cwd();
 const errors = [];
 
 const REQUIRED_FILES = [
-  'agents/sdd-orchestrator-agent.md',
+  'agents/sdd-orchestrator-agent/AGENT.md',
   'skills/sdd-operating-flow/SKILL.md',
   'runbooks/sdd-flow.md',
   'checklists/sdd-delivery-ready.md',
@@ -16,10 +16,6 @@ const FRONTMATTER = /^---\r?\n[\s\S]*?\r?\n---\r?\n?/;
 
 function addError(msg) {
   errors.push(msg);
-}
-
-function rel(p) {
-  return p.split(path.sep).join('/');
 }
 
 function assertExists() {
@@ -52,8 +48,8 @@ function checkFrontmatter() {
 
 function checkCrossLinks() {
   const linksToVerify = [
-    ['agents/sdd-orchestrator-agent.md', 'skills/sdd-operating-flow/SKILL.md'],
-    ['agents/sdd-orchestrator-agent.md', 'runbooks/sdd-flow.md'],
+    ['agents/sdd-orchestrator-agent/AGENT.md', 'skills/sdd-operating-flow/SKILL.md'],
+    ['agents/sdd-orchestrator-agent/AGENT.md', 'runbooks/sdd-flow.md'],
     ['skills/sdd-operating-flow/SKILL.md', 'checklists/sdd-delivery-ready.md'],
     ['skills/sdd-operating-flow/SKILL.md', 'templates/sdd-fast-forward.md'],
     ['runbooks/sdd-flow.md', 'checklists/sdd-delivery-ready.md'],

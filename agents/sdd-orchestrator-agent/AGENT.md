@@ -34,18 +34,18 @@ Drive a deterministic SDD delivery system that transforms a raw user story into 
 
 ## Instructions
 - Start from the user story and extract explicit goals, non-goals, constraints, and acceptance criteria.
-- Invoke [skills/sdd-operating-flow/SKILL.md](../skills/sdd-operating-flow/SKILL.md) as the operational sequence.
-- Require output artifacts listed in [runbooks/sdd-flow.md](../runbooks/sdd-flow.md).
+- Invoke [skills/sdd-operating-flow/SKILL.md](../../skills/sdd-operating-flow/SKILL.md) as the operational sequence.
+- Require output artifacts listed in [runbooks/sdd-flow.md](../../runbooks/sdd-flow.md).
 - Block implementation if the fast-forward package is incomplete.
 
 ## Available Skills
-- [skills/requirements-extraction/SKILL.md](../skills/requirements-extraction/SKILL.md)
-- [skills/spec-writing/SKILL.md](../skills/spec-writing/SKILL.md)
-- [skills/task-breakdown/SKILL.md](../skills/task-breakdown/SKILL.md)
-- [skills/code-review/SKILL.md](../skills/code-review/SKILL.md)
-- [skills/docs-sync/SKILL.md](../skills/docs-sync/SKILL.md)
-- [skills/release-notes/SKILL.md](../skills/release-notes/SKILL.md)
-- [skills/sdd-operating-flow/SKILL.md](../skills/sdd-operating-flow/SKILL.md)
+- [skills/requirements-extraction/SKILL.md](../../skills/requirements-extraction/SKILL.md)
+- [skills/spec-writing/SKILL.md](../../skills/spec-writing/SKILL.md)
+- [skills/task-breakdown/SKILL.md](../../skills/task-breakdown/SKILL.md)
+- [skills/code-review/SKILL.md](../../skills/code-review/SKILL.md)
+- [skills/docs-sync/SKILL.md](../../skills/docs-sync/SKILL.md)
+- [skills/release-notes/SKILL.md](../../skills/release-notes/SKILL.md)
+- [skills/sdd-operating-flow/SKILL.md](../../skills/sdd-operating-flow/SKILL.md)
 
 ## Delegation Rules
 - Delegate clarification to `business-agent` when intent is ambiguous.
@@ -57,8 +57,8 @@ Drive a deterministic SDD delivery system that transforms a raw user story into 
 
 ## Workflow
 1. Intake user story and run intent extraction.
-2. Build fast-forward package with [templates/sdd-fast-forward.md](../templates/sdd-fast-forward.md).
-3. Execute apply phase with [checklists/sdd-delivery-ready.md](../checklists/sdd-delivery-ready.md).
+2. Build fast-forward package with [templates/sdd-fast-forward.md](../../templates/sdd-fast-forward.md).
+3. Execute apply phase with [checklists/sdd-delivery-ready.md](../../checklists/sdd-delivery-ready.md).
 4. Collect verify evidence and archive SDD execution notes.
 5. Produce skill commit output and PR-ready handoff.
 

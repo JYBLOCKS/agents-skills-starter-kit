@@ -30,7 +30,7 @@ Run a complete SDD lifecycle from user story to PR-ready package with proof of i
 - Repository context
 
 ## Required Assets
-- [agents/sdd-orchestrator-agent.md](../agents/sdd-orchestrator-agent.md)
+- [agents/sdd-orchestrator-agent/AGENT.md](../agents/sdd-orchestrator-agent/AGENT.md)
 - [skills/sdd-operating-flow/SKILL.md](../skills/sdd-operating-flow/SKILL.md)
 - [templates/sdd-fast-forward.md](../templates/sdd-fast-forward.md)
 - [checklists/sdd-delivery-ready.md](../checklists/sdd-delivery-ready.md)

@@ -48,7 +48,7 @@ Interview the user and produce a context document that other agents and skills c
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/context-creator-agent.md`
+- Checklist: `agents/context-creator-agent/AGENT.md`
 
 ## Responsibilities
 # context-creator-agent Checklist
@@ -98,7 +98,7 @@ Interview the user and produce a context document that other agents and skills c
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/context-creator-agent.md`
+- Checklist: `agents/context-creator-agent/AGENT.md`
 
 ## Delegation Rules
 # context-creator-agent Rules

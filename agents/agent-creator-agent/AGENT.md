@@ -58,7 +58,7 @@ Interview the user and produce a complete agent package that matches the reposit
 ## Runbook and Checklist
 
 - **Runbook**: `runbooks/create-with-creators.md`
-- **Checklist**: `agents/agent-creator-agent.md`
+- **Checklist**: `agents/agent-creator-agent/AGENT.md`
 
 ## Responsibilities
 # agent-creator-agent Checklist
@@ -120,7 +120,7 @@ Interview the user and produce a complete agent package that matches the reposit
 ## Runbook and Checklist
 
 - **Runbook**: `runbooks/create-with-creators.md`
-- **Checklist**: `agents/agent-creator-agent.md`
+- **Checklist**: `agents/agent-creator-agent/AGENT.md`
 
 ## Delegation Rules
 # agent-creator-agent Rules

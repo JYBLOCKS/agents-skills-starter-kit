@@ -58,7 +58,7 @@ Interview the user and produce an adapter package that maps the neutral core int
 ## Runbook and Checklist
 
 - **Runbook**: `runbooks/create-with-creators.md`
-- **Checklist**: `agents/adapter-creator-agent.md`
+- **Checklist**: `agents/adapter-creator-agent/AGENT.md`
 
 ## Responsibilities
 # adapter-creator-agent Checklist
@@ -120,7 +120,7 @@ Interview the user and produce an adapter package that maps the neutral core int
 ## Runbook and Checklist
 
 - **Runbook**: `runbooks/create-with-creators.md`
-- **Checklist**: `agents/adapter-creator-agent.md`
+- **Checklist**: `agents/adapter-creator-agent/AGENT.md`
 
 ## Delegation Rules
 # adapter-creator-agent Rules

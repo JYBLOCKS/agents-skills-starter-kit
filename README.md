@@ -110,7 +110,7 @@ npx skills add JYBLOCKS/agents-skills-starter-kit
 | --- | --- | --- |
 | learn the repo quickly | [runbooks/start-here.md](runbooks/start-here.md) | [AGENTS.md](AGENTS.md) |
 | modify the agent flow | [AGENTS.md](AGENTS.md) | `agents/`, `skills/`, `rules/`, `context/` |
-| run a full SDD delivery flow | [runbooks/sdd-flow.md](runbooks/sdd-flow.md) | [agents/sdd-orchestrator-agent.md](agents/sdd-orchestrator-agent.md), [skills/sdd-operating-flow/SKILL.md](skills/sdd-operating-flow/SKILL.md) |
+| run a full SDD delivery flow | [runbooks/sdd-flow.md](runbooks/sdd-flow.md) | [agents/sdd-orchestrator-agent/AGENT.md](agents/sdd-orchestrator-agent/AGENT.md), [skills/sdd-operating-flow/SKILL.md](skills/sdd-operating-flow/SKILL.md) |
 | create a new artifact | [creators/README.md](creators/README.md) | `creators/CONTRACT.md`, `creators/matrix.md` |
 | add an agent | [agents/README.md](agents/README.md) | `templates/agent/`, `distribution/manifest.json` |
 | add a skill | [skills/README.md](skills/README.md) | `templates/skill/`, `rules/skill-rules.md` |

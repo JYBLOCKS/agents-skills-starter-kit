@@ -184,27 +184,27 @@ Use this decision guide:
 
 | Situation or Goal | Primary Agent | Supporting Skills | Required Rules, Context, and Checklist | Link |
 | --- | --- | --- | --- | --- |
-| Clarify goals, scope, priorities, or acceptance criteria | `business-agent` | `requirements-extraction` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/business-context.md`, `context/product-context.md`, `checklists/spec-ready.md` | [business-agent](agents/business-agent.md) |
-| Turn approved intent into an implementation-ready spec | `spec-agent` | `spec-writing`, `repo-analysis` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/`, `specs/CONTRACT.md`, `checklists/spec-ready.md` | [spec-agent](agents/spec-agent.md) |
-| Route work across the core delivery flow | `orchestrator-agent` | `task-breakdown`, `repo-analysis` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/repo-context.md`, `context/delivery-context.md`, `checklists/implementation-ready.md` | [orchestrator-agent](agents/orchestrator-agent.md) |
-| Run end-to-end SDD delivery with traceability | `sdd-orchestrator-agent` | `sdd-operating-flow`, `requirements-extraction`, `spec-writing`, `task-breakdown`, `code-review` | `rules/global-rules.md`, `rules/agent-rules.md`, `runbooks/sdd-flow.md`, `checklists/sdd-delivery-ready.md` | [sdd-orchestrator-agent](agents/sdd-orchestrator-agent.md) |
-| Implement approved changes in the repo | `implementation-agent` | `repo-analysis`, `task-breakdown`, `test-planning` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/technical-context.md`, `context/repo-context.md`, `checklists/implementation-ready.md` | [implementation-agent](agents/implementation-agent.md) |
-| Review changes for regressions, risk, and missing evidence | `review-agent` | `code-review`, `test-planning` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/technical-context.md`, `context/delivery-context.md`, `checklists/review-ready.md` | [review-agent](agents/review-agent.md) |
-| Sync README, templates, and repo documentation to shipped reality | `docs-agent` | `docs-sync` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/repo-context.md`, `context/delivery-context.md`, `checklists/docs-ready.md` | [docs-agent](agents/docs-agent.md) |
-| Create or extend repo artifacts through guided generation | `creator-orchestrator-agent` | `creator-intake`, `creator-validation` | `rules/global-rules.md`, `rules/agent-rules.md`, `creators/CONTRACT.md`, `creators/matrix.md`, `runbooks/create-with-creators.md` | [creator-orchestrator-agent](agents/creator-orchestrator-agent.md) |
+| Clarify goals, scope, priorities, or acceptance criteria | `business-agent` | `requirements-extraction` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/business-context.md`, `context/product-context.md`, `checklists/spec-ready.md` | [business-agent](agents/business-agent/AGENT.md) |
+| Turn approved intent into an implementation-ready spec | `spec-agent` | `spec-writing`, `repo-analysis` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/`, `specs/CONTRACT.md`, `checklists/spec-ready.md` | [spec-agent](agents/spec-agent/AGENT.md) |
+| Route work across the core delivery flow | `orchestrator-agent` | `task-breakdown`, `repo-analysis` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/repo-context.md`, `context/delivery-context.md`, `checklists/implementation-ready.md` | [orchestrator-agent](agents/orchestrator-agent/AGENT.md) |
+| Run end-to-end SDD delivery with traceability | `sdd-orchestrator-agent` | `sdd-operating-flow`, `requirements-extraction`, `spec-writing`, `task-breakdown`, `code-review` | `rules/global-rules.md`, `rules/agent-rules.md`, `runbooks/sdd-flow.md`, `checklists/sdd-delivery-ready.md` | [sdd-orchestrator-agent](agents/sdd-orchestrator-agent/AGENT.md) |
+| Implement approved changes in the repo | `implementation-agent` | `repo-analysis`, `task-breakdown`, `test-planning` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/technical-context.md`, `context/repo-context.md`, `checklists/implementation-ready.md` | [implementation-agent](agents/implementation-agent/AGENT.md) |
+| Review changes for regressions, risk, and missing evidence | `review-agent` | `code-review`, `test-planning` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/technical-context.md`, `context/delivery-context.md`, `checklists/review-ready.md` | [review-agent](agents/review-agent/AGENT.md) |
+| Sync README, templates, and repo documentation to shipped reality | `docs-agent` | `docs-sync` | `rules/global-rules.md`, `rules/agent-rules.md`, `context/repo-context.md`, `context/delivery-context.md`, `checklists/docs-ready.md` | [docs-agent](agents/docs-agent/AGENT.md) |
+| Create or extend repo artifacts through guided generation | `creator-orchestrator-agent` | `creator-intake`, `creator-validation` | `rules/global-rules.md`, `rules/agent-rules.md`, `creators/CONTRACT.md`, `creators/matrix.md`, `runbooks/create-with-creators.md` | [creator-orchestrator-agent](agents/creator-orchestrator-agent/AGENT.md) |
 
 ## Resource Index
 
 | Name | Type | Description | Location |
 | --- | --- | --- | --- |
-| `business-agent` | `agent` | Owns business intent, scope, and acceptance framing | [agents/business-agent.md](agents/business-agent.md) |
-| `spec-agent` | `agent` | Writes decision-complete implementation specs | [agents/spec-agent.md](agents/spec-agent.md) |
-| `orchestrator-agent` | `agent` | Routes work across the core delivery flow | [agents/orchestrator-agent.md](agents/orchestrator-agent.md) |
-| `sdd-orchestrator-agent` | `agent` | Runs the full SDD flow from refined US to PR-ready handoff | [agents/sdd-orchestrator-agent.md](agents/sdd-orchestrator-agent.md) |
-| `implementation-agent` | `agent` | Applies approved changes and gathers validation evidence | [agents/implementation-agent.md](agents/implementation-agent.md) |
-| `review-agent` | `agent` | Reviews regressions, rule compliance, and residual risk | [agents/review-agent.md](agents/review-agent.md) |
-| `docs-agent` | `agent` | Keeps docs, templates, and onboarding paths aligned | [agents/docs-agent.md](agents/docs-agent.md) |
-| `creator-orchestrator-agent` | `agent` | Detects the artifact family, asks the right creator questions, and routes to specialized creator flows | [agents/creator-orchestrator-agent.md](agents/creator-orchestrator-agent.md) |
+| `business-agent` | `agent` | Owns business intent, scope, and acceptance framing | [agents/business-agent/AGENT.md](agents/business-agent/AGENT.md) |
+| `spec-agent` | `agent` | Writes decision-complete implementation specs | [agents/spec-agent/AGENT.md](agents/spec-agent/AGENT.md) |
+| `orchestrator-agent` | `agent` | Routes work across the core delivery flow | [agents/orchestrator-agent/AGENT.md](agents/orchestrator-agent/AGENT.md) |
+| `sdd-orchestrator-agent` | `agent` | Runs the full SDD flow from refined US to PR-ready handoff | [agents/sdd-orchestrator-agent/AGENT.md](agents/sdd-orchestrator-agent/AGENT.md) |
+| `implementation-agent` | `agent` | Applies approved changes and gathers validation evidence | [agents/implementation-agent/AGENT.md](agents/implementation-agent/AGENT.md) |
+| `review-agent` | `agent` | Reviews regressions, rule compliance, and residual risk | [agents/review-agent/AGENT.md](agents/review-agent/AGENT.md) |
+| `docs-agent` | `agent` | Keeps docs, templates, and onboarding paths aligned | [agents/docs-agent/AGENT.md](agents/docs-agent/AGENT.md) |
+| `creator-orchestrator-agent` | `agent` | Detects the artifact family, asks the right creator questions, and routes to specialized creator flows | [agents/creator-orchestrator-agent/AGENT.md](agents/creator-orchestrator-agent/AGENT.md) |
 | `repo-analysis` | `skill` | Grounds work in the current repository structure and risks | [skills/repo-analysis/SKILL.md](skills/repo-analysis/SKILL.md) |
 | `caveman` | `skill` | Forces ultra-compact, token-efficient output without dropping correctness | [skills/caveman/SKILL.md](skills/caveman/SKILL.md) |
 | `requirements-extraction` | `skill` | Converts requests into explicit goals, constraints, and acceptance language | [skills/requirements-extraction/SKILL.md](skills/requirements-extraction/SKILL.md) |

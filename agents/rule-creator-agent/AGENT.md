@@ -48,7 +48,7 @@ Interview the user and produce a rule artifact with explicit audience, scope, en
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/rule-creator-agent.md`
+- Checklist: `agents/rule-creator-agent/AGENT.md`
 
 ## Responsibilities
 # rule-creator-agent Checklist
@@ -98,7 +98,7 @@ Interview the user and produce a rule artifact with explicit audience, scope, en
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/rule-creator-agent.md`
+- Checklist: `agents/rule-creator-agent/AGENT.md`
 
 ## Delegation Rules
 # rule-creator-agent Rules

@@ -48,7 +48,7 @@ Interview the user and produce a template file or template package with meaningf
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/template-creator-agent.md`
+- Checklist: `agents/template-creator-agent/AGENT.md`
 
 ## Responsibilities
 # template-creator-agent Checklist
@@ -98,7 +98,7 @@ Interview the user and produce a template file or template package with meaningf
 ## Runbook and Checklist
 
 - Runbook: `runbooks/create-with-creators.md`
-- Checklist: `agents/template-creator-agent.md`
+- Checklist: `agents/template-creator-agent/AGENT.md`
 
 ## Delegation Rules
 # template-creator-agent Rules
