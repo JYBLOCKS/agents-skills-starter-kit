@@ -1,11 +1,11 @@
 ---
 name: spec-lifecycle
-description: Repeatable workflow document for Spec Lifecycle.
-trigger: Use this when you need the repeatable workflow documented in Spec Lifecycle.
+description: Internal lifecycle reference for orchestrator-led SDD.
+trigger: Use when orchestrator delegates lifecycle checks.
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the repeatable workflow for Spec Lifecycle, but does not replace underlying contracts or repository rules.
+  scope: Internal lifecycle note that references canonical flow.
   auto-invoke: false
 allowed-tools:
   - generic
@@ -21,10 +21,12 @@ allowed-tools:
 ---
 # Spec Lifecycle
 
-1. SDD orchestrator starts from user story and opens SDD package.
-2. Business and spec agents refine intent into an implementation-ready contract.
-3. SDD flow applies sequencing and execution gates, delegating orchestration only when needed.
-4. Implementation agent executes against the approved SDD package.
-5. Review agent validates scope, risk, and evidence.
-6. Docs agent syncs artifacts and release notes.
-7. Human happy-path signoff closes the SDD lifecycle.
+Canonical source: [AGENTS.md](../AGENTS.md).
+Operational sequence: [runbooks/sdd-flow.md](sdd-flow.md).
+
+Internal lifecycle checkpoints:
+
+1. Orchestrator confirms context and scope.
+2. Orchestrator ensures spec exists before implementation.
+3. Orchestrator delegates execution to internal specialists.
+4. Orchestrator consolidates validation and caveman summary.

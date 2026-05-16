@@ -1,11 +1,11 @@
 ---
 name: end-to-end-example
-description: Repeatable workflow document for End To End Example.
-trigger: Use this when you need the repeatable workflow documented in End To End Example.
+description: Internal example aligned to the single canonical workflow.
+trigger: Use when a short internal example is needed.
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the repeatable workflow for End To End Example, but does not replace underlying contracts or repository rules.
+  scope: Demonstrates orchestrator-led flow without introducing alternate routes.
   auto-invoke: false
 allowed-tools:
   - generic
@@ -21,34 +21,13 @@ allowed-tools:
 ---
 # End-to-End Example
 
-This example shows the default flow for a repository change request.
+Canonical source: [AGENTS.md](../AGENTS.md).
 
-## Scenario
+Scenario:
+- User requests a new reusable capability.
 
-Add a new tool adapter while keeping shared prompts, rules, and context portable.
-
-## Flow
-
-1. `business-agent`
-   - frames the outcome: support a new tool without forking the neutral core
-   - defines success criteria and non-goals
-2. `spec-agent`
-   - writes the implementation spec
-   - defines the adapter contract and setup expectations
-3. `orchestrator-agent`
-   - routes work to implementation, review, and docs
-   - identifies supporting skills such as `docs-sync` and any optional adapter-specific helper skill when needed
-4. `implementation-agent`
-   - creates the adapter folder and docs
-   - updates any required templates or examples
-5. `review-agent`
-   - checks contract compliance, missing examples, and README drift
-6. `docs-agent`
-   - updates the adapter matrix and onboarding instructions
-
-## Expected Outputs
-
-- new adapter folder
-- setup example
-- README or runbook updates
-- review notes or residual risk statement
+Flow:
+1. Start at [agents/orchestrator.md](../agents/orchestrator.md).
+2. Orchestrator runs discovery and updates spec.
+3. Orchestrator delegates implementation and validation internally.
+4. Orchestrator returns caveman summary with risks and next action.

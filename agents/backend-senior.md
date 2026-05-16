@@ -53,23 +53,8 @@ This agent can delegate to:
 
 ## Quality Gates
 
-Before finishing, validate:
-
-- Spec updated.
-- Tests defined.
-- Risks documented.
-- No unnecessary duplication.
-- No overengineering.
-- Caveman response when the user does not ask for detail.
+Inherits shared gate policy from [agents/CONTRACT.md](./CONTRACT.md) and orchestrator governance in [AGENTS.md](../AGENTS.md).
 
 ## Response Style
 
 Default: caveman mode.
-
-Format:
-
-- Done:
-- Changed:
-- Tests:
-- Risks:
-- Next:

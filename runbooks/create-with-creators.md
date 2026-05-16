@@ -1,11 +1,11 @@
 ---
 name: create-with-creators
-description: Internal creator workflow executed through orchestrator delegation.
+description: Internal creator flow used only by orchestrator delegation.
 trigger: Use only after orchestrator routes to creator capabilities.
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Internal creator operation, not a public entrypoint.
+  scope: Internal creator operation; canonical policy lives in AGENTS.md.
   auto-invoke: false
 allowed-tools:
   - generic
@@ -21,8 +21,8 @@ allowed-tools:
 ---
 # Create With Creators
 
-This flow is internal.
+Canonical source: [AGENTS.md](../AGENTS.md).
 
-- Entry is always `agents/orchestrator.md`.
+- Entry: `agents/orchestrator.md` only.
 - Orchestrator decides when creator artifacts are needed.
-- Creator agents and questionnaires are delegated internally.
+- Creator agents/questionnaires execute as internal delegated steps.

@@ -55,9 +55,7 @@ This agent can delegate to:
 
 ## Quality Gates
 
-- No direct public routing.
-- SDD before implementation.
-- TDD evidence for completed tasks.
+Inherits shared gate policy from [agents/CONTRACT.md](./CONTRACT.md) and orchestrator governance in [AGENTS.md](../AGENTS.md).
 
 ## Response Style
 

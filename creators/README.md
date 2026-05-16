@@ -5,7 +5,7 @@ trigger: Use when orchestrator delegates creator work.
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Internal extension system, not a public workflow entry.
+  scope: Internal extension system; canonical routing policy is in AGENTS.md.
   auto-invoke: false
 allowed-tools:
   - generic
@@ -21,12 +21,6 @@ allowed-tools:
 ---
 # Creators
 
-Creators are internal capabilities invoked only through `agents/orchestrator.md` delegation.
+Canonical source: [AGENTS.md](../AGENTS.md).
 
-They are not a public starting point.
-
-## Internal Flow
-
-1. Orchestrator identifies missing reusable artifact.
-2. Orchestrator delegates to creator agents and skills.
-3. Creator outputs are validated and merged into canonical flow docs/contracts.
+Creators are internal capabilities invoked only through orchestrator delegation.

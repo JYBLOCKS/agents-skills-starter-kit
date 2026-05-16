@@ -40,6 +40,4 @@ Define business model, market risk, value proposition, pricing direction, and gr
 
 ## Quality Gates
 
-- Output is actionable.
-- Acceptance criteria or validation are covered when applicable.
-- No unnecessary context or repeated detail.
+Inherits shared gate policy from [skills/CONTRACT.md](./CONTRACT.md) and canonical workflow constraints in [AGENTS.md](../AGENTS.md).

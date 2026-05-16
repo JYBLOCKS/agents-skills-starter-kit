@@ -40,6 +40,4 @@ Prepare release notes, rollout, rollback, versioning, and PR handoff.
 
 ## Quality Gates
 
-- Output is actionable.
-- Acceptance criteria or validation are covered when applicable.
-- No unnecessary context or repeated detail.
+Inherits shared gate policy from [skills/CONTRACT.md](./CONTRACT.md) and canonical workflow constraints in [AGENTS.md](../AGENTS.md).
