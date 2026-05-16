@@ -1,11 +1,11 @@
 ---
 name: runbooks
-description: Catalog and usage guidance for repository runbooks.
-trigger: Use this when browsing the available Runbooks resources in the repository.
+description: Runbook index aligned to one canonical workflow.
+trigger: Use this when locating runbook-level guidance.
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns discoverability for Runbooks, but does not replace the canonical documents it references.
+  scope: Index for operational docs with one public flow.
   auto-invoke: false
 allowed-tools:
   - generic
@@ -21,17 +21,8 @@ allowed-tools:
 ---
 # Runbooks
 
-Runbooks are repeatable workflows for operating the repository.
+Primary runbook:
 
-Start with:
+- `sdd-flow.md` (single public operational path)
 
-- `start-here.md`
-- `new-project-bootstrap.md`
-- `new-agent.md`
-- `new-skill.md`
-- `new-tool-adapter.md`
-- `distribution-maintenance.md`
-- `spec-lifecycle.md`
-- `end-to-end-example.md`
-
-Creator runbooks live alongside the main runbooks under `runbooks/`.
+Supporting runbooks are internal references and must not be documented as alternate entrypoints.

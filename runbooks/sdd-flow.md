@@ -1,11 +1,11 @@
 ---
 name: sdd-flow
-description: Operational runbook for the SDD workflow from user story refinement to PR-ready delivery.
-trigger: Use this when a contributor wants high-traceability implementation flow with enforced refinement, checklist execution, and validation evidence.
+description: Canonical orchestrator-led SDD workflow.
+trigger: Use this as the single operational runbook.
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the SDD operating sequence and required handoff artifacts, but does not replace canonical agent, skill, or review contracts.
+  scope: Defines the only public workflow path in this repository.
   auto-invoke: false
 allowed-tools:
   - generic
@@ -21,46 +21,30 @@ allowed-tools:
 ---
 # SDD Flow
 
-## Goal
-Run a complete SDD lifecycle from user story to PR-ready package with proof of implementation quality.
-This is the default workflow for delivery work in this starter kit.
+## Public Entry
 
-## Inputs
-- User story
-- Constraints and acceptance criteria
-- Repository context
+- [agents/orchestrator.md](../agents/orchestrator.md)
 
 ## Required Assets
-- [agents/sdd-orchestrator-agent/AGENT.md](../agents/sdd-orchestrator-agent/AGENT.md)
-- [skills/sdd-operating-flow/SKILL.md](../skills/sdd-operating-flow/SKILL.md)
-- [templates/sdd-fast-forward.md](../templates/sdd-fast-forward.md)
+
+- [skills/spec-driven-development.md](../skills/spec-driven-development.md)
+- [skills/test-driven-development.md](../skills/test-driven-development.md)
+- [skills/caveman.md](../skills/caveman.md)
 - [checklists/sdd-delivery-ready.md](../checklists/sdd-delivery-ready.md)
+- [templates/sdd-fast-forward.md](../templates/sdd-fast-forward.md)
 
-## Phases
-1. **Capture US**: collect goal, actor, value, constraints, and acceptance.
-2. **Refine US**: convert to execution-ready requirements and scenarios.
-3. **Fast-forward Package**: instantiate the prefilled package template.
-4. **Skill Gates**: apply `caveman` for executive output efficiency; apply `frontend-design` before frontend implementation when visual direction is unsettled; apply `frontend-developer` after design is settled.
-5. **Apply**: execute every checklist task and record evidence.
-6. **Verify + Archive**: run validations and persist evidence notes.
-7. **Skill Commit**: generate standard commit + PR-ready payload.
-8. **Code Review + Validation**: validate regressions and quality gates.
-9. **Human Happy Path**: human confirms expected behavior quickly.
+## Canonical Sequence
 
-## Package Layout
-Create one delivery folder per story containing:
-- refined requirements and scenarios
-- technical and architecture design
-- execution checklist tracking
-- verification evidence
-- PR summary and release notes
+1. Discovery: orchestrator clarifies missing information.
+2. Context: orchestrator reads and updates context artifacts.
+3. Spec: create or update the governing spec before implementation.
+4. Delegation: orchestrator routes to internal specialists only as needed.
+5. Implementation and tests: enforce TDD and acceptance coverage.
+6. Validation: run structure, SDD, docs, and target checks.
+7. Summary: publish concise caveman output with risks and next action.
 
-## Done Criteria
-- All checklist tasks completed.
-- Validation outputs captured.
-- Code review evidence captured.
-- Human happy-path check recorded.
-- Final handoff concise and actionable.
+## Constraints
 
-## Documentation Limit
-Keep final delivery summary and decision log compact, targeting concise traceability and never exceeding 200 lines for the final report artifact.
+- No alternate public entrypoints.
+- No implementation before spec.
+- No task completion with failing required tests.

@@ -1,29 +1,28 @@
 ---
 name: agents-contract
-description: Canonical contract for agent packages in the starter kit
-trigger: Use this when you need the canonical structure, requirements, or constraints defined in Agents Contract
-metadata:
-  author: starter-kit
-  version: 0.3.0
-  scope: Owns the canonical requirements for Agents Contract, but does not replace the concrete artifacts that implement them
-  auto-invoke: false
-tools: shared/tool-permissions.md#standard-tool-set
+description: Canonical contract for flat agent files in the starter kit.
 ---
 # Agent Contract
 
-Every agent package should define:
+Every agent must be a flat Markdown file under `agents/*.md`.
 
-- Identity
-- Mission
-- Scope
-- Trigger Conditions
-- Decision Boundaries
-- Inputs
+## Required Frontmatter
+- `name`
+- `role`
+- `seniority`
+- `main_goal`
+- `when_to_use`
+- `delegates_to`
+- `uses_skills`
+
+## Required Sections
+- Purpose
+- Responsibilities
+- Inputs Required
 - Outputs
-- Dependencies
-- Required Context
-- Supported Skills
-- Runbook Links
-- Checklist Link
+- Delegation Rules
+- Skills Used
+- Quality Gates
+- Response Style
 
-The agent should also include a starter prompt, a handoff template, and at least one example invocation.
+Do not create per-agent folders.

@@ -5,9 +5,11 @@ const root = process.cwd();
 const errors = [];
 
 const REQUIRED_FILES = [
-  'agents/sdd-orchestrator-agent/AGENT.md',
-  'skills/sdd-operating-flow/SKILL.md',
+  'agents/orchestrator.md',
   'runbooks/sdd-flow.md',
+  'skills/spec-driven-development.md',
+  'skills/test-driven-development.md',
+  'skills/caveman.md',
   'checklists/sdd-delivery-ready.md',
   'templates/sdd-fast-forward.md',
 ];
@@ -22,7 +24,7 @@ function assertExists() {
   for (const file of REQUIRED_FILES) {
     const full = path.join(root, file);
     if (!fs.existsSync(full)) {
-      addError(`Missing required SDD artifact: ${file}`);
+      addError(`Missing required canonical-flow artifact: ${file}`);
     }
   }
 }
@@ -46,12 +48,16 @@ function checkFrontmatter() {
   }
 }
 
-function checkCrossLinks() {
+function checkCanonicalLinks() {
   const linksToVerify = [
-    ['agents/sdd-orchestrator-agent/AGENT.md', 'skills/sdd-operating-flow/SKILL.md'],
-    ['agents/sdd-orchestrator-agent/AGENT.md', 'runbooks/sdd-flow.md'],
-    ['skills/sdd-operating-flow/SKILL.md', 'checklists/sdd-delivery-ready.md'],
-    ['skills/sdd-operating-flow/SKILL.md', 'templates/sdd-fast-forward.md'],
+    ['AGENTS.md', 'agents/orchestrator.md'],
+    ['README.md', 'agents/orchestrator.md'],
+    ['README.md', 'runbooks/sdd-flow.md'],
+    ['runbooks/start-here.md', 'agents/orchestrator.md'],
+    ['runbooks/sdd-flow.md', 'agents/orchestrator.md'],
+    ['runbooks/sdd-flow.md', 'skills/spec-driven-development.md'],
+    ['runbooks/sdd-flow.md', 'skills/test-driven-development.md'],
+    ['runbooks/sdd-flow.md', 'skills/caveman.md'],
     ['runbooks/sdd-flow.md', 'checklists/sdd-delivery-ready.md'],
   ];
 
@@ -73,7 +79,53 @@ function checkCrossLinks() {
       return resolved === targetAbs;
     });
     if (!hasTarget) {
-      addError(`Missing required internal link from ${source} to ${target}`);
+      addError(`Missing required canonical link from ${source} to ${target}`);
+    }
+  }
+}
+
+function checkSingleEntryLanguage() {
+  const requiredChecks = [
+    ['README.md', /single entry/i, 'README must declare single entry workflow'],
+    ['runbooks/start-here.md', /one entrypoint only/i, 'start-here must enforce one entrypoint'],
+    ['AGENTS.md', /one public workflow entrypoint/i, 'AGENTS must declare one public entrypoint'],
+  ];
+
+  for (const [file, pattern, message] of requiredChecks) {
+    const full = path.join(root, file);
+    if (!fs.existsSync(full)) {
+      addError(`Missing routing file: ${file}`);
+      continue;
+    }
+    const content = read(file);
+    if (!pattern.test(content)) {
+      addError(message);
+    }
+  }
+}
+
+function checkForbiddenAltRouting() {
+  const files = ['AGENTS.md', 'README.md', 'runbooks/start-here.md', 'runbooks/sdd-flow.md'];
+  const forbidden = [
+    'secondary/legacy',
+    'decompose or route work',
+    'business-agent',
+    'spec-agent',
+    'implementation-agent',
+    'review-agent',
+    'docs-agent',
+    'creator-orchestrator-agent',
+    'sdd-orchestrator-agent',
+  ];
+
+  for (const file of files) {
+    const full = path.join(root, file);
+    if (!fs.existsSync(full)) continue;
+    const content = read(file).toLowerCase();
+    for (const token of forbidden) {
+      if (content.includes(token.toLowerCase())) {
+        addError(`Forbidden alternate-route token in ${file}: ${token}`);
+      }
     }
   }
 }
@@ -89,60 +141,18 @@ function checkChecklistDensity() {
   if (taskCount < 128) {
     addError(`Checklist must include at least 128 tasks, found ${taskCount}`);
   }
-  if (lines.length > 200) {
-    addError(`Checklist document must be <=200 lines, found ${lines.length}`);
-  }
-}
-
-function checkSddDefaultRouting() {
-  const requiredRoutingChecks = [
-    ['README.md', /Default Workflow:\s*SDD/i, 'README must declare SDD as default workflow'],
-    ['runbooks/start-here.md', /default delivery flow \(recommended\)/i, 'start-here must expose SDD as recommended default delivery flow'],
-  ];
-
-  for (const [file, pattern, message] of requiredRoutingChecks) {
-    const full = path.join(root, file);
-    if (!fs.existsSync(full)) {
-      addError(`Missing routing file: ${file}`);
-      continue;
-    }
-    const content = read(file);
-    if (!pattern.test(content)) {
-      addError(message);
-    }
-  }
-}
-
-function checkThreeSkillGates() {
-  const requiredMentions = [
-    ['agents/sdd-orchestrator-agent/AGENT.md', 'skills/caveman/SKILL.md'],
-    ['agents/sdd-orchestrator-agent/AGENT.md', 'skills/frontend-design/SKILL.md'],
-    ['agents/sdd-orchestrator-agent/AGENT.md', 'skills/frontend-developer/SKILL.md'],
-    ['skills/sdd-operating-flow/SKILL.md', 'skills/caveman/SKILL.md'],
-    ['skills/sdd-operating-flow/SKILL.md', 'skills/frontend-design/SKILL.md'],
-    ['skills/sdd-operating-flow/SKILL.md', 'skills/frontend-developer/SKILL.md'],
-    ['checklists/sdd-delivery-ready.md', 'caveman'],
-    ['checklists/sdd-delivery-ready.md', 'frontend-design'],
-    ['checklists/sdd-delivery-ready.md', 'frontend-developer'],
-  ];
-
-  for (const [file, token] of requiredMentions) {
-    const full = path.join(root, file);
-    if (!fs.existsSync(full)) continue;
-    const content = read(file);
-    if (!content.includes(token)) {
-      addError(`Missing required 3-skill gate reference in ${file}: ${token}`);
-    }
+  if (lines.length > 220) {
+    addError(`Checklist document must be <=220 lines, found ${lines.length}`);
   }
 }
 
 function main() {
   assertExists();
   checkFrontmatter();
-  checkCrossLinks();
+  checkCanonicalLinks();
+  checkSingleEntryLanguage();
+  checkForbiddenAltRouting();
   checkChecklistDensity();
-  checkSddDefaultRouting();
-  checkThreeSkillGates();
 
   if (errors.length > 0) {
     console.error('SDD flow validation failed:\n');

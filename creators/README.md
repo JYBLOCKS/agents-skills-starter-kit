@@ -1,11 +1,11 @@
 ---
 name: creators
-description: Overview of creator contracts, templates, and questionnaires.
-trigger: Use this when browsing the available Creators resources in the repository.
+description: Internal creator system for orchestrator-delegated artifact generation.
+trigger: Use when orchestrator delegates creator work.
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns discoverability for Creators, but does not replace the canonical documents it references.
+  scope: Internal extension system, not a public workflow entry.
   auto-invoke: false
 allowed-tools:
   - generic
@@ -21,28 +21,12 @@ allowed-tools:
 ---
 # Creators
 
-Creators are guided artifact-generation workflows layered on top of the repository's existing agent, skill, spec, rule, context, runbook, checklist, adapter, and template contracts.
+Creators are internal capabilities invoked only through `agents/orchestrator.md` delegation.
 
-## Design Goals
+They are not a public starting point.
 
-- ask the minimum questions needed to produce a correct artifact
-- reuse the neutral core instead of inventing parallel formats
-- produce complete draft outputs, not just advice
-- stay portable across OpenAI, Claude Code, OpenCode, and future tools
+## Internal Flow
 
-## Core Pieces
-
-- `CONTRACT.md`: shared creator lifecycle
-- `AGENT-CONTRACT.md`: rules for creator agents
-- `SKILL-CONTRACT.md`: rules for creator skills
-- `QUESTIONNAIRE-CONTRACT.md`: structure for question banks
-- `CREATION-PACKAGE-CONTRACT.md`: required output shape
-- `questionnaires/`: artifact-specific question banks
-- `templates/`: creator-facing output templates
-- `matrix.md`: creator ownership map by artifact family
-
-## Standard Creator Flow
-
-1. Intent and use case
-2. Contract completion and missing decisions
-3. Artifact assembly and validation summary
+1. Orchestrator identifies missing reusable artifact.
+2. Orchestrator delegates to creator agents and skills.
+3. Creator outputs are validated and merged into canonical flow docs/contracts.

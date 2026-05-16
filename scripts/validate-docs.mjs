@@ -21,12 +21,12 @@ const SPANISH_MARKERS = [
 ];
 
 const REQUIRED_TOP_LEVEL_README_DIRS = [
-  "adapters",
   "agents",
   "checklists",
   "context",
   "creators",
   "distribution",
+  "docs",
   "plugins",
   "rules",
   "runbooks",

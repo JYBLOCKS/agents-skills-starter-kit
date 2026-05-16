@@ -23,8 +23,8 @@ allowed-tools:
 
 Use these templates when adding new repository assets:
 
-- `agent/`: starter package for a new agent
-- `skill/`: starter package for a new skill
+- `agent.md`: starter file for a new flat agent
+- `skill.md`: starter file for a new flat skill
 - `spec/spec.md`: starter spec document
 - `tool-adapter.md`: starter adapter document
 

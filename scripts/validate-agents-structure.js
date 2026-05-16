@@ -3,9 +3,10 @@ const path = require('path');
 
 const root = process.cwd();
 const agentsDir = path.join(root, 'agents');
+const skillsDir = path.join(root, 'skills');
 const errors = [];
 
-const KEBAB_DIR = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const KEBAB_MD = /^[a-z0-9]+(?:-[a-z0-9]+)*\.md$/;
 const ALLOWED_TOP_LEVEL_FILES = new Set(['README.md', 'CONTRACT.md']);
 const FRONTMATTER = /^---\r?\n[\s\S]*?\r?\n---\r?\n?/;
 
@@ -24,88 +25,162 @@ function walk(dir, acc = []) {
   return acc;
 }
 
-function hasAgentFrontmatter(content) {
-  if (!FRONTMATTER.test(content)) return false;
+function frontmatterBlock(content) {
   const match = content.match(FRONTMATTER);
-  if (!match) return false;
-  const block = match[0].replace(/^---\r?\n/, '').replace(/\r?\n---\r?\n?$/, '');
-  return /\bname:\s*.+/m.test(block) && /\btype:\s*agent\b/m.test(block);
+  if (!match) return '';
+  return match[0].replace(/^---\r?\n/, '').replace(/\r?\n---\r?\n?$/, '');
 }
 
-function validateAgentsDir() {
-  if (!fs.existsSync(agentsDir)) {
-    addError('Missing required directory: agents/');
+function hasAgentFrontmatter(content) {
+  const block = frontmatterBlock(content);
+  return (
+    /\bname:\s*.+/m.test(block) &&
+    /\brole:\s*.+/m.test(block) &&
+    /\bseniority:\s*.+/m.test(block) &&
+    /\bmain_goal:\s*.+/m.test(block) &&
+    /\bwhen_to_use:\s*.+/m.test(block) &&
+    /\bdelegates_to:/m.test(block) &&
+    /\buses_skills:/m.test(block)
+  );
+}
+
+function hasSkillFrontmatter(content) {
+  const block = frontmatterBlock(content);
+  return (
+    /\bname:\s*.+/m.test(block) &&
+    /\btype:\s*.+/m.test(block) &&
+    /\bpurpose:\s*.+/m.test(block) &&
+    /\bwhen_to_use:\s*.+/m.test(block) &&
+    /\btoken_saving_level:\s*.+/m.test(block)
+  );
+}
+
+function validateFlatDir(dir, label, isValidFrontmatter) {
+  if (!fs.existsSync(dir)) {
+    addError(`Missing required directory: ${label}/`);
     return [];
   }
 
-  const entries = fs.readdirSync(agentsDir, { withFileTypes: true });
-  const agentSlugs = [];
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  const slugs = [];
 
   for (const entry of entries) {
     const name = entry.name;
-    const full = path.join(agentsDir, name);
+    const full = path.join(dir, name);
 
-    if (entry.isFile()) {
-      if (!ALLOWED_TOP_LEVEL_FILES.has(name)) {
-        addError(`Top-level files not allowed in agents/: agents/${name}`);
-      }
+    if (entry.isDirectory()) {
+      addError(`Per-${label.slice(0, -1)} folders are not allowed: ${label}/${name}/`);
       continue;
     }
 
-    if (!entry.isDirectory()) {
-      addError(`Unsupported entry in agents/: agents/${name}`);
+    if (!entry.isFile()) {
+      addError(`Unsupported entry in ${label}/: ${label}/${name}`);
       continue;
     }
 
-    if (!KEBAB_DIR.test(name)) {
-      addError(`Invalid kebab-case agent directory: agents/${name}/`);
-    }
+    if (ALLOWED_TOP_LEVEL_FILES.has(name)) continue;
 
-    const sub = fs.readdirSync(full, { withFileTypes: true });
-    const subNames = sub.map((s) => s.name);
-    if (sub.length !== 1 || subNames[0] !== 'AGENT.md' || !sub[0].isFile()) {
-      addError(`Agent directory must contain exactly AGENT.md: agents/${name}/`);
+    if (!KEBAB_MD.test(name)) {
+      addError(`Invalid kebab-case ${label.slice(0, -1)} file: ${label}/${name}`);
       continue;
     }
 
-    const content = fs.readFileSync(path.join(full, 'AGENT.md'), 'utf8');
-    if (!hasAgentFrontmatter(content)) {
-      addError(`Missing or invalid YAML frontmatter in agents/${name}/AGENT.md`);
+    const content = fs.readFileSync(full, 'utf8');
+    if (!isValidFrontmatter(content)) {
+      addError(`Missing or invalid YAML frontmatter in ${label}/${name}`);
     }
-    agentSlugs.push(name);
+    slugs.push(name.replace(/\.md$/, ''));
   }
 
-  return agentSlugs;
+  return slugs;
 }
 
-function validateLegacyReferences(agentSlugs) {
-  const files = walk(root).filter((f) => /\.(md|ya?ml|json)$/i.test(f));
+function validateLegacyPackageReferences() {
+  const files = walk(root).filter((f) => /\.(md|mjs|js|ya?ml|json)$/i.test(f));
+  const legacyPatterns = [
+    /agents\/[a-z0-9-]+\/AGENT\.md/g,
+    /skills\/[a-z0-9-]+\/SKILL\.md/g,
+  ];
 
   for (const filePath of files) {
     const rel = path.relative(root, filePath).split(path.sep).join('/');
     const content = fs.readFileSync(filePath, 'utf8');
-
-    for (const slug of agentSlugs) {
-      const legacyFlat = new RegExp(`agents/${slug}\\.md`);
-      if (legacyFlat.test(content)) {
-        addError(`Legacy flat agent reference in ${rel}: agents/${slug}.md`);
+    for (const pattern of legacyPatterns) {
+      const match = content.match(pattern);
+      if (match) {
+        addError(`Legacy package reference in ${rel}: ${match[0]}`);
         break;
       }
     }
   }
 }
 
+function validateRequiredFiles() {
+  const requiredAgents = [
+    'orchestrator',
+    'product-manager',
+    'business-strategist',
+    'finance-strategist',
+    'marketing-growth',
+    'ux-ui-designer',
+    'frontend-senior',
+    'backend-senior',
+    'database-engineer',
+    'devops-engineer',
+    'qa-engineer',
+    'security-engineer',
+    'software-architect',
+    'tech-lead',
+    'code-reviewer',
+    'documentation-writer',
+  ];
+  const requiredSkills = [
+    'caveman',
+    'spec-driven-development',
+    'test-driven-development',
+    'context-builder',
+    'requirements-discovery',
+    'delegation-router',
+    'product-strategy',
+    'business-modeling',
+    'finance-analysis',
+    'marketing-strategy',
+    'ux-research',
+    'ui-design-system',
+    'frontend-architecture',
+    'backend-architecture',
+    'database-design',
+    'api-design',
+    'devops-ci-cd',
+    'security-review',
+    'observability',
+    'testing-strategy',
+    'code-review',
+    'documentation',
+    'release-management',
+  ];
+
+  for (const slug of requiredAgents) {
+    if (!fs.existsSync(path.join(agentsDir, `${slug}.md`))) addError(`Missing required agent: agents/${slug}.md`);
+  }
+  for (const slug of requiredSkills) {
+    if (!fs.existsSync(path.join(skillsDir, `${slug}.md`))) addError(`Missing required skill: skills/${slug}.md`);
+  }
+}
+
 function main() {
-  const agentSlugs = validateAgentsDir();
-  validateLegacyReferences(agentSlugs);
+  validateFlatDir(agentsDir, 'agents', hasAgentFrontmatter);
+  validateFlatDir(skillsDir, 'skills', hasSkillFrontmatter);
+  validateRequiredFiles();
+  validateLegacyPackageReferences();
 
   if (errors.length > 0) {
-    console.error('Agents structure validation failed:\n');
+    console.error('Agents and skills structure validation failed:\n');
     for (const error of errors) console.error(`- ${error}`);
     process.exit(1);
   }
 
-  console.log('Agents structure validation passed.');
+  console.log('Agents and skills structure validation passed.');
 }
 
 main();

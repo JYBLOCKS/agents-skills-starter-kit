@@ -28,12 +28,12 @@ Use this extension as a thin entrypoint into the neutral starter kit.
 1. Read `AGENTS.md` for routing and resource discovery.
 2. Use `context/` for reusable project context.
 3. Use `rules/` plus agent-local rules before executing tasks.
-4. Use `skills/*/SKILL.md` as the callable skill catalog.
+4. Use `skills/*.md` as the callable skill catalog.
 
 ## Canonical Paths
 
-- Agents: `agents/*-agent/`
-- Skills: `skills/*/`
+- Agents: `agents/*.md`
+- Skills: `skills/*.md`
 - Rules: `rules/*.md`
 - Context: `context/*.md`
 - Checklists: `checklists/*.md`

@@ -1,5 +1,5 @@
 artifact_type: skill
-normalized_path_pattern: skills/<skill-name>/
+normalized_path_pattern: skills/<skill-name>.md
 required_questions:
   - skill_name
   - purpose
@@ -23,8 +23,8 @@ conditional_questions:
       - script_files
 contract_mapping:
   - skills/CONTRACT.md
-  - templates/skill/SKILL.md
+  - templates/skill.md
 validation_checks:
-  - SKILL.md is drafted with the required metadata block and standard sections
+  - skill file is drafted with the required metadata block and standard sections
   - trigger and allowed tools are explicit
   - workflow, checklist, and non-negotiable rules are concrete

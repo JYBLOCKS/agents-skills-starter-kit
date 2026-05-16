@@ -1,43 +1,24 @@
 ---
 name: skills-contract
-description: Canonical contract for skill packages in the starter kit
-trigger: Use this when CONTRACT is the relevant repository document for the task
-metadata:
-  author: starter-kit
-  version: 0.3.0
-  scope: Owns the repository guidance for CONTRACT, but does not replace the source artifacts it describes
-  auto-invoke: false
-tools: shared/tool-permissions.md#standard-tool-set
+description: Canonical contract for flat skill files in the starter kit.
 ---
 # Skill Contract
 
-Every skill package is centered on a single `SKILL.md` file.
+Every skill must be a flat Markdown file under `skills/*.md`.
 
-The top of `SKILL.md` should include a structured metadata block with:
-
+## Required Frontmatter
 - `name`
-- `description`
-- `trigger`
-- `metadata.author`
-- `metadata.version`
-- `metadata.scope`
-- `metadata.auto-invoke`
-- `allowed-tools`
+- `type`
+- `purpose`
+- `when_to_use`
+- `token_saving_level`
 
-The body of `SKILL.md` should define:
-
+## Required Sections
 - Purpose
 - Use When
-- Do Not Use When
-- Inputs
-- Outputs
-- Workflow
 - Rules
-- Checklist
-- Non-Negotiable Rules
-- References
-- Examples
+- Process
+- Output Format
+- Quality Gates
 
-Optional assets or scripts may live alongside `SKILL.md` when the skill genuinely needs them.
-
-Tool-specific behavior should be expressed as adapter notes or references instead of replacing the neutral core contract.
+Do not create per-skill folders.

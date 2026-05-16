@@ -30,20 +30,20 @@ function normalizeExportPath(relativePath) {
   return relativePath.replace(/^\.\//, "").replace(/\\/g, "/").replace(/\/$/, "");
 }
 
-function listDirectDirectoryNames(relativePath) {
+function listDirectNames(relativePath, kind) {
   const absolutePath = path.join(root, relativePath);
   return fs
     .readdirSync(absolutePath, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
+    .filter((entry) => (kind === "file" ? entry.isFile() && entry.name.endsWith(".md") && !["README.md", "CONTRACT.md"].includes(entry.name) : entry.isDirectory()))
     .map((entry) => entry.name)
     .sort();
 }
 
-function assertExportGroupMatchesDirectories(groupName, relativePath) {
+function assertExportGroupMatches(groupName, relativePath, kind = "directory") {
   const group = manifest.exports[groupName];
   assert(Array.isArray(group), `Missing export group: ${groupName}`);
 
-  const expectedPaths = listDirectDirectoryNames(relativePath).map((name) =>
+  const expectedPaths = listDirectNames(relativePath, kind).map((name) =>
     normalizeExportPath(path.posix.join(relativePath.replace(/\\/g, "/"), name))
   );
   const actualPaths = group
@@ -99,9 +99,9 @@ for (const group of Object.values(manifest.exports)) {
   }
 }
 
-assertExportGroupMatchesDirectories("agents", "agents");
-assertExportGroupMatchesDirectories("skills", normalizeExportPath(manifest.installSurface.skillsRoot));
-assertExportGroupMatchesDirectories("adapters", "adapters");
+assertExportGroupMatches("agents", "agents", "file");
+assertExportGroupMatches("skills", normalizeExportPath(manifest.installSurface.skillsRoot), "file");
+assertExportGroupMatches("adapters", "adapters", "directory");
 
 assert(
   manifest.exports.creators?.length === 1 &&

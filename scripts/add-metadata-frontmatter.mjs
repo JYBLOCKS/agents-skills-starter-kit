@@ -141,17 +141,11 @@ function inferDocKind(relativePath) {
   if (normalized === "GEMINI.md") {
     return { kind: "host-bootstrap", slug: "gemini-bootstrap" };
   }
-  if (parts[0] === "skills" && parts[2] === "SKILL.md") {
-    return { kind: "skill", slug: parts[1] };
+  if (parts[0] === "skills" && parts.length === 2 && base !== "README" && base !== "CONTRACT") {
+    return { kind: "skill", slug: base };
   }
-  if (parts[0] === "optional" && parts[1] === "skills" && parts[3] === "SKILL.md") {
-    return { kind: "skill", slug: parts[2] };
-  }
-  if (parts[0] === "agents" && parts.length === 3) {
-    return { kind: `agent-${base}`, slug: parts[1] };
-  }
-  if (parts[0] === "optional" && parts[1] === "agents" && parts.length === 4) {
-    return { kind: `agent-${base}`, slug: parts[2] };
+  if (parts[0] === "agents" && parts.length === 2 && base !== "README" && base !== "CONTRACT") {
+    return { kind: "agent", slug: base };
   }
   if (parts[0] === "adapters" && parts.length === 3) {
     return { kind: base === "README" ? "adapter" : "adapter-example-setup", slug: parts[1] };

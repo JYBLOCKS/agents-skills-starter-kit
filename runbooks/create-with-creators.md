@@ -1,11 +1,11 @@
 ---
 name: create-with-creators
-description: Creator workflow for Create With Creators.
-trigger: Use this when you need the repeatable workflow documented in Create With Creators.
+description: Internal creator workflow executed through orchestrator delegation.
+trigger: Use only after orchestrator routes to creator capabilities.
 metadata:
   author: starter-kit
   version: 0.3.0
-  scope: Owns the repeatable workflow for Create With Creators, but does not replace underlying contracts or repository rules.
+  scope: Internal creator operation, not a public entrypoint.
   auto-invoke: false
 allowed-tools:
   - generic
@@ -21,12 +21,8 @@ allowed-tools:
 ---
 # Create With Creators
 
-1. Start with `agents/creator-orchestrator-agent/AGENT.md` when the artifact family is unclear.
-2. Route to the specialized creator agent for the target artifact family.
-3. Load the matching creator skill and questionnaire from `skills/` and `creators/questionnaires/`.
-4. Run the conversation in three phases:
-   - intent and use case
-   - contract completion and missing decisions
-   - artifact assembly and validation summary
-5. Return one final creation package that follows `creators/CREATION-PACKAGE-CONTRACT.md`.
-6. If a dependency artifact is missing, route to the next creator before finalizing.
+This flow is internal.
+
+- Entry is always `agents/orchestrator.md`.
+- Orchestrator decides when creator artifacts are needed.
+- Creator agents and questionnaires are delegated internally.

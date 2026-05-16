@@ -93,129 +93,285 @@
     "agents": [
       {
         "name": "adapter-creator-agent",
-        "path": "./agents/adapter-creator-agent"
+        "path": "./agents/adapter-creator-agent.md"
       },
       {
         "name": "agent-creator-agent",
-        "path": "./agents/agent-creator-agent"
+        "path": "./agents/agent-creator-agent.md"
+      },
+      {
+        "name": "backend-senior",
+        "path": "./agents/backend-senior.md"
       },
       {
         "name": "business-agent",
-        "path": "./agents/business-agent"
+        "path": "./agents/business-agent.md"
+      },
+      {
+        "name": "business-strategist",
+        "path": "./agents/business-strategist.md"
       },
       {
         "name": "checklist-creator-agent",
-        "path": "./agents/checklist-creator-agent"
+        "path": "./agents/checklist-creator-agent.md"
+      },
+      {
+        "name": "code-reviewer",
+        "path": "./agents/code-reviewer.md"
       },
       {
         "name": "context-creator-agent",
-        "path": "./agents/context-creator-agent"
+        "path": "./agents/context-creator-agent.md"
       },
       {
         "name": "creator-orchestrator-agent",
-        "path": "./agents/creator-orchestrator-agent"
+        "path": "./agents/creator-orchestrator-agent.md"
+      },
+      {
+        "name": "database-engineer",
+        "path": "./agents/database-engineer.md"
+      },
+      {
+        "name": "devops-engineer",
+        "path": "./agents/devops-engineer.md"
       },
       {
         "name": "docs-agent",
-        "path": "./agents/docs-agent"
+        "path": "./agents/docs-agent.md"
+      },
+      {
+        "name": "documentation-writer",
+        "path": "./agents/documentation-writer.md"
+      },
+      {
+        "name": "finance-strategist",
+        "path": "./agents/finance-strategist.md"
+      },
+      {
+        "name": "frontend-senior",
+        "path": "./agents/frontend-senior.md"
       },
       {
         "name": "implementation-agent",
-        "path": "./agents/implementation-agent"
+        "path": "./agents/implementation-agent.md"
+      },
+      {
+        "name": "marketing-growth",
+        "path": "./agents/marketing-growth.md"
+      },
+      {
+        "name": "orchestrator",
+        "path": "./agents/orchestrator.md"
       },
       {
         "name": "orchestrator-agent",
-        "path": "./agents/orchestrator-agent"
+        "path": "./agents/orchestrator-agent.md"
+      },
+      {
+        "name": "product-manager",
+        "path": "./agents/product-manager.md"
+      },
+      {
+        "name": "qa-engineer",
+        "path": "./agents/qa-engineer.md"
       },
       {
         "name": "review-agent",
-        "path": "./agents/review-agent"
+        "path": "./agents/review-agent.md"
       },
       {
         "name": "rule-creator-agent",
-        "path": "./agents/rule-creator-agent"
+        "path": "./agents/rule-creator-agent.md"
       },
       {
         "name": "runbook-creator-agent",
-        "path": "./agents/runbook-creator-agent"
+        "path": "./agents/runbook-creator-agent.md"
+      },
+      {
+        "name": "sdd-orchestrator-agent",
+        "path": "./agents/sdd-orchestrator-agent.md"
+      },
+      {
+        "name": "security-engineer",
+        "path": "./agents/security-engineer.md"
       },
       {
         "name": "skill-creator-agent",
-        "path": "./agents/skill-creator-agent"
+        "path": "./agents/skill-creator-agent.md"
+      },
+      {
+        "name": "software-architect",
+        "path": "./agents/software-architect.md"
       },
       {
         "name": "spec-agent",
-        "path": "./agents/spec-agent"
+        "path": "./agents/spec-agent.md"
       },
       {
         "name": "spec-creator-agent",
-        "path": "./agents/spec-creator-agent"
+        "path": "./agents/spec-creator-agent.md"
+      },
+      {
+        "name": "tech-lead",
+        "path": "./agents/tech-lead.md"
       },
       {
         "name": "template-creator-agent",
-        "path": "./agents/template-creator-agent"
+        "path": "./agents/template-creator-agent.md"
+      },
+      {
+        "name": "ux-ui-designer",
+        "path": "./agents/ux-ui-designer.md"
       }
     ],
     "skills": [
       {
         "name": "adapter-generation",
-        "path": "./skills/adapter-generation"
+        "path": "./skills/adapter-generation.md"
+      },
+      {
+        "name": "api-design",
+        "path": "./skills/api-design.md"
       },
       {
         "name": "architecture-planning",
-        "path": "./skills/architecture-planning"
+        "path": "./skills/architecture-planning.md"
+      },
+      {
+        "name": "backend-architecture",
+        "path": "./skills/backend-architecture.md"
+      },
+      {
+        "name": "business-modeling",
+        "path": "./skills/business-modeling.md"
       },
       {
         "name": "caveman",
-        "path": "./skills/caveman"
+        "path": "./skills/caveman.md"
       },
       {
         "name": "code-review",
-        "path": "./skills/code-review"
+        "path": "./skills/code-review.md"
+      },
+      {
+        "name": "context-builder",
+        "path": "./skills/context-builder.md"
       },
       {
         "name": "creator-intake",
-        "path": "./skills/creator-intake"
+        "path": "./skills/creator-intake.md"
       },
       {
         "name": "creator-validation",
-        "path": "./skills/creator-validation"
+        "path": "./skills/creator-validation.md"
+      },
+      {
+        "name": "database-design",
+        "path": "./skills/database-design.md"
+      },
+      {
+        "name": "delegation-router",
+        "path": "./skills/delegation-router.md"
+      },
+      {
+        "name": "devops-ci-cd",
+        "path": "./skills/devops-ci-cd.md"
       },
       {
         "name": "docs-sync",
-        "path": "./skills/docs-sync"
+        "path": "./skills/docs-sync.md"
+      },
+      {
+        "name": "documentation",
+        "path": "./skills/documentation.md"
+      },
+      {
+        "name": "finance-analysis",
+        "path": "./skills/finance-analysis.md"
+      },
+      {
+        "name": "frontend-architecture",
+        "path": "./skills/frontend-architecture.md"
       },
       {
         "name": "frontend-design",
-        "path": "./skills/frontend-design"
+        "path": "./skills/frontend-design.md"
       },
       {
         "name": "frontend-developer",
-        "path": "./skills/frontend-developer"
+        "path": "./skills/frontend-developer.md"
+      },
+      {
+        "name": "marketing-strategy",
+        "path": "./skills/marketing-strategy.md"
+      },
+      {
+        "name": "observability",
+        "path": "./skills/observability.md"
+      },
+      {
+        "name": "product-strategy",
+        "path": "./skills/product-strategy.md"
+      },
+      {
+        "name": "release-management",
+        "path": "./skills/release-management.md"
       },
       {
         "name": "release-notes",
-        "path": "./skills/release-notes"
+        "path": "./skills/release-notes.md"
       },
       {
         "name": "repo-analysis",
-        "path": "./skills/repo-analysis"
+        "path": "./skills/repo-analysis.md"
+      },
+      {
+        "name": "requirements-discovery",
+        "path": "./skills/requirements-discovery.md"
       },
       {
         "name": "requirements-extraction",
-        "path": "./skills/requirements-extraction"
+        "path": "./skills/requirements-extraction.md"
+      },
+      {
+        "name": "sdd-operating-flow",
+        "path": "./skills/sdd-operating-flow.md"
+      },
+      {
+        "name": "security-review",
+        "path": "./skills/security-review.md"
+      },
+      {
+        "name": "spec-driven-development",
+        "path": "./skills/spec-driven-development.md"
       },
       {
         "name": "spec-writing",
-        "path": "./skills/spec-writing"
+        "path": "./skills/spec-writing.md"
       },
       {
         "name": "task-breakdown",
-        "path": "./skills/task-breakdown"
+        "path": "./skills/task-breakdown.md"
+      },
+      {
+        "name": "test-driven-development",
+        "path": "./skills/test-driven-development.md"
       },
       {
         "name": "test-planning",
-        "path": "./skills/test-planning"
+        "path": "./skills/test-planning.md"
+      },
+      {
+        "name": "testing-strategy",
+        "path": "./skills/testing-strategy.md"
+      },
+      {
+        "name": "ui-design-system",
+        "path": "./skills/ui-design-system.md"
+      },
+      {
+        "name": "ux-research",
+        "path": "./skills/ux-research.md"
       }
     ],
     "creators": [

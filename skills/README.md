@@ -15,7 +15,7 @@ Skills are portable capability bundles that agents can invoke across tools.
 
 ## Canonical Package Contents
 
-- `SKILL.md`: the canonical skill contract, trigger guidance, workflow, checklist, references, and examples
+- `*.md`: the canonical flat skill contracts with trigger guidance, workflow, checklist, references, and examples
 - optional `assets/`
 - optional `scripts/`
 
@@ -23,7 +23,7 @@ Skills are portable capability bundles that agents can invoke across tools.
 
 - Global rules: `rules/global-rules.md`
 - Skill rules: `rules/skill-rules.md`
-- Skill template: `templates/skill/`
+- Skill template: `templates/skill.md`
 - Creator extensions: `creators/SKILL-CONTRACT.md`
 
 ## Starter Skills
@@ -43,7 +43,7 @@ The minimal starter path keeps these skills front and center:
 
 ## Required Structure
 
-Each `SKILL.md` should start with a structured metadata block and then define:
+Each skill file should start with a structured metadata block and then define:
 
 - `Purpose`
 - `Use When`
@@ -57,7 +57,7 @@ Each `SKILL.md` should start with a structured metadata block and then define:
 - `References`
 - `Examples`
 
-Keep examples inline inside `SKILL.md` when they materially improve usage clarity.
+Keep examples inline inside the skill file when they materially improve usage clarity.
 
 All skills are authored directly under `skills/`.
 
